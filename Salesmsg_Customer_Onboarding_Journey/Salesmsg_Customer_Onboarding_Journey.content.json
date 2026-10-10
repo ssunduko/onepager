@@ -1,0 +1,259 @@
+{
+  "template": "two-column",
+  "source": "input/Salesmsg_Customer_Onboarding_Journey.pdf",
+  "model": "claude-code",
+  "generatedAt": "2026-10-10T00:00:00.000Z",
+  "content": {
+    "eyebrow": "Customer guide",
+    "title": "Your Salesmessage onboarding journey",
+    "summary": "What to expect from sign-up to sending your first text as an organization, so there are no surprises and you go live faster. Every business must be registered and approved before a single message can send.",
+    "pages": [
+      {
+        "sections": [
+          {
+            "heading": "Read this first",
+            "body": "U.S. and Canadian carriers regulate business texting to stop spam. You can't send texts or calls until your business is registered and approved by the carriers (10DLC or Toll-Free). We prepare and submit this for you, but the final approval is controlled by the carriers. It usually takes several business days and occasionally longer.",
+            "bullets": [],
+            "rows": []
+          },
+          {
+            "heading": "The five stages at a glance",
+            "body": "",
+            "bullets": [],
+            "rows": [
+              {
+                "label": "1. Welcome & kickoff",
+                "value": "Day 0–3"
+              },
+              {
+                "label": "2. Compliance & registration",
+                "value": "The gate"
+              },
+              {
+                "label": "3. Account setup",
+                "value": "In parallel"
+              },
+              {
+                "label": "4. Training",
+                "value": "Before launch"
+              },
+              {
+                "label": "5. Go-live & support",
+                "value": "~Day 20+"
+              }
+            ]
+          },
+          {
+            "heading": "Stage 1: Welcome & kickoff",
+            "body": "You sign up and are matched with an Onboarding Manager and, depending on your plan, a dedicated Customer Success Manager. We hold a kickoff call to understand your goals, how you'll use texting, and your target go-live date. Attend the kickoff and come ready to share:",
+            "bullets": [
+              "Your points of contact",
+              "Your texting use case",
+              "How many users and phone numbers you need",
+              "Which tools you want connected",
+              "When you'd like to be live"
+            ],
+            "rows": [
+              {
+                "label": "Done when",
+                "value": "You've had your kickoff call and a recap with your onboarding plan and timeline."
+              }
+            ]
+          }
+        ],
+        "sidebar": {
+          "heading": "At a glance",
+          "facts": [
+            {
+              "label": "Prepared for",
+              "value": "New Salesmessage customers"
+            },
+            {
+              "label": "Typical timeline",
+              "value": "~20 days to live"
+            },
+            {
+              "label": "Training",
+              "value": "1:1 admin session plus a group session"
+            },
+            {
+              "label": "Go-live check-ins",
+              "value": "Morning of go-live; ~2 weeks later"
+            }
+          ],
+          "callout_title": "The biggest way to go live faster",
+          "callout_text": "Get us your business details early and accurate. See the prep checklist at the end.",
+          "quote": "",
+          "quote_author": "",
+          "quote_role": ""
+        }
+      },
+      {
+        "sections": [
+          {
+            "heading": "Stage 2: Compliance & registration",
+            "body": "We register your business with the carriers so your texts are trusted and actually get delivered. There are two paths, and we'll tell you which one fits: 10DLC (for local numbers) or Toll-Free Verification (for toll-free numbers, and the only option for Canadian numbers). We prepare, submit, and manage the entire carrier review for you.",
+            "bullets": [],
+            "rows": []
+          },
+          {
+            "heading": "What you'll need ready",
+            "body": "This is what speeds everything up.",
+            "bullets": [
+              "Legal business name and EIN / Tax ID, exactly matching your IRS records",
+              "Business address",
+              "A website with a Privacy Policy (including SMS consent language) and Terms",
+              "A compliant opt-in method: web form, paper form, text-to-join keyword, or QR code",
+              "A clear description of what you'll text, plus a couple of sample messages"
+            ],
+            "rows": [
+              {
+                "label": "Done when",
+                "value": "Your Brand and Campaign are approved and sending is unlocked on your account."
+              }
+            ]
+          },
+          {
+            "heading": "Stage 3: Account setup",
+            "body": "We configure your account so it's ready for your whole team. Much of this runs in parallel with compliance.",
+            "bullets": [
+              "Phone numbers & inboxes: new local numbers, or transfer, port, or host yours",
+              "Users: mapped to inboxes, with assignment rules and business hours",
+              "Roles & permissions: the right people have the right access",
+              "Integrations: your CRM (e.g. HubSpot) and tools like Aircall or RingCentral"
+            ],
+            "rows": [
+              {
+                "label": "What you'll do",
+                "value": "Confirm users, numbers, and integrations. We set them up and send a test message."
+              },
+              {
+                "label": "Done when",
+                "value": "Numbers, users, and integrations are live and a test message sends successfully."
+              }
+            ]
+          }
+        ],
+        "sidebar": {
+          "heading": "Compliance timing",
+          "facts": [
+            {
+              "label": "Typical review",
+              "value": "Several business days once submitted"
+            },
+            {
+              "label": "Can run longer if",
+              "value": "Carriers request changes"
+            },
+            {
+              "label": "Brand-new EINs",
+              "value": "Can take 30–90 days to verify"
+            },
+            {
+              "label": "Speeds it up",
+              "value": "Complete, accurate information up front"
+            }
+          ],
+          "callout_title": "Reality check",
+          "callout_text": "Approval is decided by the carriers, not by Salesmessage. It is not guaranteed and not same-day. If anything is rejected, we tell you what to fix and resubmit it for you. No messages can be sent until this is approved.",
+          "quote": "",
+          "quote_author": "",
+          "quote_role": ""
+        }
+      },
+      {
+        "sections": [
+          {
+            "heading": "Stage 4: Training",
+            "body": "We train your team so adoption actually sticks. This includes a 1:1 admin training session and a group session for your users, covering 1:1 texting, broadcasts, tags, contacts, and calling, plus a walkthrough of your CRM integration and SMS best practices.",
+            "bullets": [],
+            "rows": [
+              {
+                "label": "Done when",
+                "value": "Your admins and users have been trained and have their recap resources and recording."
+              }
+            ]
+          },
+          {
+            "heading": "Stage 5: Go-live & ongoing support",
+            "body": "You launch. We check in the morning of go-live to make sure everyone's set, then follow up about two weeks later to clear any blockers and confirm the KPIs you're measuring success by.",
+            "bullets": [],
+            "rows": [
+              {
+                "label": "What you'll do",
+                "value": "Start texting with confidence; loop in your Customer Success team for anything you need."
+              },
+              {
+                "label": "Done when",
+                "value": "You're live, measured, and on a regular check-in cadence."
+              }
+            ]
+          },
+          {
+            "heading": "Quick answers",
+            "body": "",
+            "bullets": [],
+            "rows": [
+              {
+                "label": "Why not text right away?",
+                "value": "Carriers require registration to fight spam. Until you're approved, they block business texts."
+              },
+              {
+                "label": "How long is compliance?",
+                "value": "Carriers control final approval, usually several business days. Page 2 shows what affects it."
+              },
+              {
+                "label": "Anything different in Canada?",
+                "value": "Yes. Canadian numbers must use Toll-Free Verification; 10DLC isn't available."
+              },
+              {
+                "label": "Keep our existing numbers?",
+                "value": "In most cases, yes. Numbers can be transferred, ported, or hosted during Account Setup."
+              }
+            ]
+          }
+        ],
+        "sidebar": {
+          "heading": "Your prep checklist",
+          "facts": [
+            {
+              "label": "Business identity",
+              "value": "Legal name and EIN, matching IRS records"
+            },
+            {
+              "label": "Website",
+              "value": "Privacy Policy (with SMS consent language) and Terms"
+            },
+            {
+              "label": "Opt-in method",
+              "value": "Screenshot or link to how people agree"
+            },
+            {
+              "label": "Use case",
+              "value": "What you'll send, plus real examples"
+            },
+            {
+              "label": "Users and numbers",
+              "value": "Who needs access; any existing numbers"
+            },
+            {
+              "label": "Integrations",
+              "value": "The CRM and tools you want connected"
+            }
+          ],
+          "callout_title": "Always available",
+          "callout_text": "A weekly live webinar series and our Help Center are there whenever you need them.",
+          "quote": "",
+          "quote_author": "",
+          "quote_role": ""
+        }
+      }
+    ],
+    "cta": {
+      "headline": "Not sure where you are in the process?",
+      "text": "Your Onboarding Manager or Customer Success team can tell you exactly which stage you're in.",
+      "button_label": "Email support",
+      "url": "mailto:support@salesmessage.com"
+    }
+  }
+}
