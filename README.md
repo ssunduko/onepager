@@ -43,7 +43,11 @@ In this mode Claude writes `output/<name>/<name>.content.json` itself, and `npm 
 The same agents and skills run in cloud sessions once the repo is on GitHub.
 
 1. **Push the repo** to GitHub and open it at [claude.ai/code](https://claude.ai/code).
-2. **Environment setup.** `.claude/settings.json` has a `SessionStart` hook that runs `scripts/cloud-setup.sh`: `npm ci`, Chrome for Testing, and a smoke-test render. It only does work in cloud sessions. To have it cached before sessions start, also set the environment's *Setup script* to `ONEPAGER_FORCE_SETUP=1 bash scripts/cloud-setup.sh` (the setup phase runs before a session exists, so the script must be told to run).
+2. **Environment setup.** `.claude/settings.json` has a `SessionStart` hook that runs `scripts/cloud-setup.sh`: `npm ci`, Chrome for Testing, and a smoke-test render. It only does work in cloud sessions. To have it cached before sessions start, also set the environment's *Setup script* to the command below. The setup phase runs outside the repo directory and before a session exists, so the command locates the script itself, forces it to run, and never blocks the session if setup fails (the error then shows up in the session).
+
+   ```bash
+   f=$(find / -path '*/scripts/cloud-setup.sh' -not -path '*/node_modules/*' -print -quit 2>/dev/null); if [ -n "$f" ]; then ONEPAGER_FORCE_SETUP=1 bash "$f" || echo "onepager: setup failed (see above), continuing"; else echo "onepager: repo not found yet; the SessionStart hook will run setup"; fi
+   ```
 3. **Network access.** The default *Trusted* level covers npm. If the setup log says the Chrome download failed, switch the environment to *Custom* and allow `storage.googleapis.com`. Chrome runs without its sandbox automatically when the session is root.
 4. **Source PDFs.** `input/` is not in git. Upload the PDF into the session; Claude copies it to `input/`.
 5. **Getting results back.** `input/` and `output/` are empty in the repo (only `.gitkeep` is tracked). To hand a document back, Claude force-adds just its deliverable (`git add -f output/<name>/<name>.pdf` and its `.content.json`) on its work branch, and you download the PDF from that branch or pull request. Nothing generated lands on `main` unless you merge it.
