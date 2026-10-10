@@ -10,13 +10,13 @@
     "pages": [
       {
         "title": "From sign-up to your first text",
-        "subtitle": "Five stages, about 20 days, and one gate that sets how fast you go live.",
+        "subtitle": "Five stages, about 20 days, and one carrier-approval gate to plan around.",
         "blocks": [
           {
             "type": "highlight",
             "statement": "Sign-up to live",
             "result": "~20 days",
-            "note": "Typical timeline; carrier approval sets the pace."
+            "note": "Typical timeline; carrier approval can take longer."
           },
           {
             "type": "callout",
@@ -68,7 +68,7 @@
             "striped": true,
             "rows": [
               { "term": "Welcome & kickoff", "definition": "Bring your contacts, use case, user and number counts, tools to connect and live date." },
-              { "term": "Compliance & registration", "definition": "Send us the Stage 2 checklist, and have your opt-in form reviewed before you submit." },
+              { "term": "Compliance & registration", "definition": "Send us the Stage 2 checklist; ask us to review your opt-in form before you submit." },
               { "term": "Account setup", "definition": "Confirm your users, numbers and integrations, such as HubSpot, Aircall or RingCentral." },
               { "term": "Training", "definition": "Book the sessions and get your team on them." },
               { "term": "Go-live & support", "definition": "Start texting, and bring anything you need to your Customer Success Manager." }
@@ -108,10 +108,10 @@
             "type": "faq",
             "heading": "Quick answers",
             "items": [
-              { "question": "Why do registrations get rejected?", "answer": "A legal name that doesn't match IRS records, a new EIN still propagating (30–90 days), or one opt-in checkbox covering all message types." },
-              { "question": "Should I get my opt-in form checked?", "answer": "Yes. If your opt-in form isn't built yet, ask us to review it before you submit — that's the #1 cause of rejections." },
+              { "question": "Why do registrations get rejected?", "answer": "A legal name that doesn't match IRS records, a new EIN still propagating (30–90 days), or one opt-in checkbox for all message types." },
+              { "question": "Should I get my opt-in form checked?", "answer": "If it isn't built yet, ask us to review it before you submit — that's the #1 cause of rejections." },
               { "question": "Not sure which stage you're in?", "answer": "Ask your Onboarding Manager or CSM. They can tell you your stage and what's outstanding." },
-              { "question": "What does training cover?", "answer": "1:1 texting, broadcasts, tags, contacts, calling, your CRM integration and SMS best practices. Weekly live webinars and the Help Center stay open after." }
+              { "question": "What does training cover?", "answer": "1:1 texting, broadcasts, tags, contacts, calling, your CRM integration and SMS best practices. Weekly webinars and the Help Center stay open after." }
             ]
           }
         ]
