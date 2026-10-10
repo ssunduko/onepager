@@ -46,7 +46,7 @@ The same agents and skills run in cloud sessions once the repo is on GitHub.
 2. **Environment setup.** `.claude/settings.json` has a `SessionStart` hook that runs `scripts/cloud-setup.sh`: `npm ci`, Chrome for Testing, and a smoke-test render. It only does work in cloud sessions. To have it cached before sessions start, also set the environment's *Setup script* to `ONEPAGER_FORCE_SETUP=1 bash scripts/cloud-setup.sh` (the setup phase runs before a session exists, so the script must be told to run).
 3. **Network access.** The default *Trusted* level covers npm. If the setup log says the Chrome download failed, switch the environment to *Custom* and allow `storage.googleapis.com`. Chrome runs without its sandbox automatically when the session is root.
 4. **Source PDFs.** `input/` is not in git. Upload the PDF into the session; Claude copies it to `input/`.
-5. **Getting results back.** Generated `output/<name>/*.pdf` and `*.content.json` files are tracked, so Claude commits them to its branch and you download the PDFs from the pull request. Debug HTML, previews and anything else in `output/` stay local.
+5. **Getting results back.** `input/` and `output/` are empty in the repo (only `.gitkeep` is tracked). To hand a document back, Claude force-adds just its deliverable (`git add -f output/<name>/<name>.pdf` and its `.content.json`) on its work branch, and you download the PDF from that branch or pull request. Nothing generated lands on `main` unless you merge it.
 6. **Figma import** works if the Figma connector is enabled for your claude.ai account.
 
 Check rendering any time with `npm run check:chrome`.

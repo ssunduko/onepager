@@ -4,17 +4,14 @@ node_modules/
 .idea/shelf/
 .claude/settings.local.json
 
-# Source PDFs stay local; upload them into Claude Code web sessions instead.
-input/
+# input/ and output/ exist in the repo but stay empty: only their .gitkeep is tracked.
+# Source PDFs are uploaded into web sessions; deliverables are force-added on a work branch
+# (see CLAUDE.md, "Cloud sessions").
+input/*
+!input/.gitkeep
 
-# Generated documents: only the PDF and its .content.json sidecar inside a per-document folder
-# are tracked (web sessions hand results back by committing them). Everything else in output/
-# (debug HTML, template previews, anything dropped there by hand) stays local.
-output/**
-!output/*/
-!output/*/*.pdf
-!output/*/*.content.json
-output/_samples/
+output/*
+!output/.gitkeep
 
 # Brand: only what rendering needs (Inter web fonts + license, 4 logos, brand.json, StyleGuide.txt).
 brand/music/
