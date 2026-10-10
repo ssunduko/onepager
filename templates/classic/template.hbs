@@ -1,0 +1,45 @@
+{{#each content.pages}}
+<main class="page{{#if @first}} first{{/if}}">
+  {{#if @first}}
+  <div class="hero">
+    {{> brandHeader @root}}
+    <div class="hero-copy">
+      <h1>{{@root.content.title}}</h1>
+      {{#if @root.content.subtitle}}<p class="subtitle">{{@root.content.subtitle}}</p>{{/if}}
+      {{#if @root.content.intro}}<p class="lede">{{@root.content.intro}}</p>{{/if}}
+    </div>
+  </div>
+  {{else}}
+  <header class="running-header">
+    <img src="{{@root.logos.primary}}" alt="{{@root.brand.name}}">
+    <span>{{@root.content.title}}</span>
+  </header>
+  {{/if}}
+
+  <div class="sections">
+    {{#each sections}}
+    <section class="section">
+      <span class="index"></span>
+      <div>
+        <h2>{{heading}}</h2>
+        {{#if body}}<p>{{body}}</p>{{/if}}
+        {{> bulletList bullets}}
+        {{#if (hasItems rows)}}
+        <dl class="rows">
+          {{#each rows}}<div class="row"><dt>{{label}}</dt><dd>{{value}}</dd></div>{{/each}}
+        </dl>
+        {{/if}}
+      </div>
+    </section>
+    {{/each}}
+  </div>
+
+  <div class="spacer"></div>
+  {{#if @last}}{{#if @root.content.cta.headline}}{{> cta @root}}{{/if}}{{/if}}
+  <footer class="page-footer">
+    <span>{{bareUrl @root.brand.website}}</span>
+    {{#if @root.brand.supportEmail}}<span>{{@root.brand.supportEmail}}</span>{{/if}}
+    <span class="page-number">{{inc @index}} / {{@root.content.pages.length}}</span>
+  </footer>
+</main>
+{{/each}}

@@ -1,0 +1,36 @@
+@startuml 02-container
+!include <C4/C4_Container>
+title Container: Onepager
+LAYOUT_TOP_DOWN()
+
+Person(author, "Content author")
+System_Ext(claudeCode, "Claude Code", "Agent harness")
+System_Ext(claudeApi, "Claude API", "Anthropic Messages API")
+System_Ext(figma, "Figma MCP server", "Design files")
+
+System_Boundary(onepager, "Onepager") {
+  Container(cli, "Generator CLI", "Node.js ESM", "generate / render / validate / templates; agent loop, Handlebars rendering, fit check")
+  Container(chrome, "Headless Chrome", "Puppeteer", "Lays out HTML, measures overflow per page, prints the PDF")
+  Container(ccAssets, "Claude Code assets", "Markdown + JSON", "CLAUDE.md, .claude/agents, .claude/skills, settings.json")
+  ContainerDb(templates, "Template library", "templates/*", "template.json sidecar + template.hbs + styles.css + sample per layout; _shared partials and base.css")
+  ContainerDb(brand, "Brand kit", "brand/", "brand.json sidecar, StyleGuide.txt, Inter fonts, logos")
+  ContainerDb(examples, "Examples", "examples/", "Reference designs with example.json sidecars; sources.json lists Figma links")
+  ContainerDb(io, "Input / output", "input/, output/", "Source PDFs; generated .pdf, .html and .content.json sidecars")
+}
+
+Rel(author, cli, "npm run generate / render")
+Rel(author, claudeCode, "/onepager, agents")
+Rel(claudeCode, ccAssets, "Loads agents and skills")
+Rel(claudeCode, cli, "npm run render / validate")
+Rel(claudeCode, io, "Reads source PDF, writes .content.json")
+Rel(claudeCode, figma, "Exports page renders", "MCP")
+Rel(claudeCode, examples, "Writes imported examples")
+Rel(cli, claudeApi, "Template selection, content writing", "HTTPS")
+Rel(cli, templates, "Loads sidecars, schemas, markup")
+Rel(cli, brand, "Loads tokens, fonts, logos")
+Rel(cli, examples, "Loads references")
+Rel(cli, chrome, "Renders HTML, measures fit", "CDP")
+Rel(cli, io, "Reads PDFs, writes outputs")
+
+SHOW_LEGEND()
+@enduml

@@ -1,0 +1,18 @@
+Salesmessage Style Guide
+Source: Figma design system (Marketing Working File, SMS Credit Calculation Guide)
+
+Typography
+Headlines: Inter Bold
+Body Text: Inter Regular
+
+Colors
+Salesmsg Blue (accent, links, values, eyebrows): #24a5df
+Salesmsg Green CTA Button: #13cb6e
+Headline text: #171c28
+Body text: #525d6e
+Cards, panels and callouts: #eaf6fd
+Zebra table rows: #f4f8fb
+Contrasting card tint: #e8f6ec
+Dividers and rules: #dce8f0
+Hero band gradient: #ebfaff (top) to #cfeeff (bottom)
+Background: #ffffff

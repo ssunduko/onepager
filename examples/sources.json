@@ -1,0 +1,11 @@
+{
+  "$comment": "Remote reference designs. When examples/ has no example folders, the import-figma-example skill imports these via the Figma MCP server (page renders + example.json sidecar).",
+  "figma": [
+    {
+      "id": "figma-sms-credit-guide",
+      "title": "SMS Credit Calculation Guide",
+      "url": "https://www.figma.com/design/J12oSQR4pnHEixxXlXhvLC/Marketing-Working-File?node-id=2811-6260&t=553OMYMPr70rze1E-0",
+      "template": "customer-guide"
+    }
+  ]
+}

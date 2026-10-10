@@ -1,0 +1,56 @@
+{
+  "template": "stats-highlight",
+  "sample": true,
+  "content": {
+    "eyebrow": "Sample story",
+    "title": "How a sample team doubled replies",
+    "subtitle": "Placeholder copy for previewing the Stats Highlight layout; real runs only use figures from the source.",
+    "stats": [
+      {
+        "value": "2x",
+        "label": "Reply rate"
+      },
+      {
+        "value": "35%",
+        "label": "Faster first response"
+      },
+      {
+        "value": "10k+",
+        "label": "Messages per month"
+      }
+    ],
+    "problem": {
+      "heading": "Missed conversations",
+      "body": "Leads ignored calls and email, and reps lost track of who had been contacted and when."
+    },
+    "solution": {
+      "heading": "One texting inbox",
+      "body": "The team moved follow-up to text with shared inboxes, templates and automatic CRM logging."
+    },
+    "features": [
+      {
+        "name": "Shared inboxes",
+        "description": "Every rep sees the full thread and who owns it."
+      },
+      {
+        "name": "Smart templates",
+        "description": "Reusable messages with merge fields for quick replies."
+      },
+      {
+        "name": "CRM sync",
+        "description": "Messages and calls logged automatically on each contact."
+      }
+    ],
+    "testimonial": {
+      "quote": "Sample testimonial placeholder showing how a short customer quote is presented.",
+      "author": "Alex Sample",
+      "role": "VP Sales, Example Inc."
+    },
+    "cta": {
+      "headline": "See Salesmessage in action",
+      "text": "Book a 20-minute walkthrough tailored to your team.",
+      "button_label": "Book a demo",
+      "url": "salesmessage.com/demo"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{{#with content.cta}}
+<section class="cta">
+  <div>
+    <h2>{{headline}}</h2>
+    {{#if text}}<p>{{text}}</p>{{/if}}
+  </div>
+  <div>
+    <a class="button" href="{{url}}">{{button_label}}</a>
+    {{#if url}}<span class="url">{{bareUrl url}}</span>{{/if}}
+  </div>
+</section>
+{{/with}}

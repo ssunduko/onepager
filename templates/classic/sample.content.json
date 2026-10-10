@@ -1,0 +1,75 @@
+{
+  "template": "classic",
+  "sample": true,
+  "content": {
+    "eyebrow": "Sample content",
+    "title": "Text and call customers from one inbox",
+    "subtitle": "Placeholder copy used to preview the Classic layout without calling the API.",
+    "intro": "This sample shows how a source document is condensed into a scannable page: a clear promise up top, a few focused sections, and a single next step.",
+    "pages": [
+      {
+        "sections": [
+          {
+            "heading": "Shared team inboxes",
+            "body": "Route every conversation to the right person and keep context in one thread.",
+            "bullets": [
+              "Assign conversations in one click",
+              "Internal notes and mentions",
+              "Business-hours auto replies"
+            ],
+            "rows": []
+          },
+          {
+            "heading": "Campaigns that convert",
+            "body": "Send personalized broadcasts and follow-ups that feel one-to-one.",
+            "bullets": [
+              "Segments and merge fields",
+              "Scheduled and recurring sends"
+            ],
+            "rows": []
+          },
+          {
+            "heading": "Built into your CRM",
+            "body": "Sync contacts and activity with the tools your team already uses.",
+            "bullets": [],
+            "rows": [
+              {
+                "label": "HubSpot",
+                "value": "Two-way contact sync with activity logged on the timeline."
+              },
+              {
+                "label": "Salesforce",
+                "value": "Contacts and conversations linked to records."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "sections": [
+          {
+            "heading": "Compliance handled",
+            "body": "Opt-out handling and registration support keep every message deliverable.",
+            "bullets": [
+              "Automatic STOP handling",
+              "Guided 10DLC registration"
+            ],
+            "rows": []
+          },
+          {
+            "heading": "Getting started",
+            "body": "Placeholder second-page section showing numbering continuing across pages.",
+            "bullets": [],
+            "rows": []
+          }
+        ]
+      }
+    ],
+    "cta": {
+      "headline": "See Salesmessage in action",
+      "text": "Book a 20-minute walkthrough tailored to your team.",
+      "button_label": "Book a demo",
+      "url": "salesmessage.com/demo"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+C4Component
+  title Component: Claude Code assets (.claude/, CLAUDE.md)
+
+  Person(author, "Content author")
+  Person(designer, "Template designer")
+  System_Ext(figma, "Figma MCP server", "Design files")
+  Container_Ext(cli, "Generator CLI", "npm run render / validate / templates")
+  ContainerDb_Ext(stores, "Templates, brand, examples, output", "Files")
+
+  Container_Boundary(cc, "Claude Code assets") {
+    Component(memory, "CLAUDE.md", "Project memory", "Project rules")
+    Component(designerAgent, "onepager-designer", "Subagent", "PDF to document")
+    Component(templateAgent, "template-author", "Subagent", "New layouts")
+    Component(reviewerAgent, "brand-reviewer", "Subagent, read-only", "QA review")
+    Component(skOnepager, "onepager", "Skill", "Write and fit")
+    Component(skTemplate, "new-layout-template", "Skill", "Scaffold layout")
+    Component(skBrand, "brand-check", "Skill", "Brand checklist")
+    Component(skFigma, "import-figma-example", "Skill + find-frames.mjs", "Figma to examples/")
+    Component(settings, "settings.json", "Permissions", "Allowed commands")
+  }
+
+  Rel(author, designerAgent, "Asks for a document")
+  Rel(designer, templateAgent, "Asks for a layout")
+  Rel(designerAgent, skOnepager, "Follows")
+  Rel(designerAgent, skBrand, "Finishes with")
+  Rel(designerAgent, skFigma, "Runs when examples/ is empty")
+  Rel(templateAgent, skTemplate, "Follows")
+  Rel(reviewerAgent, skBrand, "Applies")
+  Rel(skFigma, figma, "get_metadata, get_screenshot, get_design_context", "MCP")
+  Rel(skOnepager, cli, "Validates and renders")
+  Rel(skOnepager, stores, "Reads sidecars, writes content")
+  Rel(skTemplate, stores, "Writes templates/<id>/")
+
+  UpdateLayoutConfig($c4ShapeInRow="4", $c4BoundaryInRow="1")

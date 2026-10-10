@@ -1,0 +1,105 @@
+{
+  "id": "two-column",
+  "name": "Two-Column Brief",
+  "version": "2.0.0",
+  "description": "One to three pages, each with a main column of sections on the left and a tinted sidebar on the right (key facts, a callout, an optional quote). Page 1 opens with the logo, eyebrow, headline and summary; later pages get a slim running header. Every page has a footer with the website, support email and page number. An optional call to action closes the last page.",
+  "bestFor": "Dense material that needs room: solution and integration briefs, onboarding and how-to guides, partner sheets, technical or pricing summaries with many concrete facts. Grows to extra pages instead of cutting important content.",
+  "entry": "template.hbs",
+  "styles": ["styles.css"],
+  "page": { "format": "Letter", "landscape": false, "maxPages": 3 },
+  "guidance": [
+    "Use as few pages as the content honestly needs. Add a page rather than cutting facts a reader would miss, but never pad.",
+    "Each page holds about 280-380 words in total. Every page except the last should be nearly full; the last page should be at least half full (render reports free space at the bottom per page).",
+    "Title: 4-9 words. Summary: 2 sentences, at most 45 words. Eyebrow: 1-4 words.",
+    "Main column per page: 2-4 sections. Heading 2-6 words; body at most 60 words; 0-5 bullets of at most 14 words; rows (label/value pairs, rendered as a striped table) 0-6, label at most 5 words, value at most 14 words. Use rows for stages, steps, limits and settings; use bullets for simple lists.",
+    "Sidebar per page: heading plus 3-6 facts (label 1-4 words, value a number, name or at most 8 words), and/or a callout (title at most 7 words, text at most 40 words). Quote only if verbatim in the source; otherwise leave quote, author and role empty. Leave sidebar parts empty rather than inventing them.",
+    "Keep related material together: a section never continues across pages, so move a whole section to the next page instead.",
+    "CTA: for sales material, a demo or contact CTA. For customer guides, point to help or support from the source, or leave headline empty to hide the CTA."
+  ],
+  "contentSchema": {
+    "type": "object",
+    "properties": {
+      "eyebrow": { "type": "string", "description": "1-4 word label, e.g. \"Integration guide\", or empty." },
+      "title": { "type": "string", "description": "Main headline, 4-9 words." },
+      "summary": { "type": "string", "description": "2 sentences, at most 45 words." },
+      "pages": {
+        "type": "array",
+        "description": "1-3 pages in reading order; each page is one printed sheet.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "sections": {
+              "type": "array",
+              "description": "2-4 main-column sections on this page.",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "heading": { "type": "string", "description": "2-6 words." },
+                  "body": { "type": "string", "description": "At most 60 words, or empty." },
+                  "bullets": { "type": "array", "description": "0-5 bullets, each at most 14 words.", "items": { "type": "string" } },
+                  "rows": {
+                    "type": "array",
+                    "description": "0-6 label/value rows shown as a striped table.",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "label": { "type": "string", "description": "At most 5 words." },
+                        "value": { "type": "string", "description": "At most 14 words." }
+                      },
+                      "required": ["label", "value"],
+                      "additionalProperties": false
+                    }
+                  }
+                },
+                "required": ["heading", "body", "bullets", "rows"],
+                "additionalProperties": false
+              }
+            },
+            "sidebar": {
+              "type": "object",
+              "properties": {
+                "heading": { "type": "string", "description": "e.g. \"At a glance\", or empty." },
+                "facts": {
+                  "type": "array",
+                  "description": "0-6 key facts.",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "label": { "type": "string", "description": "1-4 words." },
+                      "value": { "type": "string", "description": "A number, name or at most 8 words." }
+                    },
+                    "required": ["label", "value"],
+                    "additionalProperties": false
+                  }
+                },
+                "callout_title": { "type": "string", "description": "At most 7 words, or empty." },
+                "callout_text": { "type": "string", "description": "At most 40 words, or empty." },
+                "quote": { "type": "string", "description": "Verbatim quote from the source, at most 35 words, or empty." },
+                "quote_author": { "type": "string", "description": "Name, or empty." },
+                "quote_role": { "type": "string", "description": "Title and company, or empty." }
+              },
+              "required": ["heading", "facts", "callout_title", "callout_text", "quote", "quote_author", "quote_role"],
+              "additionalProperties": false
+            }
+          },
+          "required": ["sections", "sidebar"],
+          "additionalProperties": false
+        }
+      },
+      "cta": {
+        "type": "object",
+        "description": "Closes the last page. Empty headline hides it.",
+        "properties": {
+          "headline": { "type": "string", "description": "At most 8 words, or empty to hide the CTA." },
+          "text": { "type": "string", "description": "At most 18 words, or empty." },
+          "button_label": { "type": "string", "description": "2-4 words." },
+          "url": { "type": "string", "description": "Link from the source document, or the brand website." }
+        },
+        "required": ["headline", "text", "button_label", "url"],
+        "additionalProperties": false
+      }
+    },
+    "required": ["eyebrow", "title", "summary", "pages", "cta"],
+    "additionalProperties": false
+  }
+}

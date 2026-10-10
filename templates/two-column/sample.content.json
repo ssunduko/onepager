@@ -1,0 +1,50 @@
+{
+  "template": "two-column",
+  "sample": true,
+  "content": {
+    "eyebrow": "Sample brief",
+    "title": "A faster path from lead to conversation",
+    "summary": "Placeholder copy for previewing the Two-Column layout across two pages. Each page has its own main column and sidebar.",
+    "pages": [
+      {
+        "sections": [
+          { "heading": "The challenge", "body": "Leads go cold when follow-up waits on email and voicemail. Teams need a channel customers actually answer, with the context reps need to reply well.", "bullets": [], "rows": [] },
+          { "heading": "How it works", "body": "Inbound leads trigger an instant text, replies land in a shared inbox, and reps pick up the conversation with full history.", "bullets": ["Instant first touch on every new lead", "Round-robin assignment across the team", "Full history logged to the CRM"], "rows": [] },
+          { "heading": "Rollout in four stages", "body": "", "bullets": [], "rows": [
+            { "label": "1. Kickoff", "value": "Agree goals, owners and a launch date." },
+            { "label": "2. Registration", "value": "Carriers approve your brand and campaign." },
+            { "label": "3. Setup", "value": "Numbers, users and integrations go live." },
+            { "label": "4. Launch", "value": "Training, first sends and a two-week check-in." }
+          ] }
+        ],
+        "sidebar": {
+          "heading": "At a glance",
+          "facts": [ { "label": "Setup time", "value": "Under a day" }, { "label": "Channels", "value": "SMS, MMS, voice" }, { "label": "Integrations", "value": "HubSpot, Salesforce" }, { "label": "Support", "value": "Live chat and email" } ],
+          "callout_title": "Registration comes first",
+          "callout_text": "Placeholder callout showing a key caveat with the blue bar from the Figma design.",
+          "quote": "", "quote_author": "", "quote_role": ""
+        }
+      },
+      {
+        "sections": [
+          { "heading": "Limits to plan around", "body": "Placeholder rows showing a second-page table.", "bullets": [], "rows": [
+            { "label": "One account", "value": "Each organization connects to one CRM account." },
+            { "label": "One-way properties", "value": "Custom properties flow from Salesmessage to the CRM." },
+            { "label": "Credits", "value": "Automated sends use the same credit balance." }
+          ] },
+          { "heading": "Getting started", "body": "Connect your CRM, register your number and launch your first workflow in an afternoon.", "bullets": [], "rows": [] }
+        ],
+        "sidebar": {
+          "heading": "",
+          "facts": [],
+          "callout_title": "",
+          "callout_text": "",
+          "quote": "Sample quote placeholder that shows how a verbatim customer quote sits in the sidebar.",
+          "quote_author": "Jordan Example",
+          "quote_role": "Sales Lead, Sample Co."
+        }
+      }
+    ],
+    "cta": { "headline": "See Salesmessage in action", "text": "Book a 20-minute walkthrough tailored to your team.", "button_label": "Book a demo", "url": "salesmessage.com/demo" }
+  }
+}

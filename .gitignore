@@ -1,0 +1,34 @@
+node_modules/
+.env
+.idea/workspace.xml
+.idea/shelf/
+.claude/settings.local.json
+
+# Source PDFs stay local; upload them into Claude Code web sessions instead.
+input/
+
+# Generated documents: only the PDF and its .content.json sidecar inside a per-document folder
+# are tracked (web sessions hand results back by committing them). Everything else in output/
+# (debug HTML, template previews, anything dropped there by hand) stays local.
+output/**
+!output/*/
+!output/*/*.pdf
+!output/*/*.content.json
+output/_samples/
+
+# Brand: only what rendering needs (Inter web fonts + license, 4 logos, brand.json, StyleGuide.txt).
+brand/music/
+brand/sfx/
+brand/fonts/*
+!brand/fonts/LICENSE.txt
+!brand/fonts/web/
+brand/fonts/web/*
+!brand/fonts/web/Inter-Regular.woff2
+!brand/fonts/web/Inter-Medium.woff2
+!brand/fonts/web/Inter-SemiBold.woff2
+!brand/fonts/web/Inter-Bold.woff2
+brand/logo/*
+!brand/logo/salesmsg-logo-blue.png
+!brand/logo/salesmsg-logo-white.png
+!brand/logo/salesmsg-icon-blue.png
+!brand/logo/salesmsg-icon-white.png

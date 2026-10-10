@@ -1,0 +1,35 @@
+C4Component
+  title Component: Generator CLI (src/)
+
+  Person(author, "Content author")
+  System_Ext(claudeApi, "Claude API", "Messages API")
+  Container_Ext(chrome, "Headless Chrome", "Puppeteer")
+  ContainerDb_Ext(stores, "Templates, brand, examples", "JSON sidecars + assets")
+  ContainerDb_Ext(io, "Input / output", "PDF, HTML, .content.json")
+
+  Container_Boundary(cliBoundary, "Generator CLI") {
+    Component(cli, "cli.js", "node:util parseArgs", "Commands")
+    Component(pipeline, "pipeline.js", "Orchestrator", "generate / render flows")
+    Component(loaders, "Sidecar loaders", "templates.js, brand.js, examples.js", "Read JSON sidecars")
+    Component(validate, "validate.js", "Ajv", "contentSchema check")
+    Component(agent, "OnePagerAgent", "@anthropic-ai/sdk", "Write, render, revise loop")
+    Component(html, "html.js", "Handlebars", "Template to HTML")
+    Component(pdf, "pdf.js", "PdfRenderer", "Fit measure, PDF")
+    Component(fit, "fit.js", "describeFit()", "Fit summary")
+  }
+
+  Rel(author, cli, "Runs")
+  Rel(cli, pipeline, "Calls")
+  Rel(cli, validate, "Validates before render")
+  Rel(pipeline, loaders, "Loads sidecars")
+  Rel(loaders, stores, "Reads")
+  Rel(pipeline, agent, "Select template, write content")
+  Rel(agent, claudeApi, "Streams, structured outputs, fallbacks", "HTTPS")
+  Rel(pipeline, html, "Renders HTML")
+  Rel(pipeline, pdf, "Renders PDF, gets fit")
+  Rel(pdf, chrome, "Drives", "CDP")
+  Rel(agent, fit, "Overflow feedback")
+  Rel(cli, fit, "Prints fit line")
+  Rel(pipeline, io, "Reads source, writes outputs")
+
+  UpdateLayoutConfig($c4ShapeInRow="4", $c4BoundaryInRow="1")

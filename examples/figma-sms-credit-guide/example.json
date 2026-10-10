@@ -1,0 +1,20 @@
+{
+  "title": "SMS Credit Calculation Guide (customer guide, A4, 5 pages)",
+  "template": "customer-guide",
+  "source": {
+    "type": "figma",
+    "url": "https://www.figma.com/design/J12oSQR4pnHEixxXlXhvLC/Marketing-Working-File?node-id=2811-6260",
+    "fileKey": "J12oSQR4pnHEixxXlXhvLC",
+    "documentNodeId": "2811:6043",
+    "pageNodeIds": ["2811:6044", "2811:6101", "2811:6185", "2811:6245", "2811:6316"],
+    "importedAt": "2026-10-08"
+  },
+  "notes": "The house style for Salesmessage customer-facing guides; every page is a self-contained one-pager. Imitate the structure, density and voice, never the facts.\n\nStructure on every page: a header with the logo on the left and 'CUSTOMER GUIDE' over a date on the right; a light-blue gradient hero band with an eyebrow ('04 / SMS CREDIT CALCULATION'), a 2-line bold headline of 4-6 words, and a one-sentence subtitle; then 2-3 content blocks; and a footer rule with the website, support email and page number. There is no sales CTA button: these are help documents, not ads.\n\nContent blocks used: a highlight banner ('1 SMS segment = 1 credit'); a callout with a blue left bar for one key caveat; definition rows (term / explanation, optionally zebra-striped); a two-column comparison of stat cards (blue tint vs green tint for the contrasting case); a 2x3 grid of example cards (title, small detail line, blue value); a three-column rate table with uppercase blue column headers and a blue bold value column; a label/value table with striped rows; FAQ (bold question, one-sentence answer); and paragraphs whose sentences start with a bold lead-in ('Keep it short. ...').\n\nVoice: plain, practical, second person ('your balance'). Short headings that state the takeaway ('Make every credit count', 'Check before you send'). Numbers are shown as values ('2 credits', '1 / minute'), not buried in prose. About 180-260 words per page, with lots of white space.\n\nDesign tokens (A4 at 1191px wide, so 1px = 0.5pt): Inter for everything, bold for headings; H1 28pt, H2 15pt, body about 9.3pt; heading ink #171c28, body #525d6e, accent #24a5df; card tint #eaf6fd, zebra row #f4f8fb, green card tint #e8f6ec, rule #dce8f0, hero gradient #ebfaff to #cfeeff; 36pt side margins and 10pt card radius.",
+  "files": [
+    "page-01-how-credits-work.png",
+    "page-02-activity-rates.png",
+    "page-03-calling-rates-balance.png",
+    "page-04-worked-examples-tips.png",
+    "page-05-unicode-quick-answers.png"
+  ]
+}

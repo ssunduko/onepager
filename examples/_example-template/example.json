@@ -1,0 +1,7 @@
+{
+  "$comment": "Copy this folder to examples/<your-example-id>/ (no leading underscore), drop the finished one-pager next to it and list it in files. Folders starting with _ are ignored.",
+  "title": "Q3 customer story: Acme Dental",
+  "template": "stats-highlight",
+  "notes": "Why this is a good reference: leads with three hard numbers, keeps every paragraph under 40 words, uses one testimonial and a single CTA.",
+  "files": ["onepager.pdf"]
+}

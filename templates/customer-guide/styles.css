@@ -1,0 +1,134 @@
+/* Customer Guide: reproduces the Figma customer-guide design (examples/figma-sms-credit-guide).
+   Figma frames are A4 at 1191px wide, so 1px = 0.5pt. Colors and fonts come from brand tokens, which hold the Figma values. */
+.template-customer-guide {
+  font-family: var(--font-body);
+  font-size: 9.3pt;
+  line-height: 1.2;
+  color: var(--color-muted);
+}
+.template-customer-guide h1,
+.template-customer-guide h2,
+.template-customer-guide h3 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  color: var(--color-ink);
+  letter-spacing: -0.005em;
+}
+
+/* Header */
+.template-customer-guide .guide-header {
+  height: 77pt;
+  padding: 32pt 36pt 0;
+  display: flex; justify-content: space-between; align-items: flex-start;
+}
+.template-customer-guide .guide-header .logo { height: 23.6pt; display: block; }
+.template-customer-guide .guide-label { display: flex; flex-direction: column; gap: 3pt; margin-right: 50pt; margin-top: 3pt; }
+.template-customer-guide .guide-label .label { font-size: 8pt; font-weight: 700; color: var(--color-primary); text-transform: uppercase; }
+.template-customer-guide .guide-label .date { font-size: 7.5pt; color: var(--color-muted); text-transform: uppercase; letter-spacing: 0.02em; }
+
+/* Hero band */
+.template-customer-guide .guide-hero {
+  min-height: 160pt;
+  padding: 17pt 36pt 28pt;
+  background: linear-gradient(180deg, var(--color-heroFrom) 0%, var(--color-heroTo) 100%);
+}
+.template-customer-guide .guide-hero .eyebrow {
+  display: block;
+  font-size: 8pt; font-weight: 700; letter-spacing: 0; text-transform: uppercase;
+  color: var(--color-primary);
+}
+.template-customer-guide .guide-hero h1 {
+  margin-top: 16pt;
+  max-width: 300pt;
+  text-wrap: balance;
+  font-size: 28pt; line-height: 33pt;
+}
+.template-customer-guide .guide-hero .subtitle { margin-top: 12pt; font-size: 10.2pt; line-height: 12.2pt; }
+
+/* Body blocks */
+.template-customer-guide .guide-body { padding: 19pt 36pt 0; }
+.template-customer-guide .block + .block { margin-top: 18pt; }
+.template-customer-guide .block h2 { font-size: 15pt; line-height: 18pt; margin-bottom: 9pt; }
+.template-customer-guide .block .intro { margin: -2pt 0 10pt; font-size: 9.3pt; line-height: 14pt; }
+
+.template-customer-guide .highlight {
+  background: var(--color-surface); border-radius: 12pt; padding: 15pt 18pt 14pt;
+}
+.template-customer-guide .highlight .equation { font-size: 18pt; font-weight: 700; color: var(--color-ink); display: flex; gap: 46pt; }
+.template-customer-guide .highlight .result { color: var(--color-primary); }
+.template-customer-guide .highlight .note { margin-top: 9pt; font-size: 9pt; }
+
+.template-customer-guide .callout {
+  position: relative;
+  background: var(--color-surface); border-radius: 12pt;
+  padding: 14pt 18pt 16pt 17pt;
+}
+.template-customer-guide .callout::before {
+  content: ""; position: absolute; left: 0; top: 9pt; bottom: 9pt;
+  width: 3pt; background: var(--color-primary);
+}
+.template-customer-guide .callout h3 { font-size: 10pt; line-height: 12pt; margin-bottom: 5pt; }
+.template-customer-guide .callout p { font-size: 9pt; line-height: 13.4pt; }
+
+.template-customer-guide .definitions .row { display: grid; grid-template-columns: 157pt 1fr; gap: 10pt; padding: 0 0 9pt; }
+.template-customer-guide .definitions dt { font-weight: 700; font-size: 9.3pt; color: var(--color-ink); }
+.template-customer-guide .definitions dd { font-size: 8.8pt; line-height: 13pt; }
+.template-customer-guide .definitions.striped .row { grid-template-columns: 121pt 1fr; padding: 9pt 10pt; border-radius: 4pt; }
+.template-customer-guide .definitions.striped .row:nth-child(odd) { background: var(--color-surfaceSubtle); }
+
+.template-customer-guide .stat-cards .cards { display: flex; gap: 12pt; }
+.template-customer-guide .stat-cards .card { flex: 1; border-radius: 12pt; padding: 14pt 14pt 13pt; background: var(--color-surface); }
+.template-customer-guide .stat-cards .card.tone-green { background: var(--color-surfaceGreen); }
+.template-customer-guide .stat-cards .label { font-size: 9pt; font-weight: 700; color: var(--color-ink); margin-bottom: 8pt; }
+.template-customer-guide .stat-cards .value { font-size: 12pt; line-height: 15pt; font-weight: 700; color: var(--color-primary); }
+.template-customer-guide .stat-cards .value.big { font-size: 30pt; line-height: 33pt; }
+.template-customer-guide .stat-cards .caption { margin-top: 8pt; font-size: 9pt; line-height: 12pt; }
+.template-customer-guide .stat-cards .label + .value + .caption { color: var(--color-ink); }
+.template-customer-guide .stat-cards .note { margin-top: 10pt; font-size: 8.5pt; }
+.template-customer-guide .stat-cards .footnote { margin-top: 12pt; font-size: 9pt; line-height: 13pt; }
+
+.template-customer-guide .example-cards .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10pt 26pt; }
+.template-customer-guide .example-cards .card { background: var(--color-surface); border-radius: 10pt; padding: 9pt 12pt 8pt; }
+.template-customer-guide .example-cards .title { font-size: 9pt; font-weight: 700; color: var(--color-ink); }
+.template-customer-guide .example-cards .detail { margin-top: 6pt; font-size: 8.2pt; }
+.template-customer-guide .example-cards .value { margin-top: 5pt; font-size: 12pt; font-weight: 700; color: var(--color-primary); }
+
+.template-customer-guide .table .thead,
+.template-customer-guide .table .tr { display: grid; grid-template-columns: 63% 37% 0; align-items: start; padding: 0 10pt; }
+.template-customer-guide .table.has-note .thead,
+.template-customer-guide .table.has-note .tr { grid-template-columns: 29% 21% 50%; }
+.template-customer-guide .table .thead { padding-bottom: 9pt; font-size: 8pt; font-weight: 700; text-transform: uppercase; color: var(--color-primary); }
+.template-customer-guide .table .tr { padding-top: 7pt; padding-bottom: 7pt; border-radius: 4pt; font-size: 8.7pt; }
+.template-customer-guide .table .tr:nth-of-type(odd) { background: var(--color-surfaceSubtle); }
+.template-customer-guide .table .tr .label { color: var(--color-ink); }
+.template-customer-guide .table.has-note .tr .label { font-weight: 700; }
+.template-customer-guide .table .tr .value { font-weight: 700; color: var(--color-primary); }
+.template-customer-guide .table .tr .note { font-size: 8.2pt; line-height: 11.5pt; }
+.template-customer-guide .table:not(.has-note) .note { display: none; }
+
+.template-customer-guide .faq .qa + .qa { margin-top: 11pt; }
+.template-customer-guide .faq h3 { font-size: 9.5pt; line-height: 11.5pt; margin-bottom: 5pt; }
+.template-customer-guide .faq p { font-size: 9pt; line-height: 13pt; }
+
+.template-customer-guide .text p { font-size: 9.3pt; line-height: 13.6pt; }
+.template-customer-guide .text p + p { margin-top: 8pt; }
+.template-customer-guide .text strong { color: var(--color-ink); font-weight: 700; }
+
+/* Footer */
+.template-customer-guide .guide-footer {
+  margin: 0 36pt; padding: 13pt 0 30pt;
+  border-top: 1pt solid var(--color-border);
+  display: grid; grid-template-columns: 179pt 1fr auto;
+  font-size: 8pt; color: var(--color-muted);
+}
+.template-customer-guide .page-number { font-weight: 700; color: var(--color-primary); margin-right: 13pt; }
+
+/* Spread any leftover space evenly around the blocks instead of leaving one empty
+   band above the footer. The renderer measures fit with .fit-measure on <html>,
+   which turns this off so free-space reporting stays honest. */
+:root:not(.fit-measure) .template-customer-guide .page > .spacer { flex: 0 0 0; }
+:root:not(.fit-measure) .template-customer-guide .page > .guide-body {
+  flex: 1 1 auto;
+  display: flex; flex-direction: column; justify-content: space-evenly;
+}
+:root:not(.fit-measure) .template-customer-guide .page > .guide-body > .block + .block { margin-top: 0; }

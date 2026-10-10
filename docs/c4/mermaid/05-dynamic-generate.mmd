@@ -1,0 +1,27 @@
+C4Dynamic
+  title Dynamic: npm run generate (write, render, fit, revise)
+
+  Person(author, "Content author")
+  System_Ext(claudeApi, "Claude API", "Messages API")
+  Container_Ext(chrome, "Headless Chrome", "Puppeteer")
+  ContainerDb_Ext(io, "output/", "Files")
+
+  Container_Boundary(cliBoundary, "Generator CLI") {
+    Component(cli, "cli.js", "Entry point")
+    Component(pipeline, "pipeline.js", "Orchestrator")
+    Component(loaders, "Sidecar loaders", "templates, brand, examples")
+    Component(agent, "OnePagerAgent", "@anthropic-ai/sdk")
+    Component(render, "html.js + pdf.js", "Handlebars + PdfRenderer")
+  }
+
+  Rel(author, cli, "1. generate source.pdf --template auto")
+  Rel(cli, pipeline, "2. generateOnePager()")
+  Rel(pipeline, loaders, "3. Load brand.json, example.json, template.json")
+  Rel(pipeline, agent, "4. selectTemplate()")
+  Rel(agent, claudeApi, "5. Pick a layout (effort low, enum schema)")
+  Rel(pipeline, agent, "6. writeContent()")
+  Rel(agent, claudeApi, "7. Brand + examples (cached) + PDF + sidecar, structured output")
+  Rel(agent, render, "8. evaluate(content): HTML, then PDF")
+  Rel(render, chrome, "9. Measure each page with .fit-measure, print PDF")
+  Rel(agent, claudeApi, "10. On overflow: describeFit() feedback, revise (up to 3 attempts)")
+  Rel(pipeline, io, "11. Write .pdf, .html and .content.json sidecar")

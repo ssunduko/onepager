@@ -1,0 +1,38 @@
+@startuml 03-component-generator
+!include <C4/C4_Component>
+title Component: Generator CLI (src/)
+LAYOUT_TOP_DOWN()
+
+Person(author, "Content author")
+System_Ext(claudeApi, "Claude API", "Messages API")
+Container_Ext(chrome, "Headless Chrome", "Puppeteer")
+ContainerDb_Ext(stores, "Templates, brand, examples", "JSON sidecars + assets")
+ContainerDb_Ext(io, "Input / output", "PDF, HTML, .content.json")
+
+Container_Boundary(cliBoundary, "Generator CLI") {
+  Component(cli, "cli.js", "node:util parseArgs", "generate, render, validate, templates")
+  Component(pipeline, "pipeline.js", "Orchestrator", "generateOnePager(), renderFromContent(); writes the .content.json sidecar")
+  Component(loaders, "Sidecar loaders", "templates.js, brand.js, examples.js", "Discover and validate template.json, brand.json, example.json")
+  Component(validate, "validate.js", "Ajv", "Checks content against the template contentSchema")
+  Component(agent, "OnePagerAgent", "@anthropic-ai/sdk", "selectTemplate(); writeContent() with render-and-revise fit loop")
+  Component(html, "html.js", "Handlebars", "Template + shared partials + brand CSS tokens to HTML")
+  Component(pdf, "pdf.js", "PdfRenderer", "Per-page overflow and free space via .fit-measure, then PDF")
+  Component(fit, "fit.js", "describeFit()", "Human- and agent-readable fit summary")
+}
+
+Rel(author, cli, "Runs")
+Rel(cli, pipeline, "Calls")
+Rel(cli, validate, "Validates before render")
+Rel(pipeline, loaders, "Loads sidecars")
+Rel(loaders, stores, "Reads")
+Rel(pipeline, agent, "Select template, write content")
+Rel(agent, claudeApi, "Streams; structured outputs; fallbacks", "HTTPS")
+Rel(pipeline, html, "Renders HTML")
+Rel(pipeline, pdf, "Renders PDF, gets fit")
+Rel(pdf, chrome, "Drives", "CDP")
+Rel(agent, fit, "Overflow feedback")
+Rel(cli, fit, "Prints fit line")
+Rel(pipeline, io, "Reads source, writes outputs")
+
+SHOW_LEGEND()
+@enduml

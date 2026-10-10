@@ -1,0 +1,6 @@
+# Normalise text files; shell scripts must keep LF so bash runs them on any OS.
+* text=auto
+*.sh text eol=lf
+*.pdf binary
+*.png binary
+*.woff2 binary

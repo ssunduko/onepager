@@ -1,0 +1,39 @@
+<main class="page{{#unless content.testimonial.quote}} no-testimonial{{/unless}}">
+  <div class="hero">
+    {{> brandHeader reversed=true}}
+    <div class="hero-copy">
+      <h1>{{content.title}}</h1>
+      {{#if content.subtitle}}<p>{{content.subtitle}}</p>{{/if}}
+    </div>
+  </div>
+
+  <div class="stats">
+    {{#each content.stats}}
+    <div class="stat"><span class="value">{{value}}</span><span class="label">{{label}}</span></div>
+    {{/each}}
+  </div>
+
+  <div class="cards">
+    {{#with content.problem}}<section class="card problem"><span class="eyebrow">The challenge</span><h2>{{heading}}</h2><p>{{body}}</p></section>{{/with}}
+    {{#with content.solution}}<section class="card solution"><span class="eyebrow">The solution</span><h2>{{heading}}</h2><p>{{body}}</p></section>{{/with}}
+  </div>
+
+  {{#if (hasItems content.features)}}
+  <div class="features">
+    {{#each content.features}}
+    <div class="feature"><h3>{{name}}</h3><p>{{description}}</p></div>
+    {{/each}}
+  </div>
+  {{/if}}
+
+  {{#with content.testimonial}}{{#if quote}}
+  <figure class="testimonial">
+    <blockquote>“{{quote}}”</blockquote>
+    {{#if author}}<figcaption><strong>{{author}}</strong>{{#if role}} · {{role}}{{/if}}</figcaption>{{/if}}
+  </figure>
+  {{/if}}{{/with}}
+
+  <div class="spacer"></div>
+  {{> cta}}
+  {{> brandFooter}}
+</main>

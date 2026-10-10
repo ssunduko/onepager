@@ -1,0 +1,21 @@
+C4Context
+  title System Context: Onepager (branded PDF generator)
+
+  Person(author, "Content author", "Marketing or customer-success person who turns source PDFs into branded documents.")
+  Person(designer, "Template designer", "Adds and tunes layout templates and brand assets.")
+  Person(reader, "Customer / prospect", "Reads the finished PDF.")
+
+  System(onepager, "Onepager", "Turns a source PDF into an on-brand PDF (1-5 pages) using pluggable layout templates described by JSON sidecars.")
+
+  System_Ext(claudeApi, "Claude API", "Anthropic Messages API. Writes schema-constrained content (claude-opus-5).")
+  System_Ext(claudeCode, "Claude Code", "Agent harness that runs the onepager-designer, template-author and brand-reviewer agents.")
+  System_Ext(figma, "Figma", "Marketing design files, reached through the Figma MCP server.")
+
+  Rel(author, onepager, "Generates documents with", "CLI / Claude Code")
+  Rel(designer, onepager, "Adds templates, brand and examples to")
+  Rel(onepager, reader, "Produces PDFs for")
+  Rel(onepager, claudeApi, "Selects template, writes content", "HTTPS, structured outputs")
+  Rel(claudeCode, onepager, "Reads sidecars, writes content, runs render", "Files, npm scripts")
+  Rel(claudeCode, figma, "Imports reference designs", "Figma MCP")
+
+  UpdateLayoutConfig($c4ShapeInRow="3", $c4BoundaryInRow="1")

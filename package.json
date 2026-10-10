@@ -1,0 +1,27 @@
+{
+  "name": "onepager",
+  "version": "1.0.0",
+  "description": "Claude agent that turns a source PDF into an on-brand one-pager PDF using pluggable layout templates (sidecar pattern).",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "onepager": "src/cli.js"
+  },
+  "scripts": {
+    "generate": "node src/cli.js generate",
+    "render": "node src/cli.js render",
+    "templates": "node src/cli.js templates",
+    "validate": "node src/cli.js validate",
+    "check:chrome": "node scripts/check-chrome.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "private": true,
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.132.1",
+    "ajv": "^8.20.0",
+    "handlebars": "^4.7.10",
+    "puppeteer": "^25.13.0"
+  }
+}

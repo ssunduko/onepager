@@ -1,0 +1,64 @@
+{
+  "$comment": "Machine-readable sidecar for the Salesmessage brand; mirrors StyleGuide.txt. Colors are the Figma design-system values (examples/figma-sms-credit-guide), except cta, which Figma does not define.",
+  "name": "Salesmessage",
+  "website": "https://www.salesmessage.com",
+  "supportEmail": "support@salesmessage.com",
+  "colors": {
+    "primary": "#24a5df",
+    "cta": "#13cb6e",
+    "ink": "#171c28",
+    "muted": "#525d6e",
+    "surface": "#eaf6fd",
+    "surfaceSubtle": "#f4f8fb",
+    "surfaceGreen": "#e8f6ec",
+    "border": "#dce8f0",
+    "white": "#ffffff",
+    "heroFrom": "#ebfaff",
+    "heroTo": "#cfeeff"
+  },
+  "fonts": {
+    "headline": {
+      "family": "Inter",
+      "weight": 700,
+      "faces": []
+    },
+    "body": {
+      "family": "Inter",
+      "faces": [
+        {
+          "weight": 400,
+          "file": "fonts/web/Inter-Regular.woff2"
+        },
+        {
+          "weight": 500,
+          "file": "fonts/web/Inter-Medium.woff2"
+        },
+        {
+          "weight": 600,
+          "file": "fonts/web/Inter-SemiBold.woff2"
+        },
+        {
+          "weight": 700,
+          "file": "fonts/web/Inter-Bold.woff2"
+        }
+      ]
+    }
+  },
+  "logos": {
+    "primary": "logo/salesmsg-logo-blue.png",
+    "reversed": "logo/salesmsg-logo-white.png",
+    "icon": "logo/salesmsg-icon-blue.png",
+    "iconReversed": "logo/salesmsg-icon-white.png"
+  },
+  "voice": [
+    "Clear, confident and friendly; written for busy sales and support teams.",
+    "Lead with the customer outcome, then the feature that delivers it.",
+    "Short sentences, active voice, no jargon; numbers beat adjectives.",
+    "Refer to the company as \"Salesmessage\"."
+  ],
+  "rules": [
+    "Headlines use Inter Bold in ink #171c28; body copy uses Inter Regular in muted #525d6e.",
+    "Salesmsg Blue #24a5df is the accent; reserve Green #13cb6e for a single call-to-action button.",
+    "Light-blue gradient hero bands, soft #eaf6fd panels and generous white space, as in the Figma customer guide."
+  ]
+}

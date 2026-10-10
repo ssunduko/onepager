@@ -1,0 +1,69 @@
+{{#each content.pages}}
+<main class="page{{#if @first}} first{{/if}}">
+  {{#if @first}}
+  {{> brandHeader @root}}
+  <div class="headline-band">
+    <h1>{{@root.content.title}}</h1>
+    {{#if @root.content.summary}}<p class="lede">{{@root.content.summary}}</p>{{/if}}
+  </div>
+  {{else}}
+  <header class="running-header">
+    <img src="{{@root.logos.primary}}" alt="{{@root.brand.name}}">
+    <span>{{@root.content.title}}</span>
+  </header>
+  {{/if}}
+
+  <div class="columns">
+    <div class="main">
+      {{#each sections}}
+      <section>
+        <h2>{{heading}}</h2>
+        {{#if body}}<p>{{body}}</p>{{/if}}
+        {{> bulletList bullets}}
+        {{#if (hasItems rows)}}
+        <dl class="rows">
+          {{#each rows}}<div class="row"><dt>{{label}}</dt><dd>{{value}}</dd></div>{{/each}}
+        </dl>
+        {{/if}}
+      </section>
+      {{/each}}
+    </div>
+
+    {{#with sidebar}}
+    <aside class="sidebar">
+      {{#if (hasItems facts)}}
+      <div class="facts">
+        {{#if heading}}<h3>{{heading}}</h3>{{/if}}
+        <dl>
+          {{#each facts}}
+          <div class="fact"><dt>{{label}}</dt><dd>{{value}}</dd></div>
+          {{/each}}
+        </dl>
+      </div>
+      {{else}}{{#if heading}}<h3 class="sidebar-heading">{{heading}}</h3>{{/if}}
+      {{/if}}
+      {{#if callout_title}}
+      <div class="callout">
+        <h4>{{callout_title}}</h4>
+        {{#if callout_text}}<p>{{callout_text}}</p>{{/if}}
+      </div>
+      {{/if}}
+      {{#if quote}}
+      <figure class="quote">
+        <blockquote>“{{quote}}”</blockquote>
+        {{#if quote_author}}<figcaption><strong>{{quote_author}}</strong>{{#if quote_role}}<br>{{quote_role}}{{/if}}</figcaption>{{/if}}
+      </figure>
+      {{/if}}
+    </aside>
+    {{/with}}
+  </div>
+
+  <div class="spacer"></div>
+  {{#if @last}}{{#if @root.content.cta.headline}}{{> cta @root}}{{/if}}{{/if}}
+  <footer class="page-footer">
+    <span>{{bareUrl @root.brand.website}}</span>
+    {{#if @root.brand.supportEmail}}<span>{{@root.brand.supportEmail}}</span>{{/if}}
+    <span class="page-number">{{inc @index}} / {{@root.content.pages.length}}</span>
+  </footer>
+</main>
+{{/each}}

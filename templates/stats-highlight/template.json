@@ -1,0 +1,93 @@
+{
+  "id": "stats-highlight",
+  "name": "Stats Highlight",
+  "version": "1.0.0",
+  "description": "Bold blue hero, a row of three headline metrics, problem/solution cards, a feature grid and a customer testimonial.",
+  "bestFor": "Case studies, ROI stories and results-driven sales sheets where the source has concrete numbers.",
+  "entry": "template.hbs",
+  "styles": ["styles.css"],
+  "page": { "format": "Letter", "landscape": false, "maxPages": 1 },
+  "guidance": [
+    "Use only if the source has at least two real metrics; every stat value must appear in the source.",
+    "Title: 4-8 words. Subtitle: at most 22 words.",
+    "Exactly 3 stats. Value is short (e.g. \"3x\", \"42%\", \"10k+\"); label at most 6 words.",
+    "Problem and solution: heading 2-5 words, body at most 40 words each.",
+    "3 or 6 features (multiples of 3 fill the grid); name 2-4 words, description at most 16 words.",
+    "Testimonial only if quoted in the source; otherwise leave all three fields empty."
+  ],
+  "contentSchema": {
+    "type": "object",
+    "properties": {
+      "eyebrow": { "type": "string", "description": "1-4 word label, e.g. \"Customer story\", or empty." },
+      "title": { "type": "string", "description": "Main headline, 4-8 words." },
+      "subtitle": { "type": "string", "description": "At most 22 words." },
+      "stats": {
+        "type": "array",
+        "description": "Exactly 3 metrics taken from the source.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "string", "description": "Short figure, e.g. \"42%\"." },
+            "label": { "type": "string", "description": "At most 6 words." }
+          },
+          "required": ["value", "label"],
+          "additionalProperties": false
+        }
+      },
+      "problem": {
+        "type": "object",
+        "properties": {
+          "heading": { "type": "string", "description": "2-5 words." },
+          "body": { "type": "string", "description": "At most 40 words." }
+        },
+        "required": ["heading", "body"],
+        "additionalProperties": false
+      },
+      "solution": {
+        "type": "object",
+        "properties": {
+          "heading": { "type": "string", "description": "2-5 words." },
+          "body": { "type": "string", "description": "At most 40 words." }
+        },
+        "required": ["heading", "body"],
+        "additionalProperties": false
+      },
+      "features": {
+        "type": "array",
+        "description": "3 or 6 features.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": { "type": "string", "description": "2-4 words." },
+            "description": { "type": "string", "description": "At most 16 words." }
+          },
+          "required": ["name", "description"],
+          "additionalProperties": false
+        }
+      },
+      "testimonial": {
+        "type": "object",
+        "properties": {
+          "quote": { "type": "string", "description": "Verbatim quote, at most 35 words, or empty." },
+          "author": { "type": "string", "description": "Name, or empty." },
+          "role": { "type": "string", "description": "Title and company, or empty." }
+        },
+        "required": ["quote", "author", "role"],
+        "additionalProperties": false
+      },
+      "cta": {
+        "type": "object",
+        "properties": {
+          "headline": { "type": "string", "description": "At most 8 words." },
+          "text": { "type": "string", "description": "At most 18 words, or empty." },
+          "button_label": { "type": "string", "description": "2-4 words." },
+          "url": { "type": "string", "description": "Link from the source document, or the brand website." }
+        },
+        "required": ["headline", "text", "button_label", "url"],
+        "additionalProperties": false
+      }
+    },
+    "required": ["eyebrow", "title", "subtitle", "stats", "problem", "solution", "features", "testimonial", "cta"],
+    "additionalProperties": false
+  }
+}

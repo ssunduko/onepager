@@ -1,0 +1,33 @@
+C4Container
+  title Container: Onepager
+
+  Person(author, "Content author")
+  System_Ext(claudeCode, "Claude Code", "Agent harness")
+  System_Ext(claudeApi, "Claude API", "Messages API")
+  System_Ext(figma, "Figma MCP server", "Design files")
+
+  System_Boundary(onepager, "Onepager") {
+    Container(cli, "Generator CLI", "Node.js ESM", "Agent loop, rendering, fit check")
+    Container(chrome, "Headless Chrome", "Puppeteer", "Layout, fit measure, PDF")
+    Container(ccAssets, "Claude Code assets", "Markdown + JSON", "CLAUDE.md, agents, skills")
+    ContainerDb(templates, "Template library", "templates/", "Sidecars, .hbs, .css")
+    ContainerDb(brand, "Brand kit", "brand/", "brand.json, fonts, logos")
+    ContainerDb(examples, "Examples", "examples/", "example.json, sources.json")
+    ContainerDb(io, "Input / output", "input/, output/", "PDFs, .content.json")
+  }
+
+  Rel(author, cli, "npm run generate / render")
+  Rel(author, claudeCode, "/onepager, agents")
+  Rel(claudeCode, ccAssets, "Loads agents and skills")
+  Rel(claudeCode, cli, "npm run render / validate")
+  Rel(claudeCode, io, "Reads source, writes content")
+  Rel(claudeCode, figma, "Exports page renders", "MCP")
+  Rel(claudeCode, examples, "Writes imported examples")
+  Rel(cli, claudeApi, "Selects template, writes content", "HTTPS")
+  Rel(cli, templates, "Loads sidecars")
+  Rel(cli, brand, "Loads tokens")
+  Rel(cli, examples, "Loads references")
+  Rel(cli, chrome, "Renders, measures fit", "CDP")
+  Rel(cli, io, "Reads PDFs, writes outputs")
+
+  UpdateLayoutConfig($c4ShapeInRow="4", $c4BoundaryInRow="1")

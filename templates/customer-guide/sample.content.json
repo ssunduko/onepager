@@ -1,0 +1,157 @@
+{
+  "template": "customer-guide",
+  "sample": true,
+  "$comment": "Recreates pages 01 and 04 of the Figma reference (examples/figma-sms-credit-guide) for visual comparison.",
+  "content": {
+    "header_label": "Customer guide",
+    "date_label": "September 2026",
+    "eyebrow": "SMS credit calculation",
+    "pages": [
+      {
+        "title": "How Salesmsg credits work",
+        "subtitle": "Understand segments, character limits, and what comes off your balance.",
+        "blocks": [
+          {
+            "type": "highlight",
+            "statement": "1 SMS segment",
+            "result": "= 1 credit",
+            "note": "Inbound messages use credits too."
+          },
+          {
+            "type": "definitions",
+            "heading": "The basics",
+            "intro": "Texting is billed in segments. Most short, plain-text messages fit in one segment. Longer messages and messages using Unicode can need more segments. Calling, voicemail, and AI features have their own rates.",
+            "striped": true,
+            "rows": [
+              {
+                "term": "Character",
+                "definition": "Every letter, number, space, and symbol counts."
+              },
+              {
+                "term": "GSM-7",
+                "definition": "The standard character set for plain text and common punctuation."
+              },
+              {
+                "term": "Unicode (UCS-2)",
+                "definition": "The expanded character set used for emojis and non-Latin scripts."
+              },
+              {
+                "term": "Segment / credit",
+                "definition": "A segment is one billed text unit. One SMS segment costs one credit."
+              }
+            ]
+          },
+          {
+            "type": "stat_cards",
+            "heading": "How a text turns into credits",
+            "intro": "",
+            "cards": [
+              {
+                "label": "GSM-7 · plain text",
+                "value": "160",
+                "caption": "characters = 1 credit",
+                "note": "Longer messages: 153 per segment",
+                "tone": "blue"
+              },
+              {
+                "label": "Unicode · emojis & special characters",
+                "value": "70",
+                "caption": "characters = 1 credit",
+                "note": "Longer messages: 67 per segment",
+                "tone": "green"
+              }
+            ],
+            "footnote": "Long messages use some space for a header that lets the recipient’s phone reassemble the segments into one continuous message."
+          }
+        ]
+      },
+      {
+        "title": "Make every credit count",
+        "subtitle": "Worked examples, simple sending habits, and answers to common questions.",
+        "blocks": [
+          {
+            "type": "example_cards",
+            "heading": "Worked examples",
+            "cards": [
+              {
+                "title": "Three-segment text",
+                "detail": "3 segments × 1 credit",
+                "value": "3 credits"
+              },
+              {
+                "title": "Photo MMS",
+                "detail": "Flat MMS rate",
+                "value": "2 credits"
+              },
+              {
+                "title": "2-minute call + transcript",
+                "detail": "2 call + 2 transcription",
+                "value": "4 credits"
+              },
+              {
+                "title": "Ringless voicemail",
+                "detail": "Flat rate per drop",
+                "value": "2 credits"
+              },
+              {
+                "title": "One-segment AI reply",
+                "detail": "1 SMS + 2 AI",
+                "value": "3 credits"
+              },
+              {
+                "title": "A contact texts you back",
+                "detail": "1 inbound segment",
+                "value": "1 credit"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "heading": "Keep messages to one credit",
+            "paragraphs": [
+              {
+                "lead": "Keep it short.",
+                "text": "Aim comfortably below 160 characters. Link to detail instead of sending several segments. Use simple punctuation and paste as plain text."
+              },
+              {
+                "lead": "Use emojis deliberately:",
+                "text": "they can switch the message to Unicode and lower the single-segment limit to 70. Check the composer’s segment counter on templates and broadcasts before sending."
+              }
+            ]
+          },
+          {
+            "type": "table",
+            "heading": "When you are charged",
+            "columns": {
+              "label": "",
+              "value": "",
+              "note": ""
+            },
+            "rows": [
+              {
+                "label": "Unverified toll-free texts blocked",
+                "value": "No charge",
+                "note": ""
+              },
+              {
+                "label": "Inbound calls from blocked contacts",
+                "value": "No charge",
+                "note": ""
+              },
+              {
+                "label": "Failed RCS attempt",
+                "value": "Charged",
+                "note": ""
+              },
+              {
+                "label": "RCS fails, then falls back to SMS / MMS",
+                "value": "Both messages charged",
+                "note": ""
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

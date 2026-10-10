@@ -1,0 +1,37 @@
+@startuml 04-component-claude-code
+!include <C4/C4_Component>
+title Component: Claude Code assets (.claude/, CLAUDE.md)
+LAYOUT_TOP_DOWN()
+
+Person(author, "Content author")
+Person(designer, "Template designer")
+System_Ext(figma, "Figma MCP server", "Design files")
+Container_Ext(cli, "Generator CLI", "npm run render / validate / templates")
+ContainerDb_Ext(stores, "Templates, brand, examples, output", "Files")
+
+Container_Boundary(cc, "Claude Code assets") {
+  Component(memory, "CLAUDE.md", "Project memory", "Sidecar pattern, page budget, brand rules, commands")
+  Component(designerAgent, "onepager-designer", "Subagent", "Source PDF to branded document, end to end")
+  Component(templateAgent, "template-author", "Subagent", "Designs and verifies new layout templates")
+  Component(reviewerAgent, "brand-reviewer", "Subagent, read-only", "Brand, layout and truthfulness review")
+  Component(skOnepager, "onepager", "Skill", "Read inputs, choose layout, write .content.json, render, fit loop")
+  Component(skTemplate, "new-layout-template", "Skill", "Scaffold template.json, .hbs, .css and sample")
+  Component(skBrand, "brand-check", "Skill", "Checklist: page budget, palette, fonts, copy, facts")
+  Component(skFigma, "import-figma-example", "Skill + find-frames.mjs", "Resolve Figma pages, export PNGs, write example.json")
+  Component(settings, "settings.json", "Permissions", "Allows render/validate and Figma reads; asks before paid generate")
+}
+
+Rel(author, designerAgent, "Asks for a document")
+Rel(designer, templateAgent, "Asks for a layout")
+Rel(designerAgent, skOnepager, "Follows")
+Rel(designerAgent, skBrand, "Finishes with")
+Rel(designerAgent, skFigma, "Runs when examples/ is empty")
+Rel(templateAgent, skTemplate, "Follows")
+Rel(reviewerAgent, skBrand, "Applies")
+Rel(skFigma, figma, "get_metadata, get_screenshot, get_design_context", "MCP")
+Rel(skOnepager, cli, "Validates and renders")
+Rel(skOnepager, stores, "Reads sidecars, writes content")
+Rel(skTemplate, stores, "Writes templates/<id>/")
+
+SHOW_LEGEND()
+@enduml

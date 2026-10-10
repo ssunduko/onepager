@@ -1,0 +1,55 @@
+.template-stats-highlight .hero {
+  --header-eyebrow: color-mix(in srgb, var(--color-white) 85%, transparent);
+  background: linear-gradient(135deg, var(--color-primary) 0%, color-mix(in srgb, var(--color-primary) 80%, var(--color-ink)) 100%);
+  color: var(--color-white);
+  padding-bottom: 48pt;
+}
+.template-stats-highlight .hero-copy { padding: 22pt 0.6in 0; max-width: 6.6in; }
+.template-stats-highlight .hero h1 { color: var(--color-white); }
+.template-stats-highlight .hero p { margin-top: 8pt; font-size: 11.5pt; opacity: 0.92; }
+
+.template-stats-highlight .stats {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 12pt;
+  margin: -32pt 0.6in 0;
+}
+.template-stats-highlight .stat {
+  background: var(--color-white);
+  border-radius: 12pt;
+  padding: 12pt 14pt;
+  box-shadow: 0 6pt 18pt color-mix(in srgb, var(--color-ink) 12%, transparent);
+  display: flex; flex-direction: column;
+}
+.template-stats-highlight .stat .value {
+  font-family: var(--font-headline); font-weight: 800; font-size: 24pt; line-height: 1;
+  color: var(--color-primary);
+}
+.template-stats-highlight .stat .label { margin-top: 5pt; font-size: 8.5pt; color: var(--color-muted); }
+
+.template-stats-highlight .cards {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12pt;
+  padding: 16pt 0.6in 0;
+}
+.template-stats-highlight .card { border-radius: 12pt; padding: 12pt 14pt; }
+.template-stats-highlight .card h2 { margin: 3pt 0 4pt; font-size: 12.5pt; }
+.template-stats-highlight .problem { background: var(--color-surface); }
+.template-stats-highlight .solution { border: 1.5pt solid var(--color-primary); }
+
+.template-stats-highlight .features {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 10pt 14pt;
+  padding: 14pt 0.6in 0;
+}
+.template-stats-highlight .feature { padding-top: 8pt; border-top: 2pt solid var(--color-primary); }
+.template-stats-highlight .feature h3 { font-size: 10pt; margin-bottom: 2pt; }
+.template-stats-highlight .feature p { font-size: 8.5pt; color: var(--color-muted); line-height: 1.4; }
+
+.template-stats-highlight .testimonial { margin: 14pt 0.6in 14pt; padding-left: 14pt; border-left: 3pt solid var(--color-cta); }
+.template-stats-highlight .testimonial blockquote { font-family: var(--font-headline); font-size: 11.5pt; font-weight: 500; line-height: 1.35; }
+.template-stats-highlight .testimonial figcaption { margin-top: 5pt; font-size: 8pt; color: var(--color-muted); }
+
+/* Without a testimonial, spread the leftover space evenly between the sections
+   instead of leaving one empty band above the CTA. The renderer measures fit with
+   .fit-measure on <html>, which turns this off so free-space reporting stays honest. */
+:root:not(.fit-measure) .template-stats-highlight .page.no-testimonial > .spacer { flex: 0 0 14pt; }
+:root:not(.fit-measure) .template-stats-highlight .page.no-testimonial > .cards,
+:root:not(.fit-measure) .template-stats-highlight .page.no-testimonial > .features,
+:root:not(.fit-measure) .template-stats-highlight .page.no-testimonial > .cta { margin-top: auto; }
