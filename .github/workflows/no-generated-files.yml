@@ -1,0 +1,24 @@
+# Fails any push or pull request that commits generated documents or source PDFs.
+# input/ and output/ must only contain .gitkeep; publish deliverables with
+# scripts/publish-deliverable.sh (orphan "deliverables" branch) instead.
+name: No generated files
+
+on:
+  push:
+    branches-ignore: [deliverables]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: input/ and output/ contain only .gitkeep
+        run: |
+          bad=$(git ls-files input output | grep -v -E '^(input|output)/\.gitkeep$' || true)
+          if [ -n "$bad" ]; then
+            echo "::error::Generated files must not be committed. Publish them with scripts/publish-deliverable.sh instead:"
+            echo "$bad"
+            exit 1
+          fi
+          echo "OK: input/ and output/ are empty"

@@ -51,7 +51,8 @@ C4 diagrams live in `docs/c4/` in two formats (`mermaid/*.mmd`, `plantuml/*.puml
 - `scripts/cloud-setup.sh` runs from the `SessionStart` hook. It installs dependencies and Chrome and renders a smoke test, and does nothing locally. If rendering fails, run `npm run check:chrome` for a diagnosis.
 - Uploaded source PDFs: copy them into `input/` (git-ignored) before running the onepager workflow.
 - `input/` and `output/` are empty in the repo; only their `.gitkeep` files are tracked, and everything else in them is git-ignored.
-- Deliverables leave the session through git: on the session's work branch (never `main`), run `git add -f output/<name>/<name>[.<template>].pdf output/<name>/<name>[.<template>].content.json`, commit and push. Never force-add anything else: no `input/` files, debug HTML or previews.
+- Deliverables leave the session through the orphan `deliverables` branch, never through work branches or `main`: run `bash scripts/publish-deliverable.sh output/<name>` (it publishes that folder's `.pdf` and `.content.json` files and prints the GitHub link). That branch shares no history with `main`, so it can't be merged.
+- Never `git add -f` anything under `input/` or `output/`. The `No generated files` GitHub check fails any push or PR that does.
 - `.content.json` `source` paths are relative to the project root (e.g. `input/Foo.pdf`).
 
 ## Claude Code assets

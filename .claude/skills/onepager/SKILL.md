@@ -66,6 +66,10 @@ Run `npm run render -- output/<name>/<name>.content.json`.
 
 Read the rendered `output/<name>/<name>.pdf` and check it visually against `.claude/skills/brand-check/SKILL.md`: no clipped text, balanced pages without large empty gaps, and at most one green CTA. If something is off, revise the content and render again.
 
-## 6. Report
+## 6. Publish (cloud sessions)
+
+In a Claude Code on the web session, publish the result with `bash scripts/publish-deliverable.sh output/<name>` and include the printed link in your report. Never commit generated files to the work branch or `main`, and never `git add -f` anything under `input/` or `output/`. Locally, skip this step unless the user asks to publish.
+
+## 7. Report
 
 Reply with the template used and why, the PDF path, and any facts you deliberately left out or slots you left empty.
