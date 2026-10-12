@@ -2,7 +2,7 @@
   "template": "classic",
   "source": "input/Salesmsg_Onboarding_At_A_Glance.pdf",
   "model": "claude-code",
-  "generatedAt": "2026-10-12T14:23:49.393Z",
+  "generatedAt": "2026-10-12T14:26:28.627Z",
   "content": {
     "eyebrow": "Customer guide",
     "title": "From sign-up to your first text in ~20 days",
@@ -13,7 +13,7 @@
         "sections": [
           {
             "heading": "The gate: carrier approval",
-            "body": "You can't send texts or calls until your business is registered and approved by the carriers (10DLC or Toll-Free). We prepare and submit it for you, but the carriers make the final call. That usually takes several business days, occasionally longer.",
+            "body": "You can't send texts or calls until your business is registered and approved by the carriers, through 10DLC or toll-free verification. We prepare and submit it for you, but the carriers make the final call. Review usually takes several business days, occasionally longer.",
             "bullets": [],
             "rows": []
           },
@@ -51,15 +51,15 @@
             "rows": [
               {
                 "label": "What we do",
-                "value": "Match you with an Onboarding Manager (and a CSM, depending on plan); run the kickoff call."
+                "value": "Assign an Onboarding Manager and, depending on plan, a Customer Success Manager (CSM); run kickoff"
               },
               {
                 "label": "What you do",
-                "value": "Bring points of contact, texting use case, user and number counts, tools, ideal live date."
+                "value": "Bring points of contact, texting use case, user and number counts, tools, ideal live date"
               },
               {
                 "label": "Done when",
-                "value": "You've had the kickoff and have your onboarding plan and timeline in writing."
+                "value": "You've had the kickoff and have your onboarding plan and timeline in writing"
               }
             ]
           }
@@ -74,19 +74,19 @@
             "rows": [
               {
                 "label": "What we do",
-                "value": "Register you: 10DLC for local numbers, Toll-Free Verification for toll-free and all Canadian numbers."
+                "value": "Register you: 10DLC for local numbers, Toll-Free Verification for toll-free and all Canadian numbers"
               },
               {
                 "label": "We also",
-                "value": "Prepare, submit and manage the whole review, and fix and resubmit anything returned."
+                "value": "Prepare, submit and manage the whole review, and fix and resubmit anything returned"
               },
               {
                 "label": "What you do",
-                "value": "Send us the checklist in section 08. Ask us to review your opt-in form before you submit."
+                "value": "Send us the checklist in section 08. Ask us to review your opt-in form first"
               },
               {
                 "label": "Done when",
-                "value": "Your Brand and Campaign are carrier-approved and sending is unlocked."
+                "value": "Your Brand and Campaign are carrier-approved and sending is unlocked"
               }
             ]
           },
@@ -97,19 +97,19 @@
             "rows": [
               {
                 "label": "What we do",
-                "value": "Set up numbers and inboxes (new, transferred, ported or hosted), users, assignment rules, business hours."
+                "value": "Set up numbers and inboxes (new, transferred, ported or hosted), users, assignment rules, business hours"
               },
               {
                 "label": "We also",
-                "value": "Configure roles and permissions, and connect your CRM and tools."
+                "value": "Configure roles and permissions, and connect your CRM and tools"
               },
               {
                 "label": "What you do",
-                "value": "Confirm your user list, numbers and integrations: HubSpot, Aircall, RingCentral."
+                "value": "Confirm your user list, numbers and integrations: HubSpot, Aircall, RingCentral"
               },
               {
                 "label": "Done when",
-                "value": "Numbers, users and integrations are live and a test message sends."
+                "value": "Numbers, users and integrations are live and a test message sends"
               }
             ]
           },
@@ -120,19 +120,19 @@
             "rows": [
               {
                 "label": "What we do",
-                "value": "A 1:1 admin session and a group session for your users."
+                "value": "A 1:1 admin session and a group session for your users"
               },
               {
                 "label": "Topics covered",
-                "value": "1:1 texting, broadcasts, tags, contacts, calling, your CRM integration, SMS best practices."
+                "value": "1:1 texting, broadcasts, tags, contacts, calling, your CRM integration, SMS best practices"
               },
               {
                 "label": "What you do",
-                "value": "Book the sessions and get your team on them. Weekly webinars and Help Center stay open."
+                "value": "Book the sessions and get your team on them. Weekly webinars and Help Center stay open"
               },
               {
                 "label": "Done when",
-                "value": "Admins and users are trained and have the recording and recap."
+                "value": "Admins and users are trained and have the recording and recap"
               }
             ]
           },
@@ -143,19 +143,19 @@
             "rows": [
               {
                 "label": "What we do",
-                "value": "Check in the morning of go-live, then follow up about two weeks later."
+                "value": "Check in the morning of go-live, then follow up about two weeks later"
               },
               {
                 "label": "Follow-up goal",
-                "value": "Clear blockers and confirm the KPIs you're measuring."
+                "value": "Clear blockers and confirm the KPIs you're measuring"
               },
               {
                 "label": "What you do",
-                "value": "Start texting, and bring anything you need to your Customer Success Manager."
+                "value": "Start texting, and bring anything you need to your CSM"
               },
               {
                 "label": "Done when",
-                "value": "You're live, measured, and on a regular check-in cadence."
+                "value": "You're live, measured, and on a regular check-in cadence"
               }
             ]
           }
@@ -170,27 +170,27 @@
             "rows": [
               {
                 "label": "Legal name + EIN / Tax ID",
-                "value": "Exactly as they appear on your IRS documents."
+                "value": "Exactly as they appear on your IRS documents"
               },
               {
                 "label": "Active business website",
-                "value": "With a Privacy Policy (including SMS consent language) and Terms."
+                "value": "With a Privacy Policy (including SMS consent language) and Terms"
               },
               {
                 "label": "Your opt-in method",
-                "value": "A link or screenshot: web form, paper, keyword or QR."
+                "value": "A link or screenshot: web form, paper, keyword or QR"
               },
               {
                 "label": "Use case + sample messages",
-                "value": "What you'll send, plus a couple of real examples with your brand name."
+                "value": "What you'll send, plus a couple of real examples with your brand name"
               },
               {
                 "label": "Users and numbers",
-                "value": "Who needs access, and whether you're bringing existing numbers."
+                "value": "Who needs access, and whether you're bringing existing numbers"
               },
               {
                 "label": "Your integrations",
-                "value": "The CRM and tools you want connected."
+                "value": "The CRM and tools you want connected"
               }
             ]
           },
