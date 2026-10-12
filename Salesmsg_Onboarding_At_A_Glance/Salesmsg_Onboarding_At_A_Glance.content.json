@@ -2,12 +2,12 @@
   "template": "classic",
   "source": "input/Salesmsg_Onboarding_At_A_Glance.pdf",
   "model": "claude-code",
-  "generatedAt": "2026-10-12T00:00:00Z",
+  "generatedAt": "2026-10-12T14:23:49.393Z",
   "content": {
     "eyebrow": "Customer guide",
     "title": "From sign-up to your first text in ~20 days",
     "subtitle": "The five onboarding stages: who does what, and what to have ready so you go live faster.",
-    "intro": "Your Salesmsg onboarding runs in five stages, with a typical timeline of about 20 days to go live. One stage is the gate: carrier compliance. Getting us your business details early and accurately is the single biggest way to go live faster.",
+    "intro": "Your Salesmessage onboarding runs in five stages, with a typical timeline of about 20 days to go live. One stage is the gate: carrier compliance. Getting us your business details early and accurately is the single biggest way to go live faster.",
     "pages": [
       {
         "sections": [
@@ -46,7 +46,7 @@
           },
           {
             "heading": "Stage 1: Welcome & kickoff",
-            "body": "Day 0–3.",
+            "body": "",
             "bullets": [],
             "rows": [
               {
@@ -69,7 +69,7 @@
         "sections": [
           {
             "heading": "Stage 2: Compliance & registration",
-            "body": "The gate. Start here.",
+            "body": "",
             "bullets": [],
             "rows": [
               {
@@ -82,7 +82,7 @@
               },
               {
                 "label": "What you do",
-                "value": "Send us the checklist below. Ask us to review your opt-in form before you submit."
+                "value": "Send us the checklist in section 08. Ask us to review your opt-in form before you submit."
               },
               {
                 "label": "Done when",
@@ -92,7 +92,7 @@
           },
           {
             "heading": "Stage 3: Account setup",
-            "body": "Runs in parallel with compliance.",
+            "body": "",
             "bullets": [],
             "rows": [
               {
@@ -115,7 +115,7 @@
           },
           {
             "heading": "Stage 4: Training",
-            "body": "Before launch.",
+            "body": "",
             "bullets": [],
             "rows": [
               {
@@ -135,14 +135,10 @@
                 "value": "Admins and users are trained and have the recording and recap."
               }
             ]
-          }
-        ]
-      },
-      {
-        "sections": [
+          },
           {
             "heading": "Stage 5: Go-live & support",
-            "body": "~Day 20+.",
+            "body": "",
             "bullets": [],
             "rows": [
               {
@@ -162,7 +158,11 @@
                 "value": "You're live, measured, and on a regular check-in cadence."
               }
             ]
-          },
+          }
+        ]
+      },
+      {
+        "sections": [
           {
             "heading": "Bring these to Stage 2",
             "body": "Have these ready and you'll clear the gate fast.",
