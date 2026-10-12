@@ -1,176 +1,118 @@
 {
-  "template": "two-column",
+  "template": "customer-guide",
   "source": "input/Salesmsg_Your_First_Day.pdf",
   "model": "claude-code",
-  "generatedAt": "2026-10-12T00:00:00Z",
+  "generatedAt": "2026-10-12T18:00:00Z",
   "content": {
-    "eyebrow": "Quick start",
-    "title": "Your first day on Salesmessage",
-    "summary": "Five steps take you from your invite to your first real conversation in about 20 minutes. Your organization is already registered and approved with the carriers, so everything here is just your own setup.",
+    "header_label": "Getting started",
+    "date_label": "",
+    "eyebrow": "Your first day",
     "pages": [
       {
-        "sections": [
+        "title": "From invite to your first text",
+        "subtitle": "Five steps to your first real conversation. The whole setup takes about 20 minutes.",
+        "blocks": [
           {
-            "heading": "1. Accept your invite",
-            "body": "Open the invitation email from Salesmessage, click the link, and set your password.",
-            "bullets": [],
-            "rows": [
+            "type": "highlight",
+            "statement": "Carrier registration",
+            "result": "= already done",
+            "note": "That part takes weeks. Everything below is your own setup."
+          },
+          {
+            "type": "text",
+            "heading": "Steps 1 to 3: log in, add contacts, send",
+            "paragraphs": [
               {
-                "label": "Done when",
-                "value": "You're logged in and can see your workspace and inbox."
+                "lead": "1. Accept your invite.",
+                "text": "Open the invitation email from Salesmessage, click the link and set your password. Done when you're logged in and can see your company's workspace and your inbox."
+              },
+              {
+                "lead": "2. Get your contacts in.",
+                "text": "Add one contact by hand, or import your list. You can't text anyone until someone's in here, and people often skip this step. Done when someone you plan to text is in."
+              },
+              {
+                "lead": "3. Send your first text.",
+                "text": "Pick a contact, write something real rather than a test, and send. Done when your message shows as delivered."
               }
             ]
           },
           {
-            "heading": "2. Get your contacts in",
-            "body": "Add one contact by hand, or import your list. You can't text anyone until someone's in here. This is the step people most often skip and then get stuck on.",
-            "bullets": [
-              "Working in HubSpot? Contacts arrive as they're used, not all at once.",
-              "They come across when searched for, opened in the panel, or run through a workflow.",
-              "Need your list brought over in bulk? Ask your admin."
+            "type": "callout",
+            "title": "Working in HubSpot? Contacts arrive gradually",
+            "text": "They come across as they're used: searched for, opened in the Salesmessage panel, or run through a workflow. Ask your admin if you need your list brought over in bulk."
+          },
+          {
+            "type": "stat_cards",
+            "heading": "Before you send: opt-in and credits",
+            "intro": "A phone number in your CRM isn't permission to text. Only message people who agreed to hear from you. Each text costs credits.",
+            "cards": [
+              {
+                "label": "Plain text",
+                "value": "160 characters",
+                "caption": "is about one credit",
+                "note": "",
+                "tone": "blue"
+              },
+              {
+                "label": "One emoji or curly quote",
+                "value": "70 characters",
+                "caption": "per credit, so the cost doubles",
+                "note": "Watch for quotes pasted from Word",
+                "tone": "green"
+              }
             ],
-            "rows": [
-              {
-                "label": "Done when",
-                "value": "At least one person you plan to text is in your contacts."
-              }
-            ]
-          },
-          {
-            "heading": "3. Send your first text",
-            "body": "Pick a contact, write something real rather than a test, and send.",
-            "bullets": [],
-            "rows": [
-              {
-                "label": "Done when",
-                "value": "Your message shows as delivered."
-              }
-            ]
-          },
-          {
-            "heading": "4. Get a reply and respond",
-            "body": "Ask a colleague to text your Salesmessage number, then reply from your inbox. This is the real test: it proves messages reach you as well as leave you.",
-            "bullets": [],
-            "rows": [
-              {
-                "label": "Done when",
-                "value": "You received an inbound message, got notified, and replied."
-              }
-            ]
+            "footnote": ""
           }
-        ],
-        "sidebar": {
-          "heading": "At a glance",
-          "facts": [
-            {
-              "label": "Takes about",
-              "value": "20 minutes"
-            },
-            {
-              "label": "Steps",
-              "value": "5"
-            },
-            {
-              "label": "Carrier approval",
-              "value": "Already done for your organization"
-            },
-            {
-              "label": "Standard text",
-              "value": "About 1 credit per 160 characters"
-            },
-            {
-              "label": "Emoji or curly quote",
-              "value": "70 characters per credit"
-            }
-          ],
-          "callout_title": "Make sure they opted in",
-          "callout_text": "A phone number in your CRM isn't permission to text. Only message people who agreed to hear from you.",
-          "quote": "",
-          "quote_author": "",
-          "quote_role": ""
-        }
+        ]
       },
       {
-        "sections": [
+        "title": "Prove it works both ways",
+        "subtitle": "Get a reply, set up wherever you work, and know who to ask when stuck.",
+        "blocks": [
           {
-            "heading": "5. Set up wherever you work",
-            "body": "Install the mobile app so you're reachable away from your desk, and the Chrome extension if you text from your browser.",
-            "bullets": [],
-            "rows": [
+            "type": "text",
+            "heading": "Steps 4 and 5: reply, then work anywhere",
+            "paragraphs": [
               {
-                "label": "Done when",
-                "value": "You see the same conversations everywhere you work."
+                "lead": "4. Get a reply and respond.",
+                "text": "Ask a colleague to text your Salesmessage number, then reply from your inbox. This proves messages reach you as well as leave you. Done when you've received an inbound, got a notification and replied."
+              },
+              {
+                "lead": "5. Set up wherever you work.",
+                "text": "Install the mobile app so you're reachable away from your desk, and the Chrome extension if you text from your browser. Done when you see the same conversations everywhere."
               }
             ]
           },
           {
-            "heading": "Working in HubSpot?",
-            "body": "Two things only you can do in your own HubSpot account:",
-            "bullets": [],
-            "rows": [
-              {
-                "label": "App Card",
-                "value": "Add it in your HubSpot settings. It won't appear on contact records until you do."
-              },
-              {
-                "label": "User mapping",
-                "value": "Check that your HubSpot user is mapped to your Salesmessage user."
-              },
-              {
-                "label": "Unmapped users",
-                "value": "Can't send. Your admin can map you."
-              }
-            ]
+            "type": "callout",
+            "title": "Working in HubSpot? Two things only you can do",
+            "text": "Add the Salesmessage App Card in your HubSpot settings; it won't appear on contact records until you do. And check your HubSpot user is mapped to your Salesmessage user: unmapped users can't send."
           },
           {
+            "type": "faq",
             "heading": "If something doesn't work",
-            "body": "Quick checks before you ask for help:",
-            "bullets": [],
-            "rows": [
+            "items": [
               {
-                "label": "Message didn't deliver",
-                "value": "Usually the number or content. Send your admin the contact and time."
+                "question": "My message didn't deliver.",
+                "answer": "Usually it's the number or the message content. Send your admin the contact and the time; they can see the delivery status."
               },
               {
-                "label": "No inbound notification",
-                "value": "Check your notification settings, then your phone's. Still nothing? Tell your admin."
+                "question": "No notification for an inbound message?",
+                "answer": "Check your notification settings first, then your phone's. Still nothing? Tell your admin which inbox."
               },
               {
-                "label": "No App Card in HubSpot",
-                "value": "Add it yourself in HubSpot settings. There but won't send? You're not mapped."
+                "question": "No App Card in HubSpot?",
+                "answer": "You have to add it yourself in HubSpot settings (step 5). If it's there but won't send, you're not mapped yet."
               }
             ]
+          },
+          {
+            "type": "callout",
+            "title": "Stuck? Ask your account admin first",
+            "text": "Most of this they can fix in a minute, including mapping your HubSpot user. For anything else, the Help Center is at help.salesmessage.com, or email us."
           }
-        ],
-        "sidebar": {
-          "heading": "Getting help",
-          "facts": [
-            {
-              "label": "First stop",
-              "value": "Your account admin"
-            },
-            {
-              "label": "Help Center",
-              "value": "help.salesmessage.com"
-            },
-            {
-              "label": "Email",
-              "value": "support@salesmessage.com"
-            }
-          ],
-          "callout_title": "Texts cost credits",
-          "callout_text": "A single emoji or a curly quote pasted from Word drops a credit from 160 characters to 70 and doubles the cost.",
-          "quote": "",
-          "quote_author": "",
-          "quote_role": ""
-        }
+        ]
       }
-    ],
-    "cta": {
-      "headline": "Stuck on any of this?",
-      "text": "Ask your account admin first; most of it they can fix in a minute.",
-      "button_label": "Visit the Help Center",
-      "url": "https://help.salesmessage.com"
-    }
+    ]
   }
 }
