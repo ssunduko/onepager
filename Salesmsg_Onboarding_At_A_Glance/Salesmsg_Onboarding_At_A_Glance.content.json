@@ -1,121 +1,217 @@
 {
-  "template": "customer-guide",
+  "template": "classic",
   "source": "input/Salesmsg_Onboarding_At_A_Glance.pdf",
   "model": "claude-code",
-  "generatedAt": "2026-10-10T12:00:00Z",
+  "generatedAt": "2026-10-12T00:00:00Z",
   "content": {
-    "header_label": "Customer guide",
-    "date_label": "",
-    "eyebrow": "Onboarding at a glance",
+    "eyebrow": "Customer guide",
+    "title": "From sign-up to your first text in ~20 days",
+    "subtitle": "The five onboarding stages: who does what, and what to have ready so you go live faster.",
+    "intro": "Your Salesmsg onboarding runs in five stages, with a typical timeline of about 20 days to go live. One stage is the gate: carrier compliance. Getting us your business details early and accurately is the single biggest way to go live faster.",
     "pages": [
       {
-        "title": "From sign-up to your first text",
-        "subtitle": "Five stages, about 20 days, and one carrier-approval gate to plan around.",
-        "blocks": [
+        "sections": [
           {
-            "type": "highlight",
-            "statement": "Sign-up to live",
-            "result": "~20 days",
-            "note": "Typical timeline; carrier approval can take longer."
+            "heading": "The gate: carrier approval",
+            "body": "You can't send texts or calls until your business is registered and approved by the carriers (10DLC or Toll-Free). We prepare and submit it for you, but the carriers make the final call. That usually takes several business days, occasionally longer.",
+            "bullets": [],
+            "rows": []
           },
           {
-            "type": "callout",
-            "title": "No texting until carriers approve you",
-            "text": "You can't send texts or calls until your business is registered and carrier-approved (10DLC or Toll-Free). We prepare and submit it; carriers decide, usually within several business days, occasionally longer."
-          },
-          {
-            "type": "table",
             "heading": "The five stages",
-            "columns": { "label": "Stage", "value": "When", "note": "Done when" },
+            "body": "",
+            "bullets": [],
             "rows": [
-              { "label": "1. Welcome & kickoff", "value": "Day 0–3", "note": "You have your onboarding plan and timeline in writing." },
-              { "label": "2. Compliance & registration", "value": "The gate", "note": "Your Brand and Campaign are carrier-approved and sending is unlocked." },
-              { "label": "3. Account setup", "value": "In parallel", "note": "Numbers, users and integrations are live and a test message sends." },
-              { "label": "4. Training", "value": "Before launch", "note": "Admins and users are trained and have the recording and recap." },
-              { "label": "5. Go-live & support", "value": "~Day 20+", "note": "You're live, measured and on a regular check-in cadence." }
+              {
+                "label": "1 · Welcome & kickoff",
+                "value": "Day 0–3"
+              },
+              {
+                "label": "2 · Compliance & registration",
+                "value": "The gate: start here"
+              },
+              {
+                "label": "3 · Account setup",
+                "value": "Runs in parallel with compliance"
+              },
+              {
+                "label": "4 · Training",
+                "value": "Before launch"
+              },
+              {
+                "label": "5 · Go-live & support",
+                "value": "~Day 20+"
+              }
             ]
           },
           {
-            "type": "text",
-            "heading": "",
-            "paragraphs": [
-              { "lead": "Start with Stage 2.", "text": "Getting us your business details early and accurate is the single biggest way to go live faster. Account setup runs in parallel." }
+            "heading": "Stage 1: Welcome & kickoff",
+            "body": "Day 0–3.",
+            "bullets": [],
+            "rows": [
+              {
+                "label": "What we do",
+                "value": "Match you with an Onboarding Manager (and a CSM, depending on plan); run the kickoff call."
+              },
+              {
+                "label": "What you do",
+                "value": "Bring points of contact, texting use case, user and number counts, tools, ideal live date."
+              },
+              {
+                "label": "Done when",
+                "value": "You've had the kickoff and have your onboarding plan and timeline in writing."
+              }
             ]
           }
         ]
       },
       {
-        "title": "Who does what at each stage",
-        "subtitle": "Here's what Salesmessage handles and what we need from you to keep moving.",
-        "blocks": [
+        "sections": [
           {
-            "type": "definitions",
-            "heading": "What we do",
-            "intro": "",
-            "striped": false,
+            "heading": "Stage 2: Compliance & registration",
+            "body": "The gate. Start here.",
+            "bullets": [],
             "rows": [
-              { "term": "Welcome & kickoff", "definition": "Match you with an Onboarding Manager (and a CSM, by plan) and run your kickoff call." },
-              { "term": "Compliance & registration", "definition": "Prepare, submit and manage your carrier registration; fix and resubmit anything that comes back." },
-              { "term": "Account setup", "definition": "Set up numbers, inboxes, users, assignment rules, business hours and permissions; connect your CRM." },
-              { "term": "Training", "definition": "Run a 1:1 admin session and a group session for your users." },
-              { "term": "Go-live & support", "definition": "Check in on go-live morning, then follow up about two weeks later on blockers and KPIs." }
+              {
+                "label": "What we do",
+                "value": "Register you: 10DLC for local numbers, Toll-Free Verification for toll-free and all Canadian numbers."
+              },
+              {
+                "label": "We also",
+                "value": "Prepare, submit and manage the whole review, and fix and resubmit anything returned."
+              },
+              {
+                "label": "What you do",
+                "value": "Send us the checklist below. Ask us to review your opt-in form before you submit."
+              },
+              {
+                "label": "Done when",
+                "value": "Your Brand and Campaign are carrier-approved and sending is unlocked."
+              }
             ]
           },
           {
-            "type": "definitions",
-            "heading": "What you do",
-            "intro": "",
-            "striped": true,
+            "heading": "Stage 3: Account setup",
+            "body": "Runs in parallel with compliance.",
+            "bullets": [],
             "rows": [
-              { "term": "Welcome & kickoff", "definition": "Bring your contacts, use case, user and number counts, tools to connect and live date." },
-              { "term": "Compliance & registration", "definition": "Send us the Stage 2 checklist; ask us to review your opt-in form before you submit." },
-              { "term": "Account setup", "definition": "Confirm your users, numbers and integrations, such as HubSpot, Aircall or RingCentral." },
-              { "term": "Training", "definition": "Book the sessions and get your team on them." },
-              { "term": "Go-live & support", "definition": "Start texting, and bring anything you need to your Customer Success Manager." }
+              {
+                "label": "What we do",
+                "value": "Set up numbers and inboxes (new, transferred, ported or hosted), users, assignment rules, business hours."
+              },
+              {
+                "label": "We also",
+                "value": "Configure roles and permissions, and connect your CRM and tools."
+              },
+              {
+                "label": "What you do",
+                "value": "Confirm your user list, numbers and integrations: HubSpot, Aircall, RingCentral."
+              },
+              {
+                "label": "Done when",
+                "value": "Numbers, users and integrations are live and a test message sends."
+              }
             ]
           },
           {
-            "type": "callout",
-            "title": "Which registration you need",
-            "text": "10DLC covers local numbers. Toll-Free Verification covers toll-free numbers and all Canadian numbers. Numbers can be new, transferred, ported or hosted."
+            "heading": "Stage 4: Training",
+            "body": "Before launch.",
+            "bullets": [],
+            "rows": [
+              {
+                "label": "What we do",
+                "value": "A 1:1 admin session and a group session for your users."
+              },
+              {
+                "label": "Topics covered",
+                "value": "1:1 texting, broadcasts, tags, contacts, calling, your CRM integration, SMS best practices."
+              },
+              {
+                "label": "What you do",
+                "value": "Book the sessions and get your team on them. Weekly webinars and Help Center stay open."
+              },
+              {
+                "label": "Done when",
+                "value": "Admins and users are trained and have the recording and recap."
+              }
+            ]
           }
         ]
       },
       {
-        "title": "Stage 2: the compliance gate",
-        "subtitle": "Bring these to Stage 2 and you'll clear the gate fast.",
-        "blocks": [
+        "sections": [
           {
-            "type": "definitions",
-            "heading": "Your Stage 2 checklist",
-            "intro": "",
-            "striped": true,
+            "heading": "Stage 5: Go-live & support",
+            "body": "~Day 20+.",
+            "bullets": [],
             "rows": [
-              { "term": "Legal name + EIN", "definition": "Your legal business name and EIN / Tax ID, exactly as on your IRS documents." },
-              { "term": "Business website", "definition": "An active site with a Privacy Policy (including SMS consent language) and Terms." },
-              { "term": "Opt-in method", "definition": "A link or screenshot of how people agree to texts: web form, paper, keyword or QR." },
-              { "term": "Use case + samples", "definition": "What you'll send, plus a couple of real example messages with your brand name." },
-              { "term": "Users and numbers", "definition": "Who needs access, and whether you're bringing existing numbers." },
-              { "term": "Integrations", "definition": "The CRM and tools you want connected." }
+              {
+                "label": "What we do",
+                "value": "Check in the morning of go-live, then follow up about two weeks later."
+              },
+              {
+                "label": "Follow-up goal",
+                "value": "Clear blockers and confirm the KPIs you're measuring."
+              },
+              {
+                "label": "What you do",
+                "value": "Start texting, and bring anything you need to your Customer Success Manager."
+              },
+              {
+                "label": "Done when",
+                "value": "You're live, measured, and on a regular check-in cadence."
+              }
             ]
           },
           {
-            "type": "callout",
-            "title": "A rejection isn't a dead end",
-            "text": "If the carriers send something back, we tell you exactly what to change and resubmit it for you."
+            "heading": "Bring these to Stage 2",
+            "body": "Have these ready and you'll clear the gate fast.",
+            "bullets": [],
+            "rows": [
+              {
+                "label": "Legal name + EIN / Tax ID",
+                "value": "Exactly as they appear on your IRS documents."
+              },
+              {
+                "label": "Active business website",
+                "value": "With a Privacy Policy (including SMS consent language) and Terms."
+              },
+              {
+                "label": "Your opt-in method",
+                "value": "A link or screenshot: web form, paper, keyword or QR."
+              },
+              {
+                "label": "Use case + sample messages",
+                "value": "What you'll send, plus a couple of real examples with your brand name."
+              },
+              {
+                "label": "Users and numbers",
+                "value": "Who needs access, and whether you're bringing existing numbers."
+              },
+              {
+                "label": "Your integrations",
+                "value": "The CRM and tools you want connected."
+              }
+            ]
           },
           {
-            "type": "faq",
-            "heading": "Quick answers",
-            "items": [
-              { "question": "Why do registrations get rejected?", "answer": "A legal name that doesn't match IRS records, a new EIN still propagating (30–90 days), or one opt-in checkbox for all message types." },
-              { "question": "Should I get my opt-in form checked?", "answer": "If it isn't built yet, ask us to review it before you submit — that's the #1 cause of rejections." },
-              { "question": "Not sure which stage you're in?", "answer": "Ask your Onboarding Manager or CSM. They can tell you your stage and what's outstanding." },
-              { "question": "What does training cover?", "answer": "1:1 texting, broadcasts, tags, contacts, calling, your CRM integration and SMS best practices. Weekly webinars and the Help Center stay open after." }
-            ]
+            "heading": "A rejection isn't a dead end",
+            "body": "If the carriers send something back, we tell you exactly what to change and resubmit it for you. The usual causes:",
+            "bullets": [
+              "A legal name that doesn't match IRS records.",
+              "A brand-new EIN that hasn't propagated yet (30–90 days).",
+              "An opt-in form that bundles all message types into one checkbox."
+            ],
+            "rows": []
           }
         ]
       }
-    ]
+    ],
+    "cta": {
+      "headline": "Not sure where you are?",
+      "text": "Ask your Onboarding Manager or CSM which stage you're in. Send your opt-in form for a two-minute review.",
+      "button_label": "Email support",
+      "url": "mailto:support@salesmessage.com"
+    }
   }
 }
