@@ -1,0 +1,64 @@
+{
+  "template": "case-study",
+  "source": "input/Case_Study_Blackberry_Estates.pdf",
+  "model": "claude-code",
+  "generatedAt": "2026-10-13T10:05:00Z",
+  "content": {
+    "eyebrow": "Customer story",
+    "customer": "Blackberry Estates",
+    "title": "How Blackberry Estates booked $1.5M in weddings before they ever opened",
+    "subtitle": "How a 2-person team used automated SMS to outpace every competitor on speed.",
+    "results": [
+      { "value": "~$1.5M", "label": "in booked wedding revenue in 9 months" },
+      { "value": "70+", "label": "weddings booked through 2026-2027" },
+      { "value": "First event", "label": "July 2026 calendar filled before opening" },
+      { "value": "20", "label": "virtual tours per week at peak volume" }
+    ],
+    "summary": "Blackberry Estates, a luxury wedding venue in Asheville, NC, partnered with Johnson Jones Group and Salesmessage to generate ~$1.5M in booked revenue and 70+ weddings in just 9 months, before hosting a single event.",
+    "challenge": {
+      "heading": "Business challenge",
+      "bullets": [
+        "Two founders handling all inbound volume, with no room for slow follow-up.",
+        "Wedding leads evaluate multiple venues at once and go with whoever responds first.",
+        "Voicemail and email were too slow to capture intent before it moved on.",
+        "Needed to qualify leads before committing time to virtual tours.",
+        "Growth was capped by headcount without automation in place."
+      ]
+    },
+    "why": {
+      "heading": "Why Salesmessage + Johnson Jones Group",
+      "items": [
+        "Automated SMS follow-up triggered within hours of every lead form.",
+        "Two-way texting let Nathan and Amanda respond from anywhere, immediately.",
+        "Text-first communication matched how couples prefer to be reached.",
+        "Simple, fast lead qualification before committing time to a tour.",
+        "Ongoing conversation management from first contact through booking close."
+      ]
+    },
+    "implementation": {
+      "heading": "Implementation and usage",
+      "bullets": [
+        "Leads enter via Google Ads, then submit a form on the website.",
+        "Automated email sends the pricing brochure within about 30 minutes.",
+        "Salesmessage triggers an automated text 30 minutes to 2 hours after the email.",
+        "Interested leads move into a two-way conversation and book a virtual tour.",
+        "Salesmessage manages follow-up, scheduling and communication through close."
+      ]
+    },
+    "quote": {
+      "text": "We're consistently hearing from couples that we are the fastest and most responsive venue they've reached out to. That's not an accident. It's our system.",
+      "author": "Nathan Bruce-Black",
+      "role": "Co-Owner, Blackberry Estates"
+    },
+    "conclusion": {
+      "heading": "Conclusion",
+      "text": "Two founders. A venue that hadn't opened yet. $1.5M booked before the first guest arrived. Speed became their greatest competitive advantage."
+    },
+    "cta": {
+      "headline": "",
+      "text": "",
+      "button_label": "",
+      "url": ""
+    }
+  }
+}
