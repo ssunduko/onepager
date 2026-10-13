@@ -1,0 +1,76 @@
+<main class="page">
+  <div class="hero">
+    <header class="brand-header">
+      <span class="lockup">
+        <img src="{{logos.reversed}}" alt="{{brand.name}}">
+        {{#if content.customer}}<span class="customer">{{content.customer}}</span>{{/if}}
+      </span>
+      {{#if content.eyebrow}}<span class="eyebrow">{{content.eyebrow}}</span>{{/if}}
+    </header>
+
+    <div class="hero-copy">
+      <h1>{{content.title}}</h1>
+      {{#if content.subtitle}}<p>{{content.subtitle}}</p>{{/if}}
+    </div>
+
+    {{#if (hasItems content.results)}}
+    <div class="results">
+      <span class="results-label">Results</span>
+      <div class="result-cards">
+        {{#each content.results}}
+        <div class="result">
+          <span class="value">{{value}}</span>
+          <span class="label">{{label}}</span>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+    {{/if}}
+  </div>
+
+  <div class="body">
+    <div class="band">
+      {{#if content.summary}}<p class="summary">{{content.summary}}</p>{{/if}}
+      {{#with content.challenge}}{{#if (hasItems bullets)}}
+      <section>
+        <h2 class="bar">{{heading}}</h2>
+        <ul class="dots">{{#each bullets}}<li>{{this}}</li>{{/each}}</ul>
+      </section>
+      {{/if}}{{/with}}
+    </div>
+
+    <div class="band">
+      {{#with content.why}}{{#if (hasItems items)}}
+      <section>
+        <h2 class="bar">{{heading}}</h2>
+        <ol class="numbered">{{#each items}}<li>{{this}}</li>{{/each}}</ol>
+      </section>
+      {{/if}}{{/with}}
+      {{#with content.implementation}}{{#if (hasItems bullets)}}
+      <section>
+        <h2 class="bar">{{heading}}</h2>
+        {{> bulletList bullets}}
+      </section>
+      {{/if}}{{/with}}
+    </div>
+
+    <div class="band last">
+      {{#with content.quote}}{{#if text}}
+      <figure class="quote">
+        <blockquote>&ldquo;{{text}}&rdquo;</blockquote>
+        {{#if author}}<figcaption><strong>{{author}}</strong>{{#if role}}<br>{{role}}{{/if}}</figcaption>{{/if}}
+      </figure>
+      {{/if}}{{/with}}
+      {{#with content.conclusion}}{{#if text}}
+      <section class="conclusion">
+        <h2 class="bar">{{heading}}</h2>
+        <p>{{text}}</p>
+      </section>
+      {{/if}}{{/with}}
+    </div>
+  </div>
+
+  <div class="spacer"></div>
+  {{#if content.cta.headline}}{{> cta}}{{/if}}
+  {{> brandFooter}}
+</main>
