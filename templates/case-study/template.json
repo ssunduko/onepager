@@ -17,12 +17,12 @@
     "One page only, and it is a tight page. Total budget is about 320-360 words; the hero, all three bands, the optional CTA and the footer have to fit together.",
     "title: the outcome, not the activity, 8-14 words. subtitle: one sentence, at most 14 words.",
     "results: 2-4 cards. Use only figures the source states; never round, extrapolate or invent one. A non-numeric milestone is fine if the source gives it. value at most 3 words, label at most 9 words.",
-    "summary: 30-40 words, set bold. Name the customer, what they do, who else was involved and the headline result.",
+    "summary: 35-50 words, set bold, and prefer the longer end. It sits beside the challenge list, so a short summary leaves a visible hole in the left column. Name the customer, what they do, who else was involved and the headline result.",
     "challenge: 3-5 bullets, each at most 15 words, describing the situation before Salesmessage.",
-    "why: 3-5 numbered reasons, each at most 12 words, phrased as capabilities the customer valued.",
-    "implementation: 3-5 bullets, each at most 15 words, in the order the process actually runs.",
+    "why: heading at most 3 words, or it wraps and knocks the two lists out of alignment. 3-5 numbered reasons, each at most 12 words, phrased as capabilities the customer valued.",
+    "implementation: 3-5 bullets, each at most 18 words, in the order the process actually runs.",
     "quote: verbatim from the source only, at most 32 words. Leave text, author and role empty if the source has no quote; the block is then omitted.",
-    "conclusion: at most 32 words, restating the outcome. Do not introduce facts that appear nowhere else.",
+    "conclusion: at most 34 words, restating the outcome and crediting anyone the source credits. Do not introduce facts that appear nowhere else.",
     "cta: optional. Leave headline empty to drop it, which is usually right for a reference a customer will see, and buys room for longer bullets. Green is only ever this one button.",
     "With 5 bullets in all three lists you are at the limit: if the render overflows, cut the weakest bullet from the longest list before shortening anything else.",
     "Every number, name and quote must come from the source document."
@@ -70,7 +70,7 @@
       },
       "summary": {
         "type": "string",
-        "description": "Bold opening paragraph: who the customer is and what they achieved, 30-40 words."
+        "description": "Bold opening paragraph: who the customer is and what they achieved, 35-50 words."
       },
       "challenge": {
         "type": "object",
@@ -99,7 +99,7 @@
         "properties": {
           "heading": {
             "type": "string",
-            "description": "Section heading, 2-6 words, e.g. \"Why Salesmessage\"."
+            "description": "Section heading, at most 3 words, e.g. \"Why Salesmessage\"; longer headings wrap."
           },
           "items": {
             "type": "array",
@@ -128,7 +128,7 @@
             "description": "3-5 bullets describing how it actually runs, in order.",
             "items": {
               "type": "string",
-              "description": "At most 15 words."
+              "description": "At most 18 words."
             }
           }
         },
@@ -170,7 +170,7 @@
           },
           "text": {
             "type": "string",
-            "description": "Closing paragraph restating the outcome, at most 32 words."
+            "description": "Closing paragraph restating the outcome, at most 34 words."
           }
         },
         "required": [

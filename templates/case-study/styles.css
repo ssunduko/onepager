@@ -4,8 +4,8 @@
 /* Hero */
 .template-case-study .hero {
   background: linear-gradient(135deg,
-    var(--color-ink),
-    color-mix(in srgb, var(--color-ink) 62%, var(--color-primary)));
+    color-mix(in srgb, var(--color-primary) 45%, var(--color-ink)),
+    color-mix(in srgb, var(--color-primary) 64%, var(--color-ink)));
   color: var(--color-white);
   padding-bottom: 14pt;
 }
@@ -41,7 +41,7 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: color-mix(in srgb, var(--color-white) 70%, transparent);
+  color: color-mix(in srgb, var(--color-white) 84%, transparent);
 }
 .template-case-study .result-cards {
   display: grid;
@@ -67,9 +67,9 @@
 .template-case-study .result .label {
   display: block;
   margin-top: 3pt;
-  font-size: 7.2pt;
+  font-size: 7.8pt;
   line-height: 1.3;
-  color: color-mix(in srgb, var(--color-white) 78%, transparent);
+  color: color-mix(in srgb, var(--color-white) 90%, transparent);
 }
 
 /* Two-column bands */
@@ -79,8 +79,9 @@
   grid-template-columns: 1fr 1fr;
   gap: 16pt;
   margin-bottom: 7pt;
+  align-items: start;
 }
-.template-case-study .band.last { margin-bottom: 0; align-items: start; }
+.template-case-study .band.last { margin-bottom: 0; margin-top: 4pt; align-items: start; }
 
 .template-case-study h2.bar {
   padding-left: 10pt;
