@@ -9,12 +9,24 @@
     "title": "How Blackberry Estates booked $1.5M in weddings before they ever opened",
     "subtitle": "How a 2-person team used automated SMS to outpace every competitor on speed.",
     "results": [
-      { "value": "~$1.5M", "label": "in booked wedding revenue in 9 months" },
-      { "value": "70+", "label": "weddings booked through 2026-2027" },
-      { "value": "First event", "label": "July 2026 calendar filled before opening" },
-      { "value": "20", "label": "virtual tours per week at peak volume" }
+      {
+        "value": "~$1.5M",
+        "label": "in booked wedding revenue in 9 months"
+      },
+      {
+        "value": "70+",
+        "label": "weddings booked through 2026-2027"
+      },
+      {
+        "value": "First event",
+        "label": "July 2026 calendar filled before opening"
+      },
+      {
+        "value": "20",
+        "label": "virtual tours per week at peak volume"
+      }
     ],
-    "summary": "Blackberry Estates, a luxury wedding venue in Asheville, NC, partnered with Johnson Jones Group and Salesmessage to generate ~$1.5M in booked revenue and 70+ weddings in just 9 months, before hosting a single event.",
+    "summary": "Blackberry Estates, a luxury wedding venue in Asheville, NC, partnered with Johnson Jones Group and Salesmessage to generate ~$1.5M in booked revenue and 70+ weddings in just 9 months, before hosting a single event. The differentiator was speed. Salesmessage made it possible, consistently, with a team of two.",
     "challenge": {
       "heading": "Business challenge",
       "bullets": [
@@ -26,7 +38,7 @@
       ]
     },
     "why": {
-      "heading": "Why Salesmessage + Johnson Jones Group",
+      "heading": "Why Salesmessage",
       "items": [
         "Automated SMS follow-up triggered within hours of every lead form.",
         "Two-way texting let Nathan and Amanda respond from anywhere, immediately.",
@@ -40,7 +52,7 @@
       "bullets": [
         "Leads enter via Google Ads, then submit a form on the website.",
         "Automated email sends the pricing brochure within about 30 minutes.",
-        "Salesmessage triggers an automated text 30 minutes to 2 hours after the email.",
+        "Salesmessage triggers an automated text 30 minutes to 2 hours later, asking about pricing and available dates.",
         "Interested leads move into a two-way conversation and book a virtual tour.",
         "Salesmessage manages follow-up, scheduling and communication through close."
       ]
@@ -52,7 +64,7 @@
     },
     "conclusion": {
       "heading": "Conclusion",
-      "text": "Two founders. A venue that hadn't opened yet. $1.5M booked before the first guest arrived. Speed became their greatest competitive advantage."
+      "text": "Two founders. A venue that hadn't opened yet. $1.5M booked before the first guest arrived. With Johnson Jones Group driving the funnel and Salesmessage powering every conversation, speed became their greatest competitive advantage."
     },
     "cta": {
       "headline": "",
