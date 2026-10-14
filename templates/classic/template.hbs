@@ -1,10 +1,11 @@
 {{#each content.pages}}
 <main class="page{{#if @first}} first{{/if}}">
   {{#if @first}}
-  <div class="hero">
-    {{> brandHeader @root}}
+  <div class="hero hero-band">
+    {{> brandHeader @root noEyebrow=true}}
     <div class="hero-copy">
-      <h1>{{@root.content.title}}</h1>
+      {{#if @root.content.eyebrow}}<span class="pill">{{@root.content.eyebrow}}</span>{{/if}}
+      <h1>{{@root.content.title}}{{#if @root.content.title_accent}} <span class="accent">{{@root.content.title_accent}}</span>{{/if}}</h1>
       {{#if @root.content.subtitle}}<p class="subtitle">{{@root.content.subtitle}}</p>{{/if}}
       {{#if @root.content.intro}}<p class="lede">{{@root.content.intro}}</p>{{/if}}
     </div>
@@ -12,7 +13,7 @@
   {{else}}
   <header class="running-header">
     <img src="{{@root.logos.primary}}" alt="{{@root.brand.name}}">
-    <span>{{@root.content.title}}</span>
+    <span>{{@root.content.title}}{{#if @root.content.title_accent}} {{@root.content.title_accent}}{{/if}}</span>
   </header>
   {{/if}}
 
@@ -36,10 +37,6 @@
 
   <div class="spacer"></div>
   {{#if @last}}{{#if @root.content.cta.headline}}{{> cta @root}}{{/if}}{{/if}}
-  <footer class="page-footer">
-    <span>{{bareUrl @root.brand.website}}</span>
-    {{#if @root.brand.supportEmail}}<span>{{@root.brand.supportEmail}}</span>{{/if}}
-    <span class="page-number">{{inc @index}} / {{@root.content.pages.length}}</span>
-  </footer>
+  {{> brandFooter page=(inc @index) pages=@root.content.pages.length}}
 </main>
 {{/each}}

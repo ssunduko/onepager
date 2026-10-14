@@ -1,3 +1,4 @@
+.template-stats-highlight { --page-margin: 0.6in; }
 .template-stats-highlight .hero {
   --header-eyebrow: color-mix(in srgb, var(--color-white) 85%, transparent);
   background: linear-gradient(135deg, var(--color-primary) 0%, color-mix(in srgb, var(--color-primary) 80%, var(--color-ink)) 100%);
@@ -40,7 +41,7 @@
 }
 .template-stats-highlight .feature { padding-top: 8pt; border-top: 2pt solid var(--color-primary); }
 .template-stats-highlight .feature h3 { font-size: 10pt; margin-bottom: 2pt; }
-.template-stats-highlight .feature p { font-size: 8.5pt; color: var(--color-muted); line-height: 1.4; }
+.template-stats-highlight .feature p { font-size: 8.5pt; line-height: 1.4; }
 
 .template-stats-highlight .testimonial { margin: 14pt 0.6in 14pt; padding-left: 14pt; border-left: 3pt solid var(--color-cta); }
 .template-stats-highlight .testimonial blockquote { font-family: var(--font-headline); font-size: 11.5pt; font-weight: 500; line-height: 1.35; }

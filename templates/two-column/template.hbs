@@ -3,13 +3,13 @@
   {{#if @first}}
   {{> brandHeader @root}}
   <div class="headline-band">
-    <h1>{{@root.content.title}}</h1>
+    <h1>{{@root.content.title}}{{#if @root.content.title_accent}} <span class="accent">{{@root.content.title_accent}}</span>{{/if}}</h1>
     {{#if @root.content.summary}}<p class="lede">{{@root.content.summary}}</p>{{/if}}
   </div>
   {{else}}
   <header class="running-header">
     <img src="{{@root.logos.primary}}" alt="{{@root.brand.name}}">
-    <span>{{@root.content.title}}</span>
+    <span>{{@root.content.title}}{{#if @root.content.title_accent}} {{@root.content.title_accent}}{{/if}}</span>
   </header>
   {{/if}}
 
@@ -42,12 +42,7 @@
       </div>
       {{else}}{{#if heading}}<h3 class="sidebar-heading">{{heading}}</h3>{{/if}}
       {{/if}}
-      {{#if callout_title}}
-      <div class="callout">
-        <h4>{{callout_title}}</h4>
-        {{#if callout_text}}<p>{{callout_text}}</p>{{/if}}
-      </div>
-      {{/if}}
+      {{#if callout_title}}{{> infoCallout title=callout_title text=callout_text}}{{/if}}
       {{#if quote}}
       <figure class="quote">
         <blockquote>“{{quote}}”</blockquote>
@@ -60,10 +55,6 @@
 
   <div class="spacer"></div>
   {{#if @last}}{{#if @root.content.cta.headline}}{{> cta @root}}{{/if}}{{/if}}
-  <footer class="page-footer">
-    <span>{{bareUrl @root.brand.website}}</span>
-    {{#if @root.brand.supportEmail}}<span>{{@root.brand.supportEmail}}</span>{{/if}}
-    <span class="page-number">{{inc @index}} / {{@root.content.pages.length}}</span>
-  </footer>
+  {{> brandFooter page=(inc @index) pages=@root.content.pages.length}}
 </main>
 {{/each}}

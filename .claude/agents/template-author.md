@@ -14,7 +14,7 @@ Follow the `new-layout-template` skill (`.claude/skills/new-layout-template/SKIL
 
 Principles:
 - A template is self-describing. Everything the writing agent needs (when to use the layout, word budgets, the content shape) goes in `template.json`, never in code.
-- Reuse `templates/_shared` partials and tokens. Stay on-brand: Inter Bold headlines (`var(--font-headline)`), Inter body, Salesmsg Blue as the accent, Green only on the CTA button.
+- Reuse `templates/_shared` partials and tokens. Stay on-brand: Product Sans hero headline with blue payoff words (`var(--font-display)`, `h1 .accent`), Inter Bold section headings (`var(--font-headline)`), Inter body in ink, Salesmsg Blue as the accent, Green only on the CTA button, the shared `brandFooter`.
 - Design for the worst case. The sample content should sit at the top of every word budget and still render with `Fit: OK`.
 - Keep changes inside `templates/<id>/`. If the renderer or loaders truly need a change, make the smallest one and explain why.
 

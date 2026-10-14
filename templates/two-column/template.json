@@ -1,13 +1,14 @@
 {
   "id": "two-column",
   "name": "Two-Column Brief",
-  "version": "2.0.0",
-  "description": "One to three pages, each with a main column of sections on the left and a tinted sidebar on the right (key facts, a callout, an optional quote). Page 1 opens with the logo, eyebrow, headline and summary; later pages get a slim running header. Every page has a footer with the website, support email and page number. An optional call to action closes the last page.",
+  "version": "3.0.0",
+  "description": "One to three pages, each with a main column of sections on the left and a tinted sidebar on the right (key facts, a callout, an optional quote). Page 1 opens with the logo, eyebrow, headline and summary; later pages get a slim running header. Every page has the brand footer (logo, website / phone, social icons, page number). An optional call to action closes the last page.",
   "bestFor": "Dense material that needs room: solution and integration briefs, onboarding and how-to guides, partner sheets, technical or pricing summaries with many concrete facts. Grows to extra pages instead of cutting important content.",
   "entry": "template.hbs",
   "styles": ["styles.css"],
   "page": { "format": "Letter", "landscape": false, "maxPages": 3 },
   "guidance": [
+    "Headline: title + title_accent read as one headline; put the 1-3 word payoff in title_accent (shown in blue), as in the Figma house style.",
     "Use as few pages as the content honestly needs. Add a page rather than cutting facts a reader would miss, but never pad.",
     "Each page holds about 280-380 words in total. Every page except the last should be nearly full; the last page should be at least half full (render reports free space at the bottom per page).",
     "Title: 4-9 words. Summary: 2 sentences, at most 45 words. Eyebrow: 1-4 words.",
@@ -21,6 +22,7 @@
     "properties": {
       "eyebrow": { "type": "string", "description": "1-4 word label, e.g. \"Integration guide\", or empty." },
       "title": { "type": "string", "description": "Main headline, 4-9 words." },
+      "title_accent": { "type": "string", "description": "Last 1-3 words of the headline, shown in Salesmsg Blue, or empty." },
       "summary": { "type": "string", "description": "2 sentences, at most 45 words." },
       "pages": {
         "type": "array",
@@ -99,7 +101,7 @@
         "additionalProperties": false
       }
     },
-    "required": ["eyebrow", "title", "summary", "pages", "cta"],
+    "required": ["eyebrow", "title", "title_accent", "summary", "pages", "cta"],
     "additionalProperties": false
   }
 }

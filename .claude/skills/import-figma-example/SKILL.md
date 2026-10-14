@@ -61,7 +61,7 @@ If you imported from a URL that isn't in `examples/sources.json`, add it there s
 
 ## 5. Compare with the brand and the templates; don't silently change them
 
-- Compare the extracted tokens with `brand/brand.json`. Report differences (for example, "Figma uses #2b9be0 for links; StyleGuide says #24a5df") to the user. Don't edit `brand.json` or `StyleGuide.txt` without their confirmation.
+- Compare the extracted tokens with `brand/brand.json`. Report differences (for example, "Figma uses #2b9be0 for links; StyleGuide says #0180f4") to the user. Don't edit `brand.json` or `StyleGuide.txt` without their confirmation.
 - If no existing template can reproduce the design, recommend creating one with the `new-layout-template` skill (or the `template-author` agent), and mention the example id it should match.
 
 ## 6. Report

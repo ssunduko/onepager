@@ -1,33 +1,28 @@
 {{#each content.pages}}
 <main class="page">
-  <header class="guide-header">
-    <img class="logo" src="{{@root.logos.primary}}" alt="{{@root.brand.name}}">
-    <div class="guide-label">
-      <span class="label">{{@root.content.header_label}}</span>
+  <header class="guide-hero hero-band">
+    <div class="topbar">
+      <img class="logo" src="{{@root.logos.primary}}" alt="{{@root.brand.name}}">
       {{#if @root.content.date_label}}<span class="date">{{@root.content.date_label}}</span>{{/if}}
     </div>
+    <div class="hero-copy">
+      {{#if @root.content.eyebrow}}<span class="pill">{{@root.content.eyebrow}}</span>{{/if}}
+      <h1>{{title}}{{#if title_accent}} <span class="accent">{{title_accent}}</span>{{/if}}</h1>
+      {{#if subtitle}}<p class="subtitle">{{subtitle}}</p>{{/if}}
+    </div>
   </header>
-
-  <section class="guide-hero">
-    {{#if @root.content.eyebrow}}<span class="eyebrow">{{#if (gt @root.content.pages.length 1)}}{{pad2 (inc @index)}} / {{/if}}{{@root.content.eyebrow}}</span>{{/if}}
-    <h1>{{title}}</h1>
-    {{#if subtitle}}<p class="subtitle">{{subtitle}}</p>{{/if}}
-  </section>
 
   <div class="guide-body">
     {{#each blocks}}
     {{#if (eq type "highlight")}}
     <section class="block highlight">
-      <p class="equation"><span>{{statement}}</span> <span class="result">{{result}}</span></p>
+      <p class="statement">{{statement}}</p>
       {{#if note}}<p class="note">{{note}}</p>{{/if}}
     </section>
     {{/if}}
 
     {{#if (eq type "callout")}}
-    <section class="block callout">
-      <h3>{{title}}</h3>
-      <p>{{text}}</p>
-    </section>
+    {{> infoCallout class="block"}}
     {{/if}}
 
     {{#if (eq type "definitions")}}
@@ -46,11 +41,11 @@
       {{#if intro}}<p class="intro">{{intro}}</p>{{/if}}
       <div class="cards">
         {{#each cards}}
-        <div class="card tone-{{tone}}">
+        <div class="card">
           {{#if label}}<p class="label">{{label}}</p>{{/if}}
-          <p class="value{{#if (isShort value 5)}} big{{/if}}">{{value}}</p>
-          <p class="caption">{{caption}}</p>
-          {{#if note}}<p class="note">{{note}}</p>{{/if}}
+          <p class="value">{{value}}</p>
+          {{#if caption}}<p class="caption">{{caption}}</p>{{/if}}
+          {{#if (hasItems points)}}<ul class="points">{{#each points}}<li>{{this}}</li>{{/each}}</ul>{{/if}}
         </div>
         {{/each}}
       </div>
@@ -61,11 +56,12 @@
     {{#if (eq type "example_cards")}}
     <section class="block example-cards">
       {{#if heading}}<h2>{{heading}}</h2>{{/if}}
-      <div class="grid">
+      <div class="grid{{#if (eq cards.length 2)}} two{{/if}}{{#if (eq cards.length 4)}} two{{/if}}">
         {{#each cards}}
         <div class="card"><p class="title">{{title}}</p><p class="detail">{{detail}}</p><p class="value">{{value}}</p></div>
         {{/each}}
       </div>
+      {{#if footnote}}<p class="footnote">{{footnote}}</p>{{/if}}
     </section>
     {{/if}}
 
@@ -98,10 +94,6 @@
   </div>
 
   <div class="spacer"></div>
-  <footer class="guide-footer">
-    <span>{{bareUrl @root.brand.website}}</span>
-    {{#if @root.brand.supportEmail}}<span>{{@root.brand.supportEmail}}</span>{{/if}}
-    <span class="page-number">{{inc @index}} / {{@root.content.pages.length}}</span>
-  </footer>
+  {{> brandFooter page=(inc @index) pages=@root.content.pages.length}}
 </main>
 {{/each}}

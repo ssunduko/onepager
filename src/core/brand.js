@@ -10,11 +10,13 @@ export async function loadBrand(brandDir = DIRS.brand) {
   const brand = JSON.parse(await fs.readFile(path.join(brandDir, 'brand.json'), 'utf8'));
   const styleGuide = await fs.readFile(path.join(brandDir, 'StyleGuide.txt'), 'utf8').catch(() => '');
 
-  const logos = Object.fromEntries(
-    Object.entries(brand.logos ?? {}).map(([key, rel]) => [key, fileUrl(path.join(brandDir, rel))]),
-  );
+  const resolve = (assets = {}) =>
+    Object.fromEntries(Object.entries(assets).map(([key, rel]) => [key, fileUrl(path.join(brandDir, rel))]));
+  const logos = resolve(brand.logos);
+  const icons = resolve(brand.icons);
+  const social = (brand.social ?? []).map((s) => ({ ...s, iconUrl: icons[s.icon] }));
 
-  return { ...brand, dir: brandDir, styleGuide, logos, css: brandCss(brand, brandDir) };
+  return { ...brand, dir: brandDir, styleGuide, logos, icons, social, css: brandCss(brand, brandDir) };
 }
 
 /** @font-face rules plus :root design tokens shared by every template. */
@@ -27,11 +29,18 @@ function brandCss(brand, brandDir) {
     ),
   );
   const colorTokens = Object.entries(brand.colors).map(([name, value]) => `  --color-${name}: ${value};`);
+  const display = brand.fonts.display ?? brand.fonts.headline;
+  const displayStack = [display.family, ...(display.fallback ?? []), 'sans-serif']
+    .map((f) => (f === 'sans-serif' ? f : `"${f}"`))
+    .join(', ');
 
   return [
     ...fontFaces,
     ':root {',
     ...colorTokens,
+    '  --color-border: color-mix(in srgb, var(--color-primary) 14%, var(--color-white));',
+    `  --font-display: ${displayStack};`,
+    `  --font-display-weight: ${display.weight ?? 700};`,
     `  --font-headline: "${brand.fonts.headline.family}", "Inter", sans-serif;`,
     `  --font-headline-weight: ${brand.fonts.headline.weight ?? 700};`,
     `  --font-body: "${brand.fonts.body.family}", system-ui, sans-serif;`,
