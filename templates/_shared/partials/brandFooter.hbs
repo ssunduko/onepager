@@ -1,4 +1,6 @@
 <footer class="brand-footer">
-  <img src="{{logos.icon}}" alt="">
-  <span>{{brand.name}} · {{bareUrl brand.website}}</span>
+  <img class="logo" src="{{@root.logos.primary}}" alt="{{@root.brand.name}}">
+  <span class="contact"><a href="{{@root.brand.website}}">{{bareUrl @root.brand.website}}</a>{{#if @root.brand.phone}}<span class="sep">/</span>{{@root.brand.phone}}{{/if}}</span>
+  <span class="social">{{#each @root.brand.social}}<a href="{{url}}"><img src="{{iconUrl}}" alt="{{name}}"></a>{{/each}}</span>
+  <span class="page-number">{{#if pages}}{{#if (gt pages 1)}}{{page}}/{{pages}}{{/if}}{{/if}}</span>
 </footer>

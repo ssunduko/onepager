@@ -3,7 +3,8 @@
   "sample": true,
   "content": {
     "eyebrow": "Sample content",
-    "title": "Text and call customers from one inbox",
+    "title": "Text and call customers",
+    "title_accent": "from one inbox",
     "subtitle": "Placeholder copy used to preview the Classic layout without calling the API.",
     "intro": "This sample shows how a source document is condensed into a scannable page: a clear promise up top, a few focused sections, and a single next step.",
     "pages": [

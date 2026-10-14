@@ -13,7 +13,7 @@ input/*
 output/*
 !output/.gitkeep
 
-# Brand: only what rendering needs (Inter web fonts + license, 4 logos, brand.json, StyleGuide.txt).
+# Brand: only what rendering needs (Inter web fonts + license, logos, icons, brand.json, StyleGuide.txt).
 brand/music/
 brand/sfx/
 brand/fonts/*
@@ -26,6 +26,7 @@ brand/fonts/web/*
 !brand/fonts/web/Inter-Bold.woff2
 brand/logo/*
 !brand/logo/salesmsg-logo-blue.png
+!brand/logo/salesmsg-logo-blue.svg
 !brand/logo/salesmsg-logo-white.png
 !brand/logo/salesmsg-icon-blue.png
 !brand/logo/salesmsg-icon-white.png

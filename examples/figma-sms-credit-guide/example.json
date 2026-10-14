@@ -3,13 +3,19 @@
   "template": "customer-guide",
   "source": {
     "type": "figma",
-    "url": "https://www.figma.com/design/J12oSQR4pnHEixxXlXhvLC/Marketing-Working-File?node-id=2811-6260",
-    "fileKey": "J12oSQR4pnHEixxXlXhvLC",
-    "documentNodeId": "2811:6043",
-    "pageNodeIds": ["2811:6044", "2811:6101", "2811:6185", "2811:6245", "2811:6316"],
-    "importedAt": "2026-10-08"
+    "url": "https://www.figma.com/design/XMCP0ExsAQKFku0OWqgjiv/One-Pagers?node-id=14170-4637",
+    "fileKey": "XMCP0ExsAQKFku0OWqgjiv",
+    "documentNodeId": "14170:4637",
+    "pageNodeIds": [
+      "14170:4407",
+      "14164:1766",
+      "14166:1920",
+      "14170:4027",
+      "14170:4217"
+    ],
+    "importedAt": "2026-10-13"
   },
-  "notes": "The house style for Salesmessage customer-facing guides; every page is a self-contained one-pager. Imitate the structure, density and voice, never the facts.\n\nStructure on every page: a header with the logo on the left and 'CUSTOMER GUIDE' over a date on the right; a light-blue gradient hero band with an eyebrow ('04 / SMS CREDIT CALCULATION'), a 2-line bold headline of 4-6 words, and a one-sentence subtitle; then 2-3 content blocks; and a footer rule with the website, support email and page number. There is no sales CTA button: these are help documents, not ads.\n\nContent blocks used: a highlight banner ('1 SMS segment = 1 credit'); a callout with a blue left bar for one key caveat; definition rows (term / explanation, optionally zebra-striped); a two-column comparison of stat cards (blue tint vs green tint for the contrasting case); a 2x3 grid of example cards (title, small detail line, blue value); a three-column rate table with uppercase blue column headers and a blue bold value column; a label/value table with striped rows; FAQ (bold question, one-sentence answer); and paragraphs whose sentences start with a bold lead-in ('Keep it short. ...').\n\nVoice: plain, practical, second person ('your balance'). Short headings that state the takeaway ('Make every credit count', 'Check before you send'). Numbers are shown as values ('2 credits', '1 / minute'), not buried in prose. About 180-260 words per page, with lots of white space.\n\nDesign tokens (A4 at 1191px wide, so 1px = 0.5pt): Inter for everything, bold for headings; H1 28pt, H2 15pt, body about 9.3pt; heading ink #171c28, body #525d6e, accent #24a5df; card tint #eaf6fd, zebra row #f4f8fb, green card tint #e8f6ec, rule #dce8f0, hero gradient #ebfaff to #cfeeff; 36pt side margins and 10pt card radius.",
+  "notes": "The house style for Salesmessage customer-facing guides; every page is a self-contained one-pager. Imitate the structure, density and voice, never the facts.\n\nStructure on every page: a 210pt light-blue radial hero band (white at left to #c2e3ff at right) holding the logo top-left and the date ('September 2026') top-right, then a pill-shaped topic label ('SMS credit calculation guide'), a one-line headline of 3-5 words whose last 1-3 words are blue ('How Salesmsg credits work'), and a one-sentence subtitle. Then 2-4 content blocks with even spacing, and a footer with the logo, 'salesmessage.com / (888) 409-2298', five social icons and the page number ('1/5') in blue. No divider rules and no sales CTA: these are help documents, not ads.\n\nContent blocks used: a centered highlight panel ('1 SMS segment = 1 credit' in blue, a note beneath); an info callout (blue info icon, navy semibold title and navy text on a #f0f8ff panel), often closing a page; striped definition rows with rounded corners (semibold term, regular explanation); stat cards (2 or 3 across) with a big blue equation value plus a label and caption or two bullet points; a grid of worked-example cards (3 across, or 2 across for a pair) with a semibold title, a detail line and a big blue value; a three-column rate table with blue semibold column headers and semibold label/value columns; a two-column label/value table; FAQ (semibold question, one-sentence answer); and paragraphs whose sentences start with a bold lead-in ('Keep it short. ...').\n\nVoice: plain, practical, second person ('your balance'). Short headings that state the takeaway ('Make every credit count', 'Check before you send'). Numbers are shown as values ('2 credits', '1 credit = 1 min'), not buried in prose. About 150-230 words per page.\n\nDesign tokens (A4 at 1190px wide, so 1px = 0.5pt): hero headline Product Sans Bold 32pt, letter-spacing -1%; section headings Inter Bold 18pt; labels, table headers and questions Inter Semi Bold 11-12pt; body Inter Regular 10pt; subtitle 13pt; pill 10pt semibold #0072db on Salesmsg Blue at 10%; date Inter Medium 10pt; footer 7pt gray #667085. Colors: ink #121517 for headings and body, accent #0180f4, callout navy #023359, panels and striped rows #f0f8ff. 35pt side margins, 10pt card radius, 7pt row radius, 10pt panel padding, 7.5pt card gaps.",
   "files": [
     "page-01-how-credits-work.png",
     "page-02-activity-rates.png",

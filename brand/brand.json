@@ -1,22 +1,34 @@
 {
-  "$comment": "Machine-readable sidecar for the Salesmessage brand; mirrors StyleGuide.txt. Colors are the Figma design-system values (examples/figma-sms-credit-guide), except cta, which Figma does not define.",
+  "$comment": "Machine-readable sidecar for the Salesmessage brand; mirrors StyleGuide.txt. Colors, fonts, logo and icons are the Figma One-Pagers file values (examples/figma-sms-credit-guide, imported 2026-10-13), except cta, which Figma does not define. Lighter shades (borders, pill tints) are derived in CSS with color-mix().",
   "name": "Salesmessage",
   "website": "https://www.salesmessage.com",
   "supportEmail": "support@salesmessage.com",
+  "phone": "(888) 409-2298",
+  "social": [
+    { "name": "YouTube", "icon": "youtube", "url": "https://www.youtube.com/@Salesmsg" },
+    { "name": "X", "icon": "x", "url": "https://twitter.com/salesmsg" },
+    { "name": "Facebook", "icon": "facebook", "url": "https://www.facebook.com/salesmsg" },
+    { "name": "LinkedIn", "icon": "linkedin", "url": "https://www.linkedin.com/company/salesmsg/" },
+    { "name": "Instagram", "icon": "instagram", "url": "https://www.instagram.com/salesmsg/" }
+  ],
   "colors": {
-    "primary": "#24a5df",
+    "primary": "#0180f4",
+    "primaryDark": "#0072db",
     "cta": "#13cb6e",
-    "ink": "#171c28",
-    "muted": "#525d6e",
-    "surface": "#eaf6fd",
-    "surfaceSubtle": "#f4f8fb",
-    "surfaceGreen": "#e8f6ec",
-    "border": "#dce8f0",
-    "white": "#ffffff",
-    "heroFrom": "#ebfaff",
-    "heroTo": "#cfeeff"
+    "ink": "#121517",
+    "muted": "#667085",
+    "navy": "#023359",
+    "surface": "#f0f8ff",
+    "heroTint": "#c2e3ff",
+    "white": "#ffffff"
   },
   "fonts": {
+    "display": {
+      "family": "Product Sans",
+      "weight": 700,
+      "fallback": ["Google Sans", "Inter"],
+      "faces": []
+    },
     "headline": {
       "family": "Inter",
       "weight": 700,
@@ -45,10 +57,19 @@
     }
   },
   "logos": {
-    "primary": "logo/salesmsg-logo-blue.png",
+    "primary": "logo/salesmsg-logo-blue.svg",
+    "primaryPng": "logo/salesmsg-logo-blue.png",
     "reversed": "logo/salesmsg-logo-white.png",
     "icon": "logo/salesmsg-icon-blue.png",
     "iconReversed": "logo/salesmsg-icon-white.png"
+  },
+  "icons": {
+    "info": "icons/info-circle.svg",
+    "youtube": "icons/youtube.svg",
+    "x": "icons/x.svg",
+    "facebook": "icons/facebook.svg",
+    "linkedin": "icons/linkedin.svg",
+    "instagram": "icons/instagram.svg"
   },
   "voice": [
     "Clear, confident and friendly; written for busy sales and support teams.",
@@ -57,8 +78,10 @@
     "Refer to the company as \"Salesmessage\"."
   ],
   "rules": [
-    "Headlines use Inter Bold in ink #171c28; body copy uses Inter Regular in muted #525d6e.",
-    "Salesmsg Blue #24a5df is the accent; reserve Green #13cb6e for a single call-to-action button.",
-    "Light-blue gradient hero bands, soft #eaf6fd panels and generous white space, as in the Figma customer guide."
+    "Page hero headlines use Product Sans Bold (falls back to Inter Bold) in ink #121517, with the last 1-3 words in Salesmsg Blue #0180f4. Section headings use Inter Bold; body copy uses Inter Regular in ink #121517.",
+    "Salesmsg Blue #0180f4 is the accent for values, table headers and highlights; reserve Green #13cb6e for a single call-to-action button.",
+    "Gray #667085 is only for footers and small meta text. Callouts use navy #023359 text with a blue info icon on a #f0f8ff panel.",
+    "Light-blue radial hero band (white to #c2e3ff) with the logo, date, a pill-shaped topic label, headline and subtitle; soft #f0f8ff panels and striped rows with rounded corners; no divider rules between sections; generous white space.",
+    "Footer on every page: logo, website / phone, social icons and page number in blue."
   ]
 }

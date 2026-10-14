@@ -1,20 +1,19 @@
 {
   "template": "customer-guide",
   "sample": true,
-  "$comment": "Recreates pages 01 and 04 of the Figma reference (examples/figma-sms-credit-guide) for visual comparison.",
+  "$comment": "Recreates the five pages of the Figma reference (examples/figma-sms-credit-guide) for visual comparison.",
   "content": {
-    "header_label": "Customer guide",
     "date_label": "September 2026",
-    "eyebrow": "SMS credit calculation",
+    "eyebrow": "SMS credit calculation guide",
     "pages": [
       {
-        "title": "How Salesmsg credits work",
+        "title": "How Salesmsg",
+        "title_accent": "credits work",
         "subtitle": "Understand segments, character limits, and what comes off your balance.",
         "blocks": [
           {
             "type": "highlight",
-            "statement": "1 SMS segment",
-            "result": "= 1 credit",
+            "statement": "1 SMS segment = 1 credit",
             "note": "Inbound messages use credits too."
           },
           {
@@ -23,22 +22,10 @@
             "intro": "Texting is billed in segments. Most short, plain-text messages fit in one segment. Longer messages and messages using Unicode can need more segments. Calling, voicemail, and AI features have their own rates.",
             "striped": true,
             "rows": [
-              {
-                "term": "Character",
-                "definition": "Every letter, number, space, and symbol counts."
-              },
-              {
-                "term": "GSM-7",
-                "definition": "The standard character set for plain text and common punctuation."
-              },
-              {
-                "term": "Unicode (UCS-2)",
-                "definition": "The expanded character set used for emojis and non-Latin scripts."
-              },
-              {
-                "term": "Segment / credit",
-                "definition": "A segment is one billed text unit. One SMS segment costs one credit."
-              }
+              { "term": "Character", "definition": "Every letter, number, space, and symbol counts." },
+              { "term": "GSM-7", "definition": "The standard character set for plain text and common punctuation." },
+              { "term": "Unicode (UCS-2)", "definition": "The expanded character set used for emojis and non-Latin scripts." },
+              { "term": "Segment / credit", "definition": "A segment is one billed text unit. One SMS segment costs one credit." }
             ]
           },
           {
@@ -46,108 +33,156 @@
             "heading": "How a text turns into credits",
             "intro": "",
             "cards": [
-              {
-                "label": "GSM-7 · plain text",
-                "value": "160",
-                "caption": "characters = 1 credit",
-                "note": "Longer messages: 153 per segment",
-                "tone": "blue"
-              },
-              {
-                "label": "Unicode · emojis & special characters",
-                "value": "70",
-                "caption": "characters = 1 credit",
-                "note": "Longer messages: 67 per segment",
-                "tone": "green"
-              }
+              { "label": "GSM-7 · plain text", "value": "160 characters = 1 credit", "caption": "Longer messages: 153 per segment", "points": [] },
+              { "label": "Unicode · emojis & special characters", "value": "70 characters = 1 credit", "caption": "Longer messages: 67 per segment", "points": [] }
             ],
             "footnote": "Long messages use some space for a header that lets the recipient’s phone reassemble the segments into one continuous message."
           }
         ]
       },
       {
-        "title": "Make every credit count",
+        "title": "What each",
+        "title_accent": "activity costs",
+        "subtitle": "A quick reference for messaging, calling, voicemail, and AI features.",
+        "blocks": [
+          {
+            "type": "table",
+            "heading": "",
+            "columns": { "label": "Activity", "value": "Credits", "note": "How it’s billed" },
+            "rows": [
+              { "label": "SMS", "value": "1 segment", "note": "Inbound and outbound. See the character limits on page 1." },
+              { "label": "MMS", "value": "2 message", "note": "Picture or media message. Flat rate, regardless of length." },
+              { "label": "RCS", "value": "2 message", "note": "Same as MMS, including international. Failed attempts are charged." },
+              { "label": "Ringless voicemail", "value": "2 drop", "note": "Flat rate for each voicemail delivered." },
+              { "label": "Voicemail drop", "value": "1 minute", "note": "Based on the recording’s length." },
+              { "label": "Calling", "value": "from 1 minute", "note": "Standard U.S. number: 1 credit per minute. Other rates vary." },
+              { "label": "Call forwarding", "value": "2 minute", "note": "Starts when the forwarded call rings, even if unanswered." },
+              { "label": "Transcription", "value": "1 minute", "note": "For calls and voicemails, including the AI summary." },
+              { "label": "AI agent messages", "value": "+2 message", "note": "Added to SMS, MMS, or RCS for each message the agent reads or writes." },
+              { "label": "AI calling agent", "value": "Per minute", "note": "Depends on your plan. Ask your Customer Success Manager." },
+              { "label": "Enterprise / custom", "value": "Per agreement", "note": "Negotiated activity rates, including the premium Salesforce integration." }
+            ]
+          },
+          {
+            "type": "callout",
+            "title": "Credits and carrier fees are separate",
+            "text": "U.S. and Canadian carrier surcharges and 10DLC one-time and monthly fees appear separately on your invoice. They are passed through at cost and do not reduce your credit balance."
+          }
+        ]
+      },
+      {
+        "title": "Calling rates & your",
+        "title_accent": "credit balance",
+        "subtitle": "Know which rates vary, which credits carry forward, and what happens at zero.",
+        "blocks": [
+          {
+            "type": "stat_cards",
+            "heading": "Calling and international rates",
+            "intro": "For inbound calls, the rate depends on your own inbox number. For outbound calls and texts, it depends on the contact’s country.",
+            "cards": [
+              { "label": "", "value": "1 credit = 1 min", "caption": "", "points": ["standard U.S. number", "inbound or outbound calls"] },
+              { "label": "", "value": "3 credit = 1 min", "caption": "", "points": ["toll-free number", "inbound calls"] },
+              { "label": "", "value": "5 credit = 1 min", "caption": "", "points": ["Alaska (907)", "outbound calls"] }
+            ],
+            "footnote": ""
+          },
+          {
+            "type": "text",
+            "heading": "",
+            "paragraphs": [
+              { "lead": "International rates vary", "text": "by country and route, for inbound and outbound texting and calling. Salesmsg supports 236 countries; see the Help Center for the full credit list." },
+              { "lead": "International texting is a setting.", "text": "If disabled, only U.S., Canadian, U.K., and Australian numbers are valid. Other destinations are rejected." }
+            ]
+          },
+          {
+            "type": "definitions",
+            "heading": "Your balance: what carries forward",
+            "intro": "",
+            "striped": true,
+            "rows": [
+              { "term": "Plan credits reset", "definition": "Monthly credits reset on your billing anniversary. Annual credits are granted in full on your renewal date. Unused plan credits do not carry forward." },
+              { "term": "Purchased credits stay", "definition": "One-off purchases and auto-recharge top-ups remain until you use them." },
+              { "term": "At zero, outbound stops", "definition": "Messages and calls cannot go out until you top up. Inbound texts still arrive and can take the balance negative; the shortfall comes off your next purchase." },
+              { "term": "Broadcasts check first", "definition": "If credits are insufficient for a broadcast or voicemail drop, Salesmsg prompts you to buy more before sending." }
+            ]
+          },
+          {
+            "type": "callout",
+            "title": "Keep your account running",
+            "text": "Set an auto-recharge threshold and top-up amount, and add a backup card. Call forwarding requires auto-recharge to be enabled."
+          }
+        ]
+      },
+      {
+        "title": "Make every",
+        "title_accent": "credit count",
         "subtitle": "Worked examples, simple sending habits, and answers to common questions.",
         "blocks": [
           {
             "type": "example_cards",
             "heading": "Worked examples",
             "cards": [
-              {
-                "title": "Three-segment text",
-                "detail": "3 segments × 1 credit",
-                "value": "3 credits"
-              },
-              {
-                "title": "Photo MMS",
-                "detail": "Flat MMS rate",
-                "value": "2 credits"
-              },
-              {
-                "title": "2-minute call + transcript",
-                "detail": "2 call + 2 transcription",
-                "value": "4 credits"
-              },
-              {
-                "title": "Ringless voicemail",
-                "detail": "Flat rate per drop",
-                "value": "2 credits"
-              },
-              {
-                "title": "One-segment AI reply",
-                "detail": "1 SMS + 2 AI",
-                "value": "3 credits"
-              },
-              {
-                "title": "A contact texts you back",
-                "detail": "1 inbound segment",
-                "value": "1 credit"
-              }
-            ]
+              { "title": "Three-segment text", "detail": "3 segments × 1 credit", "value": "3 credits" },
+              { "title": "Photo MMS", "detail": "Flat MMS rate", "value": "2 credits" },
+              { "title": "2-minute call + transcript", "detail": "2 call + 2 transcription", "value": "4 credits" },
+              { "title": "Ringless voicemail", "detail": "Flat rate per drop", "value": "2 credits" },
+              { "title": "One-segment AI reply", "detail": "1 SMS + 2 AI", "value": "3 credits" },
+              { "title": "A contact texts you back", "detail": "1 inbound segment", "value": "1 credit" }
+            ],
+            "footnote": ""
           },
           {
             "type": "text",
             "heading": "Keep messages to one credit",
             "paragraphs": [
-              {
-                "lead": "Keep it short.",
-                "text": "Aim comfortably below 160 characters. Link to detail instead of sending several segments. Use simple punctuation and paste as plain text."
-              },
-              {
-                "lead": "Use emojis deliberately:",
-                "text": "they can switch the message to Unicode and lower the single-segment limit to 70. Check the composer’s segment counter on templates and broadcasts before sending."
-              }
+              { "lead": "Keep it short.", "text": "Aim comfortably below 160 characters. Link to detail instead of sending several segments. Use simple punctuation and paste as plain text. Use emojis deliberately: they can switch the message to Unicode and lower the single-segment limit to 70. Check the composer’s segment counter before sending." }
             ]
           },
           {
             "type": "table",
             "heading": "When you are charged",
-            "columns": {
-              "label": "",
-              "value": "",
-              "note": ""
-            },
+            "columns": { "label": "", "value": "", "note": "" },
             "rows": [
-              {
-                "label": "Unverified toll-free texts blocked",
-                "value": "No charge",
-                "note": ""
-              },
-              {
-                "label": "Inbound calls from blocked contacts",
-                "value": "No charge",
-                "note": ""
-              },
-              {
-                "label": "Failed RCS attempt",
-                "value": "Charged",
-                "note": ""
-              },
-              {
-                "label": "RCS fails, then falls back to SMS / MMS",
-                "value": "Both messages charged",
-                "note": ""
-              }
+              { "label": "Unverified toll-free texts blocked", "value": "No charge", "note": "" },
+              { "label": "Inbound calls from blocked contacts", "value": "No charge", "note": "" },
+              { "label": "Failed RCS attempt", "value": "Charged", "note": "" },
+              { "label": "RCS fails, then falls back to SMS / MMS", "value": "Both messages charged", "note": "" }
+            ]
+          },
+          {
+            "type": "callout",
+            "title": "See where your credits went",
+            "text": "The in-app credit usage report breaks down messages, calls, AI agent, transcripts, and Salesforce, with logs and exports. Your Customer Success Manager can walk through it with you."
+          }
+        ]
+      },
+      {
+        "title": "Check before",
+        "title_accent": "you send",
+        "subtitle": "A single Unicode character can change the cost of the whole message.",
+        "blocks": [
+          {
+            "type": "callout",
+            "title": "The whole message uses the same encoding",
+            "text": "An emoji or a character outside GSM-7 switches the entire message to Unicode. Curly quotes and em dashes pasted from other apps can do this too."
+          },
+          {
+            "type": "example_cards",
+            "heading": "Same length. Different credit use",
+            "cards": [
+              { "title": "Plain-text promo", "detail": "About 200 characters, no emoji", "value": "2 segments = 2 credits" },
+              { "title": "Promo with an emoji", "detail": "About 200 characters, Unicode", "value": "3 segments = 3 credits" }
+            ],
+            "footnote": "A short pickup message can still fit in one segment with or without an emoji. The difference matters when the message exceeds its encoding’s single-segment limit."
+          },
+          {
+            "type": "faq",
+            "heading": "Quick answers",
+            "items": [
+              { "question": "Why did a short message cost 2 credits?", "answer": "Check for a Unicode character. One can lower the whole message’s single-segment limit to 70 characters." },
+              { "question": "Do customer replies cost credits?", "answer": "Yes. Inbound messages use the same rates as outbound, even when your balance is zero." },
+              { "question": "Do unused credits carry forward?", "answer": "Purchased credits do. Plan credits reset each billing period." },
+              { "question": "Where can I see my usage?", "answer": "Open the credit usage report for activity breakdowns, logs, and exports. Your Customer Success Manager can help." }
             ]
           }
         ]

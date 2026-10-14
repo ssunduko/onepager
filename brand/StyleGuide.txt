@@ -1,18 +1,24 @@
 Salesmessage Style Guide
-Source: Figma design system (Marketing Working File, SMS Credit Calculation Guide)
+Source: Figma design system (One-Pagers file, SMS Credit Calculation Guide, 2026-10-13)
 
 Typography
-Headlines: Inter Bold
+Page hero headlines: Product Sans Bold, letter-spacing -1% (Inter Bold when Product Sans is not installed)
+Section headings: Inter Bold
+Labels, table headers, questions: Inter Semi Bold
 Body Text: Inter Regular
 
 Colors
-Salesmsg Blue (accent, links, values, eyebrows): #24a5df
+Salesmsg Blue (accent, headline highlight, values, table headers, page numbers): #0180f4
+Topic pill text: #0072db (pill background is Salesmsg Blue at 10%)
 Salesmsg Green CTA Button: #13cb6e
-Headline text: #171c28
-Body text: #525d6e
-Cards, panels and callouts: #eaf6fd
-Zebra table rows: #f4f8fb
-Contrasting card tint: #e8f6ec
-Dividers and rules: #dce8f0
-Hero band gradient: #ebfaff (top) to #cfeeff (bottom)
+Headline and body text: #121517
+Footer and meta text: #667085
+Callout text: #023359
+Cards, panels, callouts and striped rows: #f0f8ff
+Hero band: radial gradient from white (left) to #c2e3ff (right)
 Background: #ffffff
+
+Layout
+Hero band at the top of every page: logo, date, pill topic label, two-tone headline, subtitle.
+Rounded panels (10pt cards, 7pt rows), no divider rules.
+Footer: logo, website / phone, social icons, page number in blue.
