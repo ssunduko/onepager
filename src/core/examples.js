@@ -29,7 +29,12 @@ export async function loadExamples(examplesDir = DIRS.examples) {
     const files = (sidecar.files ?? []).map((name) => {
       const mediaType = MEDIA_TYPES[path.extname(name).toLowerCase()];
       if (!mediaType) throw new Error(`examples/${entry.name}: unsupported file type "${name}"`);
-      return { path: path.join(dir, name), mediaType };
+      // Example files are sent to the API, so they must stay inside the example's own folder.
+      const filePath = path.resolve(dir, name);
+      if (path.relative(dir, filePath).startsWith('..') || path.isAbsolute(path.relative(dir, filePath))) {
+        throw new Error(`examples/${entry.name}: file "${name}" is outside the example folder`);
+      }
+      return { path: filePath, mediaType };
     });
     examples.push({ id: entry.name, ...sidecar, files });
   }

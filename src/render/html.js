@@ -25,6 +25,8 @@ async function getHandlebars() {
   }
   hb.registerHelper('eq', (a, b) => a === b);
   hb.registerHelper('hasItems', (list) => Array.isArray(list) && list.length > 0);
+  // Links written from a source PDF are untrusted: only https: survives, anything else falls back.
+  hb.registerHelper('safeUrl', (url, fallback) => (isHttpsUrl(url) ? url : isHttpsUrl(fallback) ? fallback : ''));
   hb.registerHelper('bareUrl', (url) => String(url ?? '').replace(/^(https?:\/\/(www\.)?|mailto:)/, '').replace(/\/$/, ''));
   hb.registerHelper('isShort', (text, max) => String(text ?? '').length <= max);
   hb.registerHelper('inc', (n) => Number(n) + 1);
@@ -33,6 +35,14 @@ async function getHandlebars() {
 
   handlebarsInstance = hb;
   return hb;
+}
+
+function isHttpsUrl(value) {
+  try {
+    return new URL(String(value ?? '')).protocol === 'https:';
+  } catch {
+    return false;
+  }
 }
 
 export function pageSize(page) {

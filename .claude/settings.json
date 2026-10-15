@@ -13,7 +13,6 @@
       "Write(./output/**)",
       "Edit(./output/**)",
       "Bash(node .claude/skills/import-figma-example/find-frames.mjs:*)",
-      "Bash(curl -sSL -o examples/*)",
       "Write(./examples/**)",
       "mcp__claude_ai_Figma__get_metadata",
       "mcp__claude_ai_Figma__get_screenshot",
@@ -24,7 +23,8 @@
       "Bash(bash scripts/publish-deliverable.sh:*)"
     ],
     "ask": [
-      "Bash(npm run generate:*)"
+      "Bash(npm run generate:*)",
+      "Bash(curl:*)"
     ]
   },
   "hooks": {
