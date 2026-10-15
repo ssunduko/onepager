@@ -1,12 +1,12 @@
-# Scans dependency lockfiles (package-lock.json) with OSV-Scanner on every pull request into main.
-# It compares the PR against main and fails only on vulnerabilities the PR introduces;
-# results also appear under Security > Code scanning.
+# Scans dependency lockfiles (package-lock.json) with OSV-Scanner on every pull request, into any
+# branch, and in the merge queue. It compares the PR against its base branch and fails only on
+# vulnerabilities the PR introduces; results also appear under Security > Code scanning.
+# Merges into main get a full scan from osv-scanner-merge.yml.
 # Docs: https://google.github.io/osv-scanner/github-action/
 name: OSV-Scanner PR scan
 
 on:
   pull_request:
-    branches: [main]
   merge_group:
     branches: [main]
 
