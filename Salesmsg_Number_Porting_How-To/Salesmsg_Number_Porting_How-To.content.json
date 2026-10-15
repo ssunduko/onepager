@@ -1,0 +1,210 @@
+{
+  "template": "customer-guide",
+  "source": "input/Salesmsg_Number_Porting_How-To.pdf",
+  "model": "claude-code",
+  "generatedAt": "2026-10-15T12:00:00Z",
+  "content": {
+    "date_label": "",
+    "eyebrow": "Number porting how-to",
+    "pages": [
+      {
+        "title": "Port your number",
+        "title_accent": "to Salesmessage",
+        "subtitle": "Bring the number your customers already know — texting and calling.",
+        "blocks": [
+          {
+            "type": "highlight",
+            "statement": "Typical timeline: 2-4 weeks",
+            "note": "Your current provider controls most of that timeline."
+          },
+          {
+            "type": "stat_cards",
+            "heading": "Porting or hosting — pick the right one",
+            "intro": "Two ways to bring a number into Salesmessage. Keeping your phone system and adding texting? Choose hosting. Want Salesmessage handling calls too? Choose porting.",
+            "cards": [
+              {
+                "label": "Porting — move everything",
+                "value": "2-4 weeks",
+                "caption": "",
+                "points": [
+                  "Texting and calling move over",
+                  "You leave your current provider",
+                  "Billed at Salesmessage rates"
+                ]
+              },
+              {
+                "label": "Hosting — texting only",
+                "value": "2-3 business days",
+                "caption": "",
+                "points": [
+                  "Only texting comes over",
+                  "Calling stays where it is",
+                  "Keep your phone system"
+                ]
+              }
+            ],
+            "footnote": "Not sure where to start? Ask your Onboarding Manager or Customer Success Manager — we'll tell you which path fits."
+          },
+          {
+            "type": "callout",
+            "title": "Keep your current service active",
+            "text": "Don't cancel with your current provider until the port is fully complete. Cancelling early is the most common cause of delays."
+          }
+        ]
+      },
+      {
+        "title": "What you need",
+        "title_accent": "before you start",
+        "subtitle": "Having everything ready before you submit keeps the port moving.",
+        "blocks": [
+          {
+            "type": "definitions",
+            "heading": "",
+            "intro": "Anything missing or mismatched sends the request back to the start.",
+            "striped": true,
+            "rows": [
+              {
+                "term": "Phone number(s)",
+                "definition": "Every number you want to move — local, toll-free, VoIP and landline all work."
+              },
+              {
+                "term": "Account info",
+                "definition": "Account number and PIN from your current provider. No PIN? Use the last four of the SSN."
+              },
+              {
+                "term": "Name & address",
+                "definition": "Company name (business) or first and last name (personal), plus the full service address."
+              },
+              {
+                "term": "Signed LOA",
+                "definition": "Letter of Authorization, signed and returned as a PDF to authorize the port request."
+              },
+              {
+                "term": "Proof of ownership",
+                "definition": "A bill from the last 30 days showing the number, or a screenshot from your provider."
+              }
+            ]
+          },
+          {
+            "type": "callout",
+            "title": "Match your provider's records",
+            "text": "A shortened business name or an old address is enough to get the port rejected. Check every detail before you submit."
+          }
+        ]
+      },
+      {
+        "title": "How to port",
+        "title_accent": "your number",
+        "subtitle": "Five steps to follow, plus special cases to know about.",
+        "blocks": [
+          {
+            "type": "definitions",
+            "heading": "",
+            "intro": "",
+            "striped": true,
+            "rows": [
+              {
+                "term": "1. Gather documents",
+                "definition": "Collect your account details, the signed LOA and your proof of ownership."
+              },
+              {
+                "term": "2. Confirm compliance",
+                "definition": "Local U.S. numbers need A2P 10DLC approval in your Salesmessage account, or texts get filtered."
+              },
+              {
+                "term": "3. Keep number active",
+                "definition": "Don't cancel your current service — a disconnected number can't be ported."
+              },
+              {
+                "term": "4. Submit request",
+                "definition": "Send everything via the porting request form, live chat or support@salesmessage.com."
+              },
+              {
+                "term": "5. Reply quickly",
+                "definition": "If carriers request a correction, a same-day reply from you can save a week."
+              }
+            ]
+          },
+          {
+            "type": "definitions",
+            "heading": "Special cases",
+            "intro": "",
+            "striped": true,
+            "rows": [
+              {
+                "term": "Verizon numbers",
+                "definition": "One number per port request only. We'll process multiples separately."
+              },
+              {
+                "term": "Google Voice",
+                "definition": "Unlock in settings first. Keep active throughout the port."
+              },
+              {
+                "term": "Twilio numbers",
+                "definition": "Separate, faster path — about 3-5 business days."
+              },
+              {
+                "term": "Personal mobile",
+                "definition": "Not recommended — your phone loses its number during setup. Ask about alternatives."
+              }
+            ]
+          },
+          {
+            "type": "callout",
+            "title": "What happens behind the scenes",
+            "text": "Salesmessage is the winning carrier and your current provider the losing carrier. Once you send your details, we drive the request and keep you posted."
+          }
+        ]
+      },
+      {
+        "title": "After the port —",
+        "title_accent": "what to expect",
+        "subtitle": "What changes once your number arrives in Salesmessage.",
+        "blocks": [
+          {
+            "type": "definitions",
+            "heading": "",
+            "intro": "",
+            "striped": true,
+            "rows": [
+              {
+                "term": "Message history",
+                "definition": "Doesn't come with it. Only new messages and calls appear in Salesmessage."
+              },
+              {
+                "term": "Local U.S. sync",
+                "definition": "May need up to 3 business days for 10DLC sync. Error 30034 resolves itself."
+              },
+              {
+                "term": "Toll-free numbers",
+                "definition": "Must be verified in Salesmessage before sending texts."
+              },
+              {
+                "term": "10DLC approval",
+                "definition": "Doesn't transfer. Once your Salesmessage account is approved, additional local numbers are covered."
+              }
+            ]
+          },
+          {
+            "type": "faq",
+            "heading": "Quick answers",
+            "items": [
+              {
+                "question": "Does it cost anything to port a number in?",
+                "answer": "No fee to port. Additional lines are $5 per month each."
+              },
+              {
+                "question": "Will we lose service during the port?",
+                "answer": "No. Your number stays with your current provider until the port completes."
+              },
+              {
+                "question": "What if we want to port out later?",
+                "answer": "Your new provider starts the request. Keep your subscription active and ask us for your CSR."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
