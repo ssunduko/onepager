@@ -1,0 +1,75 @@
+{
+  "template": "case-study",
+  "sample": true,
+  "content": {
+    "eyebrow": "Customer story",
+    "customer": "Northwind Partners",
+    "title": "How Northwind Partners doubled booked meetings",
+    "title_accent": "in a single quarter",
+    "subtitle": "How a four-person team replaced slow email follow-up with two-way texting.",
+    "results": [
+      {
+        "value": "2.4x",
+        "label": "more booked meetings per rep each month"
+      },
+      {
+        "value": "91%",
+        "label": "of inbound texts answered within five minutes"
+      },
+      {
+        "value": "11 days",
+        "label": "cut from the average deal cycle end to end"
+      },
+      {
+        "value": "480",
+        "label": "conversations handled every week at peak volume"
+      }
+    ],
+    "summary": "Northwind Partners, a commercial services firm in Columbus, Ohio, moved all inbound follow-up onto Salesmessage and more than doubled booked meetings in one quarter, with the same four-person team and no extra advertising spend. The difference was speed, every time.",
+    "challenge": {
+      "heading": "Business challenge",
+      "bullets": [
+        "Four people handled every inbound enquiry, with no room for slow follow-up.",
+        "Buyers requested quotes from several firms at once and went with whoever replied first.",
+        "Email and voicemail were too slow to catch intent before it moved on.",
+        "Reps needed to qualify enquiries before committing an hour to a site visit.",
+        "Growth was capped by headcount, because none of the follow-up was automated."
+      ]
+    },
+    "why": {
+      "heading": "Why Salesmessage",
+      "items": [
+        "Automated text follow-up fired within minutes of every form submission.",
+        "Two-way texting let reps answer from anywhere, immediately.",
+        "Text-first contact matched how their buyers preferred to be reached.",
+        "Fast qualification before anyone committed time to a site visit.",
+        "One shared inbox kept every conversation visible through close."
+      ]
+    },
+    "implementation": {
+      "heading": "Implementation and usage",
+      "bullets": [
+        "Enquiries arrive through paid search and a form on the Northwind Partners website.",
+        "An automated email sends the pricing guide within about fifteen minutes.",
+        "Salesmessage triggers a text follow-up an hour later, asking about timing and site-visit dates.",
+        "Interested buyers move into a two-way conversation and book a site visit.",
+        "Salesmessage handles scheduling, reminders and communication all the way through close."
+      ]
+    },
+    "quote": {
+      "text": "We hear the same thing on almost every call now: we were the first firm to get back to them. That is not luck, it is the system.",
+      "author": "Dana Whitfield",
+      "role": "Managing Partner, Northwind Partners"
+    },
+    "conclusion": {
+      "heading": "Conclusion",
+      "text": "Four people. The same advertising budget. More than twice the booked meetings in one quarter. With Salesmessage carrying every follow-up, speed became the firm's clearest advantage."
+    },
+    "cta": {
+      "headline": "See what texting does for your pipeline",
+      "text": "Book a walkthrough and we will map it to your current follow-up process.",
+      "button_label": "Book a demo",
+      "url": "https://www.salesmessage.com"
+    }
+  }
+}

@@ -1,0 +1,162 @@
+/* Case Study: light hero band with a results strip, then three two-column bands
+   (summary/challenge, why/implementation, quote/conclusion). */
+.template-case-study { --page-margin: 0.6in; }
+
+/* Hero */
+.template-case-study .hero { padding-bottom: 14pt; }
+.template-case-study .hero .brand-header { padding: 0.36in 0.6in 0; }
+.template-case-study .lockup { display: flex; align-items: center; gap: 10pt; }
+.template-case-study .lockup img { height: 20pt; }
+.template-case-study .lockup .customer {
+  padding-left: 10pt;
+  border-left: 1pt solid color-mix(in srgb, var(--color-primary) 30%, transparent);
+  font-family: var(--font-headline);
+  font-weight: var(--font-headline-weight);
+  font-size: 12pt;
+  letter-spacing: 0.02em;
+  color: var(--color-navy);
+}
+
+.template-case-study .hero-copy { padding: 14pt 0.6in 0; }
+.template-case-study .hero-copy h1 { font-size: 20.5pt; }
+.template-case-study .hero-copy h1 .accent { white-space: nowrap; }
+.template-case-study .hero-copy p {
+  margin-top: 6pt;
+  font-size: 10pt;
+  line-height: 1.4;
+  max-width: 6.4in;
+}
+
+/* Results strip inside the hero */
+.template-case-study .results { padding: 12pt 0.6in 0; }
+.template-case-study .results-label {
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-primaryDark);
+}
+.template-case-study .result-cards {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+  gap: 8pt;
+  margin-top: 7pt;
+}
+.template-case-study .result {
+  padding: 7pt 9pt;
+  border-radius: 8pt;
+  background: var(--color-white);
+  box-shadow: 0 3pt 10pt color-mix(in srgb, var(--color-primary) 12%, transparent);
+}
+.template-case-study .result .value {
+  display: block;
+  font-family: var(--font-headline);
+  font-weight: var(--font-headline-weight);
+  font-size: 14pt;
+  line-height: 1.1;
+  color: var(--color-primary);
+}
+.template-case-study .result .label {
+  display: block;
+  margin-top: 3pt;
+  font-size: 7.8pt;
+  line-height: 1.3;
+}
+
+/* Two-column bands */
+.template-case-study .body { padding: 11pt 0.6in 0; font-size: 8.8pt; line-height: 1.4; }
+.template-case-study .band {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16pt;
+  margin-bottom: 7pt;
+  align-items: start;
+}
+.template-case-study .band.last { margin-bottom: 0; margin-top: 4pt; align-items: start; }
+
+.template-case-study h2.bar {
+  padding-left: 10pt;
+  border-left: 3pt solid var(--color-primary);
+  font-size: 13pt;
+}
+.template-case-study .band section > *:not(h2) { margin-top: 6pt; }
+
+.template-case-study .summary {
+  padding-left: 10pt;
+  border-left: 3pt solid var(--color-primary);
+  font-family: var(--font-headline);
+  font-weight: var(--font-headline-weight);
+  font-size: 10.5pt;
+  line-height: 1.36;
+}
+
+/* Plain dot list for the challenge column */
+.template-case-study ul.dots { list-style: none; }
+.template-case-study ul.dots li {
+  position: relative;
+  padding-left: 12pt;
+  margin-top: 3.5pt;
+}
+.template-case-study ul.dots li::before {
+  content: "";
+  position: absolute; left: 1pt; top: 5pt;
+  width: 4pt; height: 4pt; border-radius: 50%;
+  background: var(--color-primary);
+}
+
+/* Numbered list for the "why" column */
+.template-case-study ol.numbered { list-style: none; counter-reset: why; }
+.template-case-study ol.numbered li {
+  counter-increment: why;
+  position: relative;
+  padding-left: 19pt;
+  margin-top: 4.5pt;
+}
+.template-case-study ol.numbered li::before {
+  content: counter(why);
+  position: absolute; left: 0; top: 1pt;
+  width: 13pt; height: 13pt;
+  border-radius: 4pt;
+  background: var(--color-surface);
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 7.5pt;
+  text-align: center;
+  line-height: 13pt;
+}
+
+/* Quote and conclusion */
+.template-case-study .quote {
+  padding-left: 10pt;
+  border-left: 3pt solid var(--color-primary);
+}
+.template-case-study .quote blockquote {
+  font-family: var(--font-headline);
+  font-weight: var(--font-headline-weight);
+  font-style: italic;
+  font-size: 10.5pt;
+  line-height: 1.38;
+}
+.template-case-study .quote figcaption {
+  margin-top: 6pt;
+  text-align: right;
+  font-size: 8.5pt;
+  color: var(--color-muted);
+}
+.template-case-study .quote figcaption strong { color: var(--color-ink); }
+
+.template-case-study .conclusion p { font-size: 9pt; line-height: 1.35; }
+
+.template-case-study .cta { margin-top: 12pt; padding: 12pt 20pt; }
+.template-case-study .cta h2 { font-size: 13.5pt; }
+
+/* Spread leftover space between the bands instead of leaving one gap above the
+   footer. The renderer measures fit with .fit-measure on <html>, which turns this
+   off so free-space reporting stays honest. */
+:root:not(.fit-measure) .template-case-study .page > .spacer { flex: 0 0 0; }
+:root:not(.fit-measure) .template-case-study .page > .body {
+  flex: 1 1 auto;
+  display: flex; flex-direction: column; justify-content: space-evenly;
+}
+:root:not(.fit-measure) .template-case-study .page > .body > .band { margin-bottom: 0; }
