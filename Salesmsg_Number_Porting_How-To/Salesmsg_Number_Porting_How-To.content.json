@@ -91,10 +91,10 @@
       }
     ],
     "cta": {
-      "headline": "Need help with your port?",
-      "text": "Reach out to our team at support@salesmessage.com or live chat.",
-      "button_label": "Contact support",
-      "url": "https://www.salesmessage.com"
+      "headline": "",
+      "text": "",
+      "button_label": "",
+      "url": ""
     }
   }
 }
