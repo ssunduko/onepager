@@ -29,6 +29,16 @@ export class PdfRenderer {
   async render({ htmlPath, pdfPath, page: pageConfig }) {
     const tab = await this.browser.newPage();
     try {
+      // The page holds text derived from an untrusted PDF. Templates need no scripts and only
+      // local assets (fonts, logos, icons), so run no page JavaScript and block every network request.
+      // tab.evaluate below still works: it runs through DevTools, not as page script.
+      await tab.setJavaScriptEnabled(false);
+      await tab.setRequestInterception(true);
+      tab.on('request', (request) => {
+        const { protocol } = new URL(request.url());
+        if (protocol === 'file:' || protocol === 'data:') request.continue();
+        else request.abort('blockedbyclient');
+      });
       await tab.goto(fileUrl(htmlPath), { waitUntil: 'networkidle0' });
       await tab.evaluateHandle('document.fonts.ready');
 

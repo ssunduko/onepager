@@ -1,0 +1,23 @@
+# Full OSV-Scanner scan of main: weekly, so newly disclosed vulnerabilities in existing
+# dependencies are caught, and on every push to main. Fails on any known vulnerability;
+# results also appear under Security > Code scanning.
+# Docs: https://google.github.io/osv-scanner/github-action/
+name: OSV-Scanner scheduled scan
+
+on:
+  schedule:
+    - cron: "30 12 * * 1" # Mondays 12:30 UTC
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  # Required to upload the SARIF results to code scanning.
+  actions: read
+  contents: read
+  security-events: write
+
+jobs:
+  scan-scheduled:
+    # Pinned to the v2.7.0 commit; bump the SHA and the comment together when upgrading.
+    uses: google/osv-scanner-action/.github/workflows/osv-scanner-reusable.yml@b1d267aea5211fa648d9d442fa64b90dbdcbdd36 # v2.7.0

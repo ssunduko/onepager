@@ -2,7 +2,7 @@
 name: import-figma-example
 description: Import a Figma design as a reference example into examples/ (page renders + example.json sidecar) using the Figma MCP server. Use when examples/ has no example folders, when the user shares a Figma link to use as a reference or style, or when asked to refresh examples from Figma. With no argument it imports every entry in examples/sources.json.
 argument-hint: "[figma-url] [example-id]"
-allowed-tools: Read, Write, Edit, Glob, Bash(node .claude/skills/import-figma-example/find-frames.mjs:*), Bash(curl -sSL -o examples/*), Bash(mkdir -p examples/*), Bash(file examples/*), mcp__claude_ai_Figma__get_metadata, mcp__claude_ai_Figma__get_screenshot, mcp__claude_ai_Figma__get_design_context, mcp__claude_ai_Figma__get_variable_defs, ReadMcpResourceTool
+allowed-tools: Read, Write, Edit, Glob, Bash(node .claude/skills/import-figma-example/find-frames.mjs:*), Bash(mkdir -p examples/*), Bash(file examples/*), mcp__claude_ai_Figma__get_metadata, mcp__claude_ai_Figma__get_screenshot, mcp__claude_ai_Figma__get_design_context, mcp__claude_ai_Figma__get_variable_defs, ReadMcpResourceTool
 ---
 
 # Import a Figma reference into examples/
