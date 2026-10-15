@@ -109,7 +109,7 @@ templates/
   two-column/
   stats-highlight/
   customer-guide/        built from the Figma customer-guide design (A4, typed blocks)
-  case-study/            single-page customer story (Letter, dark hero + results strip)
+  case-study/            single-page customer story (Letter, hero band + results strip)
 src/
   agent/                OnePagerAgent (Claude calls, fit/revise loop) + prompts/system.md
   core/                 sidecar loaders (brand, templates, examples) + pipeline

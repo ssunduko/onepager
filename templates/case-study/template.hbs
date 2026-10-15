@@ -1,15 +1,15 @@
 <main class="page">
-  <div class="hero">
+  <div class="hero hero-band">
     <header class="brand-header">
       <span class="lockup">
-        <img src="{{logos.reversed}}" alt="{{brand.name}}">
+        <img src="{{logos.primary}}" alt="{{brand.name}}">
         {{#if content.customer}}<span class="customer">{{content.customer}}</span>{{/if}}
       </span>
-      {{#if content.eyebrow}}<span class="eyebrow">{{content.eyebrow}}</span>{{/if}}
+      {{#if content.eyebrow}}<span class="pill">{{content.eyebrow}}</span>{{/if}}
     </header>
 
     <div class="hero-copy">
-      <h1>{{content.title}}</h1>
+      <h1>{{content.title}}{{#if content.title_accent}} <span class="accent">{{content.title_accent}}</span>{{/if}}</h1>
       {{#if content.subtitle}}<p>{{content.subtitle}}</p>{{/if}}
     </div>
 
@@ -62,10 +62,7 @@
       </figure>
       {{/if}}{{/with}}
       {{#with content.conclusion}}{{#if text}}
-      <section class="conclusion">
-        <h2 class="bar">{{heading}}</h2>
-        <p>{{text}}</p>
-      </section>
+      {{> infoCallout title=heading text=text class="conclusion"}}
       {{/if}}{{/with}}
     </div>
   </div>

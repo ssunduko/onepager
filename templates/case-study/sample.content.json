@@ -4,7 +4,8 @@
   "content": {
     "eyebrow": "Customer story",
     "customer": "Northwind Partners",
-    "title": "How Northwind Partners doubled booked meetings in a single quarter",
+    "title": "How Northwind Partners doubled booked meetings",
+    "title_accent": "in a single quarter",
     "subtitle": "How a four-person team replaced slow email follow-up with two-way texting.",
     "results": [
       {
