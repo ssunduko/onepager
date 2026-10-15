@@ -9,8 +9,8 @@
     "pages": [
       {
         "title": "Port your number",
-        "title_accent": "to Salesmessage",
-        "subtitle": "Bring the number your customers already know — texting and calling.",
+        "title_accent": "to Salesmsg",
+        "subtitle": "Bring the number your customers already know -- texting and calling.",
         "blocks": [
           {
             "type": "highlight",
@@ -19,21 +19,21 @@
           },
           {
             "type": "stat_cards",
-            "heading": "Porting or hosting — pick the right one",
-            "intro": "Two ways to bring a number into Salesmessage. Keeping your phone system and adding texting? Choose hosting. Want Salesmessage handling calls too? Choose porting.",
+            "heading": "Porting or hosting -- pick the right one",
+            "intro": "Two ways to bring a number into Salesmsg. Keeping your phone system and adding texting? Choose hosting. Want Salesmsg handling calls too? Choose porting.",
             "cards": [
               {
-                "label": "Porting — move everything",
+                "label": "Porting -- move everything",
                 "value": "2-4 weeks",
                 "caption": "",
                 "points": [
                   "Texting and calling move over",
                   "You leave your current provider",
-                  "Billed at Salesmessage rates"
+                  "Billed at Salesmsg rates"
                 ]
               },
               {
-                "label": "Hosting — texting only",
+                "label": "Hosting -- texting only",
                 "value": "2-3 business days",
                 "caption": "",
                 "points": [
@@ -43,7 +43,7 @@
                 ]
               }
             ],
-            "footnote": "Not sure where to start? Ask your Onboarding Manager or Customer Success Manager — we'll tell you which path fits."
+            "footnote": "Not sure where to start? Ask your Onboarding Manager or Customer Success Manager -- we'll tell you which path fits."
           },
           {
             "type": "callout",
@@ -65,7 +65,7 @@
             "rows": [
               {
                 "term": "Phone number(s)",
-                "definition": "Every number you want to move — local, toll-free, VoIP and landline all work."
+                "definition": "Every number you want to move -- local, toll-free, VoIP and landline all work."
               },
               {
                 "term": "Account info",
@@ -89,6 +89,16 @@
             "type": "callout",
             "title": "Match your provider's records",
             "text": "A shortened business name or an old address is enough to get the port rejected. Check every detail before you submit."
+          },
+          {
+            "type": "text",
+            "heading": "",
+            "paragraphs": [
+              {
+                "lead": "Details are checked",
+                "text": "against what your current provider has on file. The name, address and account number on your request must match their records exactly."
+              }
+            ]
           }
         ]
       },
@@ -109,11 +119,11 @@
               },
               {
                 "term": "2. Confirm compliance",
-                "definition": "Local U.S. numbers need A2P 10DLC approval in your Salesmessage account, or texts get filtered."
+                "definition": "Local U.S. numbers need A2P 10DLC approval in your Salesmsg account, or texts get filtered."
               },
               {
                 "term": "3. Keep number active",
-                "definition": "Don't cancel your current service — a disconnected number can't be ported."
+                "definition": "Don't cancel your current service -- a disconnected number can't be ported."
               },
               {
                 "term": "4. Submit request",
@@ -141,25 +151,25 @@
               },
               {
                 "term": "Twilio numbers",
-                "definition": "Separate, faster path — about 3-5 business days."
+                "definition": "Separate, faster path -- about 3-5 business days."
               },
               {
                 "term": "Personal mobile",
-                "definition": "Not recommended — your phone loses its number during setup. Ask about alternatives."
+                "definition": "Not recommended -- your phone loses its number during setup. Ask about alternatives."
               }
             ]
           },
           {
             "type": "callout",
             "title": "What happens behind the scenes",
-            "text": "Salesmessage is the winning carrier and your current provider the losing carrier. Once you send your details, we drive the request and keep you posted."
+            "text": "Salesmsg is the winning carrier and your current provider the losing carrier. Once you send your details, we drive the request and keep you posted."
           }
         ]
       },
       {
-        "title": "After the port —",
+        "title": "After the port --",
         "title_accent": "what to expect",
-        "subtitle": "What changes once your number arrives in Salesmessage.",
+        "subtitle": "What changes once your number arrives in Salesmsg.",
         "blocks": [
           {
             "type": "definitions",
@@ -169,7 +179,7 @@
             "rows": [
               {
                 "term": "Message history",
-                "definition": "Doesn't come with it. Only new messages and calls appear in Salesmessage."
+                "definition": "Doesn't come with it. Export from your old provider first. Only new messages appear in Salesmsg."
               },
               {
                 "term": "Local U.S. sync",
@@ -177,11 +187,11 @@
               },
               {
                 "term": "Toll-free numbers",
-                "definition": "Must be verified in Salesmessage before sending texts."
+                "definition": "Must be verified in Salesmsg before sending texts."
               },
               {
                 "term": "10DLC approval",
-                "definition": "Doesn't transfer. Once your Salesmessage account is approved, additional local numbers are covered."
+                "definition": "Doesn't transfer. Once your Salesmsg account is approved, additional local numbers are covered."
               }
             ]
           },
@@ -199,9 +209,14 @@
               },
               {
                 "question": "What if we want to port out later?",
-                "answer": "Your new provider starts the request. Keep your subscription active and ask us for your CSR."
+                "answer": "Your new provider starts the request. Keep your Salesmsg subscription active and ask us for your CSR."
               }
             ]
+          },
+          {
+            "type": "callout",
+            "title": "Need help deciding?",
+            "text": "Ask your Onboarding Manager or Customer Success Manager. We'll look at your setup and tell you which path fits."
           }
         ]
       }
