@@ -1,22 +1,33 @@
-# Scans dependency lockfiles (package-lock.json) with OSV-Scanner on every pull request, into any
-# branch, and in the merge queue. It compares the PR against its base branch and fails only on
-# vulnerabilities the PR introduces; results also appear under Security > Code scanning.
-# Merges into main get a full scan from osv-scanner-merge.yml.
-# Docs: https://google.github.io/osv-scanner/github-action/
-name: OSV-Scanner PR scan
+name: OSV-Scanner
 
+# Scans every pull request (any target branch), every merge-queue run and every merge into main.
+# Docs: https://google.github.io/osv-scanner/github-action/
 on:
   pull_request:
   merge_group:
+  push:
     branches: [main]
+  workflow_dispatch:
 
 permissions:
-  # Required to upload the SARIF results to code scanning.
+  # Required to upload SARIF file to CodeQL. See: https://github.com/github/codeql-action/issues/2117
   actions: read
-  contents: read
+  # Upload SARIF results to the Security tab
   security-events: write
+  # Only need to read contents
+  contents: read
 
 jobs:
+  # Pull requests and the merge queue: fails only on vulnerabilities the change introduces.
+  # "scan-pr / osv-scan" is a required status check on main; keep the job id.
   scan-pr:
-    # Pinned to the v2.7.0 commit; bump the SHA and the comment together when upgrading.
-    uses: google/osv-scanner-action/.github/workflows/osv-scanner-reusable-pr.yml@b1d267aea5211fa648d9d442fa64b90dbdcbdd36 # v2.7.0
+    if: github.event_name == 'pull_request' || github.event_name == 'merge_group'
+    # Pinned to the commit behind v2.7.0 so a moved tag can't change what runs
+    uses: "google/osv-scanner-action/.github/workflows/osv-scanner-reusable-pr.yml@b1d267aea5211fa648d9d442fa64b90dbdcbdd36" # v2.7.0
+
+  # Merges into main (each lands as a push) and manual runs: full scan, fails on any known
+  # vulnerability, including ones disclosed since the dependency was added.
+  scan-merge:
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+    # Pinned to the commit behind v2.7.0 so a moved tag can't change what runs
+    uses: "google/osv-scanner-action/.github/workflows/osv-scanner-reusable.yml@b1d267aea5211fa648d9d442fa64b90dbdcbdd36" # v2.7.0
