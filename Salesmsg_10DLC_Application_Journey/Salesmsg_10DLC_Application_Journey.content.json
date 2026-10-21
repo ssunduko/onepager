@@ -1,0 +1,299 @@
+{
+  "template": "customer-guide",
+  "source": "input/Salesmsg_10DLC_Application_Journey.pdf",
+  "model": "claude-code",
+  "generatedAt": "2026-10-21T12:00:00Z",
+  "content": {
+    "date_label": "",
+    "eyebrow": "10DLC application guide",
+    "pages": [
+      {
+        "title": "Your 10DLC",
+        "title_accent": "application journey",
+        "subtitle": "What 10DLC registration is, what we need from you, and how to get approved.",
+        "blocks": [
+          {
+            "type": "text",
+            "heading": "",
+            "paragraphs": [
+              {
+                "lead": "What is A2P 10DLC?",
+                "text": "U.S. carriers require every business texting from a local 10-digit number to be registered. That registration is called A2P 10DLC, run by The Campaign Registry (TCR) on behalf of the carriers. You submit your business details and how you collect consent; once approved, your number is activated automatically."
+              }
+            ]
+          },
+          {
+            "type": "highlight",
+            "statement": "4 stages ~ About 1-2 weeks",
+            "note": "From first form to first text"
+          },
+          {
+            "type": "definitions",
+            "heading": "The four stages at a glance",
+            "intro": "Salesmsg handles the submissions and follows up on your behalf. You supply the details and evidence.",
+            "striped": true,
+            "rows": [
+              {
+                "term": "Business profile",
+                "definition": "You supply your details and contacts. TCR verifies them against IRS records. About 15 minutes."
+              },
+              {
+                "term": "Brand registration",
+                "definition": "TCR assigns a trust score (0-100) that sets your daily sending limits."
+              },
+              {
+                "term": "Campaign registration",
+                "definition": "You prove your use case with opt-in evidence and sample messages. Most rejections happen here."
+              },
+              {
+                "term": "Carrier review",
+                "definition": "Carriers approve and unlock your number for sending. Most clear in about a week."
+              }
+            ]
+          },
+          {
+            "type": "callout",
+            "title": "Carriers block all unregistered traffic",
+            "text": "This is a carrier rule, not a Salesmsg policy. The single biggest cause of delay is business information that doesn't exactly match your IRS records."
+          }
+        ]
+      },
+      {
+        "title": "Get your",
+        "title_accent": "details right",
+        "subtitle": "Your business profile and brand registration set the foundation for approval.",
+        "blocks": [
+          {
+            "type": "definitions",
+            "heading": "What you need for your business profile",
+            "intro": "An Admin or Owner completes this in Salesmsg under Settings then Compliance. TCR verifies your legal name, tax ID and address against government records.",
+            "striped": true,
+            "rows": [
+              {
+                "term": "Legal name and EIN",
+                "definition": "Exactly as they appear on your IRS records, not your DBA or brand name."
+              },
+              {
+                "term": "Business address",
+                "definition": "The one on file with the IRS. If you've moved, file Form 8822-B first."
+              },
+              {
+                "term": "Type and website",
+                "definition": "Business type, industry, and a working public site. A Facebook page works too."
+              },
+              {
+                "term": "Authorized contact",
+                "definition": "Name, title, business email on your domain, and a mobile number (not a landline or VoIP)."
+              },
+              {
+                "term": "EIN letter (optional)",
+                "definition": "A copy of your CP-575 or 147C. Helpful if your EIN is brand new."
+              }
+            ]
+          },
+          {
+            "type": "table",
+            "heading": "Registration packages",
+            "columns": { "label": "Package", "value": "One-time cost", "note": "Details" },
+            "rows": [
+              {
+                "label": "Low Volume Standard",
+                "value": "$19.50",
+                "note": "Under 2,000 segments/day; up to 2,000 credits/day to T-Mobile"
+              },
+              {
+                "label": "Standard",
+                "value": "$61.00",
+                "note": "Over 2,000 segments/day; up to 200,000 credits/day based on trust score"
+              },
+              {
+                "label": "Upgrade (vetting fee)",
+                "value": "$41.50",
+                "note": "One-time fee to move from Low Volume to Standard; takes about two business days"
+              }
+            ]
+          },
+          {
+            "type": "callout",
+            "title": "Canadian businesses",
+            "text": "Use a 9-digit CRA business number instead of an EIN, matched against your CRA records. Ask your Customer Success Manager which registration path fits your numbers."
+          }
+        ]
+      },
+      {
+        "title": "Nail your",
+        "title_accent": "campaign submission",
+        "subtitle": "Campaign registration is where most rejections happen -- get it right the first time.",
+        "blocks": [
+          {
+            "type": "definitions",
+            "heading": "What you'll submit",
+            "intro": "Your opt-in, campaign description and sample messages must match. If they disagree, fix it before you submit.",
+            "striped": true,
+            "rows": [
+              {
+                "term": "Use case",
+                "definition": "Customer care, notifications, delivery, marketing, mixed, and so on."
+              },
+              {
+                "term": "Campaign description",
+                "definition": "What you send, who receives it, how often, and how they opted in."
+              },
+              {
+                "term": "Two sample messages",
+                "definition": "Real examples with your business name, STOP/HELP instructions, and merge-field placeholders."
+              },
+              {
+                "term": "Opt-in proof",
+                "definition": "A screenshot or link for each method: web form, paper form, keyword, or QR code."
+              },
+              {
+                "term": "Privacy policy",
+                "definition": "Published on your website, linked right next to the consent checkbox."
+              }
+            ]
+          },
+          {
+            "type": "definitions",
+            "heading": "What a compliant web form looks like",
+            "intro": "",
+            "striped": false,
+            "rows": [
+              {
+                "term": "Optional phone field",
+                "definition": "People must be able to submit the form without entering a phone number."
+              },
+              {
+                "term": "Separate checkboxes",
+                "definition": "One for transactional texts, one for promotional, one for terms. No single combined checkbox."
+              },
+              {
+                "term": "SMS disclosures",
+                "definition": "Each checkbox states message type, business name, frequency, rates, and STOP/HELP instructions."
+              },
+              {
+                "term": "Privacy policy",
+                "definition": "States you don't sell or share mobile numbers or SMS consent with third parties."
+              }
+            ]
+          },
+          {
+            "type": "callout",
+            "title": "Check before you submit",
+            "text": "Salesmsg has an AI compliance check built into the registration flow. It scores your submission and tells you what to improve. Use it, and ask your Customer Success Manager to review anything it flags."
+          }
+        ]
+      },
+      {
+        "title": "Costs and",
+        "title_accent": "common rejections",
+        "subtitle": "Carrier and TCR fees at cost with no Salesmsg markup, and mistakes that cause most delays.",
+        "blocks": [
+          {
+            "type": "table",
+            "heading": "What it costs",
+            "columns": { "label": "Fee", "value": "Amount", "note": "Notes" },
+            "rows": [
+              {
+                "label": "Brand registration",
+                "value": "$4.50 one-time",
+                "note": "Charged by TCR at submission"
+              },
+              {
+                "label": "Campaign verification",
+                "value": "$15.00 one-time",
+                "note": "Per campaign"
+              },
+              {
+                "label": "Brand vetting (Standard)",
+                "value": "$41.50 one-time",
+                "note": "Standard package only; also applies when upgrading from Low Volume"
+              },
+              {
+                "label": "Campaign maintenance",
+                "value": "$1.50-$10.00/mo",
+                "note": "Depends on your use case"
+              },
+              {
+                "label": "Toll-free verification",
+                "value": "Free",
+                "note": "Separate process; each toll-free number is verified individually"
+              }
+            ]
+          },
+          {
+            "type": "definitions",
+            "heading": "The rejections we see most",
+            "intro": "Most are fixable. Restricted content is the exception.",
+            "striped": true,
+            "rows": [
+              {
+                "term": "EIN mismatch",
+                "definition": "Business info doesn't match the EIN record. Copy legal name and address character for character."
+              },
+              {
+                "term": "Missing opt-in language",
+                "definition": "Every consent checkbox needs the disclosures spelled out next to it."
+              },
+              {
+                "term": "Vague privacy policy",
+                "definition": "Must be public, linked, and state that SMS consent isn't shared or sold."
+              },
+              {
+                "term": "Mismatched samples",
+                "definition": "Samples must match the use case. Send real examples with your business name."
+              },
+              {
+                "term": "Restricted content",
+                "definition": "Cannabis, firearms, alcohol, lending, gambling and debt relief are refused outright."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Quick",
+        "title_accent": "answers",
+        "subtitle": "Common questions about 10DLC registration and what to do next.",
+        "blocks": [
+          {
+            "type": "faq",
+            "heading": "Quick answers",
+            "items": [
+              {
+                "question": "Can we send anything while we wait?",
+                "answer": "Not from an unregistered local number. A toll-free number uses separate, free verification and is often faster to set up."
+              },
+              {
+                "question": "Does 10DLC registration carry over from another provider?",
+                "answer": "No. Registration is tied to the platform. It's per account, not per number -- once approved, additional local numbers are covered."
+              },
+              {
+                "question": "What is a trust score and can we change it?",
+                "answer": "TCR's 0-100 rating of your brand that sets sending throughput. You can appeal free within 45 days, $41.50 after that."
+              },
+              {
+                "question": "What happens if we outgrow our daily limit?",
+                "answer": "You may see a limits-exceeded warning and carriers may charge higher fees. Upgrading to the Standard package takes about two business days."
+              },
+              {
+                "question": "We were rejected. What now?",
+                "answer": "You'll get the exact reason and what to change. Most are fixable in one pass. Restricted content (cannabis, firearms, lending) is final."
+              }
+            ]
+          },
+          {
+            "type": "callout",
+            "title": "New EINs can delay approval",
+            "text": "A brand-new EIN can take up to 45 days to appear in IRS databases. Tell us if that's you and we'll plan around it. Every resubmission restarts the carrier review."
+          },
+          {
+            "type": "callout",
+            "title": "Not sure where you stand?",
+            "text": "Your Customer Success Manager can see exactly which stage you're in, what the carriers said, and what's outstanding. Ask any time -- reviewing a draft takes ten minutes."
+          }
+        ]
+      }
+    ]
+  }
+}
