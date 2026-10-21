@@ -1,0 +1,130 @@
+{
+  "template": "two-column",
+  "source": "input/SMS_OptIn_Compliance_Guide.pdf",
+  "model": "claude-code",
+  "generatedAt": "2026-10-21T12:00:00Z",
+  "content": {
+    "eyebrow": "Customer Guide",
+    "title": "Collect SMS Opt-In Consent",
+    "title_accent": "the Right Way",
+    "summary": "Carriers require explicit, checkbox-based consent before you can text anyone. Get it right the first time to speed up approval and avoid blocked messages.",
+    "pages": [
+      {
+        "sections": [
+          {
+            "heading": "Why Proper Consent Matters",
+            "body": "A phone number alone is not consent, and neither is someone simply submitting a form. To send SMS, carriers require an explicit, unchecked consent checkbox that names your business and describes what messages the person will receive. Getting this right the first time is the single biggest thing you can do to speed up approval and avoid rejections.",
+            "bullets": [],
+            "rows": []
+          },
+          {
+            "heading": "Every Opt-In Must Include",
+            "body": "",
+            "bullets": [],
+            "rows": [
+              { "label": "Phone number field", "value": "Clearly labeled and optional to fill in" },
+              { "label": "Unchecked checkbox", "value": "Person actively checks it; never pre-checked" },
+              { "label": "Business name", "value": "Exact name you registered with" },
+              { "label": "Message description", "value": "What texts they will receive (reminders, offers, etc.)" },
+              { "label": "Standard disclosures", "value": "Msg & data rates, frequency, STOP and HELP" },
+              { "label": "Terms & Privacy", "value": "Separate checkbox with links to both policies" }
+            ]
+          },
+          {
+            "heading": "Split Consent by Message Type",
+            "body": "If you send both transactional messages (reminders, account notices) and marketing messages (promotions, offers), each type needs its own checkbox. Add a third checkbox for Terms of Service and Privacy Policy acceptance with links. Combining them into one box is the number one reason forms get rejected.",
+            "bullets": [
+              "Transactional: appointment and account texts with disclosures",
+              "Marketing: offers and promotions, plus \"consent is not required\"",
+              "Terms & Privacy: separate acknowledgement with links"
+            ],
+            "rows": []
+          }
+        ],
+        "sidebar": {
+          "heading": "At a glance",
+          "facts": [
+            { "label": "Consent type", "value": "Explicit, unchecked checkbox" },
+            { "label": "Checkbox count", "value": "One per message type + Terms" },
+            { "label": "Disclosures", "value": "Rates, frequency, STOP, HELP" },
+            { "label": "Business name", "value": "Must match registration" },
+            { "label": "Privacy Policy", "value": "Must state data is not sold" },
+            { "label": "Phone field", "value": "Optional; not required to submit" }
+          ],
+          "callout_title": "#1 reason forms get rejected",
+          "callout_text": "A single checkbox covering all SMS types, or wording like \"by submitting this form you agree to receive texts,\" will fail carrier review. Keep message types on separate boxes.",
+          "quote": "",
+          "quote_author": "",
+          "quote_role": ""
+        }
+      },
+      {
+        "sections": [
+          {
+            "heading": "Privacy Policy That Passes Review",
+            "body": "Your Privacy Policy must state plainly that you do not sell or share opt-in data. Without this, your registration can be rejected. Include this language:",
+            "bullets": [
+              "\"We do not sell or share mobile numbers or SMS consent\"",
+              "Data shared only with service providers to operate SMS",
+              "Include frequency, rates, STOP and HELP disclosures"
+            ],
+            "rows": []
+          },
+          {
+            "heading": "Write Compliant Sample Messages",
+            "body": "When you register, your sample messages must include your brand name and STOP/HELP language. Generic placeholders get rejected.",
+            "bullets": [],
+            "rows": [
+              { "label": "Too vague", "value": "\"Hi, check out our updates.\"" },
+              { "label": "Compliant", "value": "Brand name, details, STOP/HELP instructions" }
+            ]
+          },
+          {
+            "heading": "What Gets a Form Rejected",
+            "body": "Avoid these common mistakes to clear review on the first attempt.",
+            "bullets": [
+              "One combined checkbox covering all SMS types",
+              "Pre-checked or missing consent boxes",
+              "Consent implied just by submitting the form",
+              "Missing STOP, HELP, or frequency disclosures"
+            ],
+            "rows": []
+          },
+          {
+            "heading": "Pre-Submission Checklist",
+            "body": "",
+            "bullets": [
+              "Business name matches registration, website, and samples",
+              "Dedicated, optional phone number field present",
+              "Separate unchecked checkboxes for each message type",
+              "Terms and Privacy links present with own checkbox",
+              "Sample messages include brand name and real content"
+            ],
+            "rows": []
+          }
+        ],
+        "sidebar": {
+          "heading": "Required disclosures",
+          "facts": [
+            { "label": "Frequency", "value": "\"Message frequency may vary\"" },
+            { "label": "Rates", "value": "\"Msg & data rates may apply\"" },
+            { "label": "Opt-out", "value": "\"Reply STOP to cancel\"" },
+            { "label": "Help", "value": "\"Reply HELP for help\"" },
+            { "label": "Consent", "value": "\"Not a condition of purchase\"" }
+          ],
+          "callout_title": "Need a hand?",
+          "callout_text": "Your Salesmsg team is happy to review your opt-in form before you submit. A two-minute check now can save days of back-and-forth with the carriers.",
+          "quote": "",
+          "quote_author": "",
+          "quote_role": ""
+        }
+      }
+    ],
+    "cta": {
+      "headline": "Get your form reviewed",
+      "text": "Our team will check your opt-in form before you submit to carriers.",
+      "button_label": "Contact support",
+      "url": "https://www.salesmessage.com"
+    }
+  }
+}
