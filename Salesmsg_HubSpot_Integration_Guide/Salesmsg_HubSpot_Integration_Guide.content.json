@@ -13,11 +13,6 @@
         "subtitle": "What the integration does, how your data moves, and where the limits are.",
         "blocks": [
           {
-            "type": "highlight",
-            "statement": "3 parts, 1 marketplace install",
-            "note": "Contact sync, surfaces and workflow actions"
-          },
-          {
             "type": "stat_cards",
             "heading": "The three pieces",
             "intro": "Each part works with the others, but they behave differently and they're configured in different places.",
@@ -44,18 +39,6 @@
             "footnote": ""
           },
           {
-            "type": "callout",
-            "title": "Settings survive a reconnect",
-            "text": "If you disconnect and reconnect the integration, your mappings, workflows and reports stay exactly as they were."
-          }
-        ]
-      },
-      {
-        "title": "Messaging and",
-        "title_accent": "calling",
-        "subtitle": "Send texts and place calls from inside HubSpot without switching apps.",
-        "blocks": [
-          {
             "type": "definitions",
             "heading": "Messaging and calling capabilities",
             "intro": "",
@@ -71,8 +54,8 @@
           },
           {
             "type": "callout",
-            "title": "Logged call outcomes",
-            "text": "Outbound: Connected, No answer, Busy. Inbound: Missed, Left Live Voicemail. All outcomes save automatically to HubSpot."
+            "title": "Settings survive a reconnect",
+            "text": "If you disconnect and reconnect the integration, your mappings, workflows and reports stay exactly as they were."
           }
         ]
       },
