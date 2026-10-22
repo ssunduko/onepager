@@ -1,0 +1,186 @@
+{
+  "template": "customer-guide",
+  "source": "input/Salesmsg_HubSpot_Integration_Guide.pdf",
+  "model": "claude-code",
+  "generatedAt": "2026-10-22T00:00:00Z",
+  "content": {
+    "date_label": "September 2026",
+    "eyebrow": "Salesmsg + HubSpot integration",
+    "pages": [
+      {
+        "title": "Salesmsg and HubSpot,",
+        "title_accent": "end to end",
+        "subtitle": "What the integration does, how your data moves, and where the limits are.",
+        "blocks": [
+          {
+            "type": "highlight",
+            "statement": "3 parts, 1 marketplace install",
+            "note": "Contact sync, surfaces and workflow actions"
+          },
+          {
+            "type": "stat_cards",
+            "heading": "The three pieces",
+            "intro": "Each part works with the others, but they behave differently and they're configured in different places.",
+            "cards": [
+              {
+                "label": "Piece 1",
+                "value": "Contact sync",
+                "caption": "",
+                "points": ["Two-way record updates", "Ownership and notes", "HubSpot list imports"]
+              },
+              {
+                "label": "Piece 2",
+                "value": "Surfaces",
+                "caption": "",
+                "points": ["App Card and widget", "HubSpot channel", "Salesmsg sidebar data"]
+              },
+              {
+                "label": "Piece 3",
+                "value": "Automation",
+                "caption": "",
+                "points": ["Send SMS via workflows", "Create and update contacts", "Enroll into AI agents"]
+              }
+            ],
+            "footnote": ""
+          },
+          {
+            "type": "callout",
+            "title": "Settings survive a reconnect",
+            "text": "If you disconnect and reconnect the integration, your mappings, workflows and reports stay exactly as they were."
+          }
+        ]
+      },
+      {
+        "title": "Messaging and",
+        "title_accent": "calling",
+        "subtitle": "Send texts and place calls from inside HubSpot without switching apps.",
+        "blocks": [
+          {
+            "type": "definitions",
+            "heading": "Messaging and calling capabilities",
+            "intro": "",
+            "striped": true,
+            "rows": [
+              { "term": "Send SMS & MMS", "definition": "Send messages from HubSpot. Smart Inbox lets you override the Smart Sender." },
+              { "term": "Calling", "definition": "Place calls through the Salesmsg calling widget in HubSpot." },
+              { "term": "Default calling inbox", "definition": "Each user saves a preferred inbox, pre-selected every time the widget opens." },
+              { "term": "Call outcomes", "definition": "Outcomes save to HubSpot however the call ends, including voicemail and abrupt close." },
+              { "term": "Call transcription", "definition": "Transcript pushes to the native HubSpot call log. Breeze AI summarizes it." },
+              { "term": "AI Booking Agent", "definition": "Connects to HubSpot Meetings. Finds availability, books, reschedules or cancels via text." }
+            ]
+          },
+          {
+            "type": "callout",
+            "title": "Logged call outcomes",
+            "text": "Outbound: Connected, No answer, Busy. Inbound: Missed, Left Live Voicemail. All outcomes save automatically to HubSpot."
+          }
+        ]
+      },
+      {
+        "title": "Contacts, data",
+        "title_accent": "and surfaces",
+        "subtitle": "How contact records stay in sync and where each product appears.",
+        "blocks": [
+          {
+            "type": "definitions",
+            "heading": "Contact and data sync",
+            "intro": "",
+            "striped": true,
+            "rows": [
+              { "term": "Two-way contact sync", "definition": "Updates flow both directions with real-time search by name, phone number or email." },
+              { "term": "Conflict resolution", "definition": "Duplicates are resolved in real time by a user or offline, never guessed." },
+              { "term": "Custom property sync", "definition": "Maps Salesmsg properties to HubSpot contacts. Runs from Salesmsg to HubSpot only." },
+              { "term": "Note sync", "definition": "Conversation notes sync as native HubSpot notes carrying the Salesmsg user tag." },
+              { "term": "Timeline activities", "definition": "Calls, messages, notes and voicemails each log as their own HubSpot timeline event." }
+            ]
+          },
+          {
+            "type": "definitions",
+            "heading": "Where each product shows up",
+            "intro": "",
+            "striped": true,
+            "rows": [
+              { "term": "App Card", "definition": "Native card on Contacts, Deals, Companies, Tickets, Orders, Leads and Carts." },
+              { "term": "HubSpot channel", "definition": "Salesmsg inbox appears inside HubSpot Inbox and Help Desk via Custom Channel API." },
+              { "term": "HubSpot data sidebar", "definition": "A card in Salesmsg shows the linked contact, deal, company and ticket properties." },
+              { "term": "Salesmsg widget", "definition": "Full conversation history, MMS and back-and-forth threads inside HubSpot." }
+            ]
+          },
+          {
+            "type": "callout",
+            "title": "Plan contact import before launch",
+            "text": "Connecting the integration doesn't pull existing HubSpot contacts. They arrive through workflows, the Salesmsg extension, live search or a CSV import."
+          }
+        ]
+      },
+      {
+        "title": "Workflows and",
+        "title_accent": "automation",
+        "subtitle": "Triggers and actions that send messages, create contacts and enroll people.",
+        "blocks": [
+          {
+            "type": "definitions",
+            "heading": "Workflow capabilities",
+            "intro": "Available across Contact, Company, Deal, Ticket, Quote, Feedback and Custom Object workflows.",
+            "striped": true,
+            "rows": [
+              { "term": "Send SMS action", "definition": "Three send-from choices: a specific inbox, the contact owner, or Advanced mapping." },
+              { "term": "Create & update contacts", "definition": "Create or update a Salesmsg contact from a contact-based workflow." },
+              { "term": "Enroll into automations", "definition": "Enroll contacts into AI agents from a workflow using the contact owner's inbox." },
+              { "term": "Round-robin", "definition": "Applies to outbound messages too, so mass sends don't pile up unassigned." },
+              { "term": "Workflow statistics", "definition": "Webhook-receipt status shows whether Salesmsg created and delivered each message." }
+            ]
+          },
+          {
+            "type": "definitions",
+            "heading": "When a workflow send doesn't arrive",
+            "intro": "Some conditions stop a message silently. The action log shows success but nothing sends.",
+            "striped": true,
+            "rows": [
+              { "term": "No credits left", "definition": "Logged as success, message not sent." },
+              { "term": "Contact opted out", "definition": "Logged as success, message not sent." },
+              { "term": "Invalid number", "definition": "Logged as success, message not sent." },
+              { "term": "HubSpot disconnected", "definition": "Error returned in the workflow action log." }
+            ]
+          },
+          {
+            "type": "callout",
+            "title": "Messages from HubSpot cost credits",
+            "text": "Rep or workflow, it draws from the same balance. Model usage before you automate at volume."
+          }
+        ]
+      },
+      {
+        "title": "Limits and",
+        "title_accent": "common questions",
+        "subtitle": "Design around these constraints and get answers to what teams ask most.",
+        "blocks": [
+          {
+            "type": "definitions",
+            "heading": "Limits worth knowing",
+            "intro": "",
+            "striped": true,
+            "rows": [
+              { "term": "One org, one account", "definition": "One Salesmsg organization connects to one HubSpot account. Two accounts means two orgs." },
+              { "term": "Property sync one-way", "definition": "Custom properties sync Salesmsg to HubSpot only. Plan your data model accordingly." },
+              { "term": "App Card: SMS only", "definition": "No MMS, threads or conversation history. Use the full widget for those features." },
+              { "term": "Broadcast exclusion", "definition": "\"This list AND tag is not X\" isn't available yet. Open feature request." },
+              { "term": "Outbound call logging", "definition": "Can't log outbound calls as Left Live Voicemail. Inbound only." },
+              { "term": "Carrier rules apply", "definition": "Sending from HubSpot still uses your Salesmsg number. Registration and opt-in rules apply." }
+            ]
+          },
+          {
+            "type": "faq",
+            "heading": "What teams ask us most",
+            "items": [
+              { "question": "Can HubSpot be our source of truth for contacts?", "answer": "For contact records, yes. Sync runs both ways. Custom properties are the exception: they flow from Salesmsg to HubSpot only." },
+              { "question": "Can two HubSpot users share one Salesmsg user?", "answer": "Yes. Most teams have more HubSpot users than Salesmsg seats. Contacts behave as if owned by the mapped user." },
+              { "question": "Do we need engineers to set this up?", "answer": "No. Your Salesmsg team connects the integration during onboarding. The App Card is the one piece each user adds themselves." },
+              { "question": "Will disconnecting lose our configuration?", "answer": "No. Mappings, workflows and reports are all preserved when you reconnect." }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
