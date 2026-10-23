@@ -4,7 +4,7 @@
   "model": "claude-code",
   "generatedAt": "2026-10-23T00:00:00.000Z",
   "content": {
-    "date_label": "September 2026",
+    "date_label": "",
     "eyebrow": "Billing Guide",
     "pages": [
       {
@@ -141,8 +141,8 @@
         ]
       },
       {
-        "title": "Your balance and",
-        "title_accent": "worked examples",
+        "title": "Your",
+        "title_accent": "balance",
         "subtitle": "What rolls over, what stops at zero, and how credits add up in practice.",
         "blocks": [
           {
