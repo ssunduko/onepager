@@ -1,0 +1,265 @@
+{
+  "template": "customer-guide",
+  "source": "input/Salesmsg_Financial_Services_SMS_Compliance.pdf",
+  "model": "claude-code",
+  "generatedAt": "2026-10-26T00:00:00.000Z",
+  "content": {
+    "date_label": "",
+    "eyebrow": "Financial Services SMS Compliance",
+    "pages": [
+      {
+        "title": "Getting consent",
+        "title_accent": "right",
+        "subtitle": "What carriers expect before you send a financial services text.",
+        "blocks": [
+          {
+            "type": "text",
+            "heading": "Why financial messaging gets extra scrutiny",
+            "paragraphs": [
+              {
+                "lead": "Carriers watch closely.",
+                "text": "Financial services is one of the most closely watched categories in business texting. Carriers filter it harder than almost anything else, and a single word in one message can get a campaign suspended."
+              },
+              {
+                "lead": "This guide covers",
+                "text": "what you can send from a 10DLC number, the language that triggers filtering, and the consent setup carriers expect — so your messages land and your account stays in good standing."
+              }
+            ]
+          },
+          {
+            "type": "definitions",
+            "heading": "Get consent right",
+            "intro": "Every contact must have verifiable, specific consent on file before you send.",
+            "striped": true,
+            "rows": [
+              {
+                "term": "Opt-in method",
+                "definition": "Collect explicit, checkbox-based opt-in with fully compliant disclosure language."
+              },
+              {
+                "term": "Separate checkboxes",
+                "definition": "Each use case — transactional and informational — needs its own checkbox."
+              },
+              {
+                "term": "Privacy policy",
+                "definition": "State that mobile numbers, SMS consent and message data are never sold or shared."
+              },
+              {
+                "term": "Consent records",
+                "definition": "Store timestamped records for every contact and keep them for at least four years."
+              }
+            ]
+          },
+          {
+            "type": "callout",
+            "title": "Need form wording and disclosure language?",
+            "text": "Form wording, disclosure placement, and privacy-policy language are covered step by step in the SMS Opt-In Compliance Guide — ask your Salesmsg team for a copy."
+          }
+        ]
+      },
+      {
+        "title": "What to include,",
+        "title_accent": "what to avoid",
+        "subtitle": "Required content in every message and practices that trigger carrier filtering.",
+        "blocks": [
+          {
+            "type": "definitions",
+            "heading": "What to put in every message",
+            "intro": "",
+            "striped": true,
+            "rows": [
+              {
+                "term": "First-party only",
+                "definition": "Account updates, payment confirmations, appointment reminders and service notifications are safest."
+              },
+              {
+                "term": "Company name",
+                "definition": "Identify your company by name in every initial message you send."
+              },
+              {
+                "term": "Opt-out instructions",
+                "definition": "Include opt-out instructions in every initial message."
+              },
+              {
+                "term": "STOP instruction",
+                "definition": "Include \"Reply STOP to unsubscribe\" in every broadcast you send."
+              }
+            ]
+          },
+          {
+            "type": "definitions",
+            "heading": "What to avoid",
+            "intro": "Any of these practices can get a campaign suspended.",
+            "striped": false,
+            "rows": [
+              {
+                "term": "No assumed opt-in",
+                "definition": "Contacts need verifiable proof: a web form, keyword opt-in or verbal consent."
+              },
+              {
+                "term": "No bundled consent",
+                "definition": "Each message type needs its own checkbox; bundling is noncompliant."
+              },
+              {
+                "term": "No data sharing",
+                "definition": "Any policy mentioning sharing or selling consumer data makes you noncompliant."
+              },
+              {
+                "term": "CTIA quiet hours",
+                "definition": "Never send before 8:00 AM or after 9:00 PM recipient local time."
+              },
+              {
+                "term": "Unregistered numbers",
+                "definition": "Carrier fines range from $1,000 to $10,000+ per violation."
+              },
+              {
+                "term": "Promotional on 10DLC",
+                "definition": "Loan or financial product promotions require an approved short code."
+              }
+            ]
+          },
+          {
+            "type": "callout",
+            "title": "URL shorteners must be branded",
+            "text": "Public shorteners like bit.ly or tinyurl are prohibited. Use company-branded short links only."
+          }
+        ]
+      },
+      {
+        "title": "Language that",
+        "title_accent": "gets filtered",
+        "subtitle": "Terms flagged by carriers and Twilio as high-risk financial content.",
+        "blocks": [
+          {
+            "type": "text",
+            "heading": "",
+            "paragraphs": [
+              {
+                "lead": "Any message that",
+                "text": "solicits, arranges, brokers, refers, refinances or markets new loans is prohibited by mobile carriers. Using flagged terms can trigger filtering, campaign suspension or fines of $1,000–$10,000+ per violation."
+              }
+            ]
+          },
+          {
+            "type": "table",
+            "heading": "High-risk terms by category",
+            "columns": {
+              "label": "Category",
+              "value": "Status",
+              "note": "Examples"
+            },
+            "rows": [
+              {
+                "label": "Loans & lending",
+                "value": "Prohibited",
+                "note": "\"payday loan\", \"fast cash\", \"pre-approved loan\", \"guaranteed approval\""
+              },
+              {
+                "label": "Debt — all senders",
+                "value": "Prohibited",
+                "note": "\"debt consolidation\", \"credit repair\", \"debt relief\", \"collection\""
+              },
+              {
+                "label": "Investment & crypto",
+                "value": "Prohibited",
+                "note": "\"invest now\", \"guaranteed returns\", \"cryptocurrency\", \"forex\""
+              },
+              {
+                "label": "Get rich quick",
+                "value": "Prohibited",
+                "note": "\"make money fast\", \"financial freedom\", \"guaranteed income\""
+              },
+              {
+                "label": "Deceptive claims",
+                "value": "Prohibited",
+                "note": "\"guaranteed funding\", \"100% approval rate\", \"free money\""
+              },
+              {
+                "label": "Lead generation",
+                "value": "Prohibited",
+                "note": "\"based on your profile\", \"on behalf of\", \"affiliate offer\""
+              }
+            ]
+          },
+          {
+            "type": "callout",
+            "title": "Search your saved content first",
+            "text": "Flagged terms appear in templates, automations, broadcasts and signature lines you set up months ago. Search your saved content before you scale up sending."
+          }
+        ]
+      },
+      {
+        "title": "What you can send",
+        "title_accent": "on 10DLC",
+        "subtitle": "Permitted 10DLC message types for first-party financial services.",
+        "blocks": [
+          {
+            "type": "table",
+            "heading": "Permitted message types",
+            "columns": {
+              "label": "Message type",
+              "value": "",
+              "note": "Example"
+            },
+            "rows": [
+              {
+                "label": "Account notifications",
+                "value": "",
+                "note": "Your payment of $500 was received. — ABC Financial"
+              },
+              {
+                "label": "Appointment reminders",
+                "value": "",
+                "note": "Your consultation with ABC Advisors is tomorrow at 2 PM."
+              },
+              {
+                "label": "Transaction confirmations",
+                "value": "",
+                "note": "Your wire transfer of $1,200 has been processed. Ref #12345."
+              },
+              {
+                "label": "Service updates",
+                "value": "",
+                "note": "ABC Financial: system maintenance Saturday 2–4 AM EST."
+              },
+              {
+                "label": "Two-factor authentication",
+                "value": "",
+                "note": "Your verification code is 482910. Do not share this code."
+              }
+            ]
+          },
+          {
+            "type": "definitions",
+            "heading": "Before you send",
+            "intro": "Run through this checklist before every campaign launch.",
+            "striped": true,
+            "rows": [
+              {
+                "term": "Consent on file",
+                "definition": "Separate checkbox per message type; timestamped records retained four years."
+              },
+              {
+                "term": "Privacy policy",
+                "definition": "Confirms data is not sold or shared with third parties."
+              },
+              {
+                "term": "Message content",
+                "definition": "Company name and opt-out in every initial message; no flagged wording."
+              },
+              {
+                "term": "Sending window",
+                "definition": "Scheduled 8:00 AM–9:00 PM recipient local time."
+              }
+            ]
+          },
+          {
+            "type": "callout",
+            "title": "Not sure a message will pass?",
+            "text": "Send it to your Salesmsg team first. We'd rather review it now than untangle a filtered campaign later."
+          }
+        ]
+      }
+    ]
+  }
+}
