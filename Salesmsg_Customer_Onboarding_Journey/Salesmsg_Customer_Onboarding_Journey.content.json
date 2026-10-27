@@ -4,12 +4,12 @@
   "model": "claude-code",
   "generatedAt": "2026-10-27T00:00:00Z",
   "content": {
-    "date_label": "October 2026",
+    "date_label": "",
     "eyebrow": "Customer onboarding journey",
     "pages": [
       {
         "title": "Your Salesmsg onboarding",
-        "title_accent": "journey",
+        "title_accent": "",
         "subtitle": "Five stages from sign-up to first text — no surprises, go live faster.",
         "blocks": [
           {
@@ -176,7 +176,7 @@
       },
       {
         "title": "Your prep checklist",
-        "title_accent": "and quick answers",
+        "title_accent": "",
         "subtitle": "Have these ready before Stage 2 and you'll go live faster.",
         "blocks": [
           {
